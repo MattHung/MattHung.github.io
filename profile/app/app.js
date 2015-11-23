@@ -5,6 +5,7 @@
 var module_main=angular.module("module_main", []);
 module_main.controller("controller_main", function($scope){});
 
+var module_about=angular.module("module_about", []);
 var module_portfolio=angular.module("module_portfolio", []);
 
 //var module_about=angular.module("module_about", ['dymaicmodule']);
