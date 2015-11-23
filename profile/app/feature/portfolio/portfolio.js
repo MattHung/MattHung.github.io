@@ -10,7 +10,8 @@ var EventDirection={
 var video_width = 320;
 var video_height = 160;
 
-module_portfolio.registerCtrl("controller_portfolio", ['$scope', 'dynamicDirectiveManager', '$sce', '$timeout',
+//module_portfolio.registerCtrl("controller_portfolio", ['$scope', 'dynamicDirectiveManager', '$sce', '$timeout',
+module_portfolio.controller("controller_portfolio", ['$scope', '$sce', '$timeout',
     function($scope, dynamicDirectiveManager, $sce, timer) {
         $scope.DisplayHtml="";
 
