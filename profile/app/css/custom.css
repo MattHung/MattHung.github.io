@@ -1,0 +1,342 @@
+/*Website Colors:
+Main: #1e1e1e
+Light Accent:  Blue 700 #0288D1
+Dark Accent: Blue 900  #01579B
+Contrasting Accent: Orange #FF9800
+Retrieved from http://www.materialui.co/colors
+*/
+
+/*==========CSS Styling for the main structure of each page=======*/
+h1,h2,h3,h4,h5,h6,a,p,div,li{
+  font-family: Lato,sans-serif;
+}
+html{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+body{
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding:0;
+  background-color: #FAFAFA;
+}
+a {
+  color:#0277BD;
+  text-decoration:none;
+}
+a:hover{
+  color:#01579B;
+  text-decoration:underline;
+}
+a:active{
+  color:#FF9800;
+}
+/*The wrapper that keeps the sticky footer at the bottom of the screen*/
+#wrapper{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -32px;
+}
+/*For the sticky footer*/
+.push{
+	height: 32px;
+}
+.banner{
+  display:flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  background-color:#303030;
+  text-align:center;
+  padding:82px;
+}
+.banner-wrapper{
+  display:flex;
+  flex-wrap:wrap;
+  margin:auto;
+  text-align:center;
+  justify-content:center;
+}
+@media (max-width:490px){
+  .banner{
+    padding:12px;
+  }
+}
+.banner-wrapper>p{
+  color:white;
+  font-family:Lato,sans-serif;
+  font-size:2em;
+}
+.banner-profile-picture{
+  width: 100%;
+  height: auto;
+  max-width:300px;
+}
+.banner-profile-picture img{
+  border-radius:50%;
+  height: 100%;
+  width: 100%;
+  margin:0 !important;
+}
+#content{
+	width: 100%;
+  max-width:1024px;
+	height: auto;
+  min-width:320px;
+  padding:24px 24px 24px 24px;
+	margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-radius:0px;
+}
+#content h1{
+	font-weight: bold;
+	font-size: 3em;
+	color: #383838;
+  margin: 12px 0 12px 0;
+}
+#content h2{
+	font-weight: bold;
+	font-size: 2em;
+	color: #515151;
+  margin: 12px 0 12px 0;
+}
+#content h3{
+	font-weight: bold;
+	font-size: 1.75em;
+	color: #6b6b6b;
+  margin: 12px 0 12px 0;
+}
+#content h4{
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #848484;
+  margin: 12px 0 12px 0;
+}
+#content p{
+	font-size: 1.5em;
+	line-height: 175%;
+}
+#content li{
+	font-size: 1.5em;
+  margin: 12px 0 12px 0;
+	line-height: 175%;
+}
+
+#content img {
+  display: block;
+  margin: 0 auto 0 auto;
+  border-radius:100%;
+  width:150px;
+}
+#content hr,br{
+	clear: both;
+}
+/*Reduces the width of the content and makes the background visible when on bigger screen sizes*/
+@media (min-width: 900px){
+  #content{
+    width:80%;
+    margin: 20px auto 20px auto;
+    padding: 20px 36px 20px 36px;
+    border-radius:5px;
+  }
+  #content p, #content li{
+    line-height:200%;
+  }
+}
+footer{
+  height: 32px;
+  font-size:1.25em;
+  width: 100%;
+  text-align:center;
+  line-height: 32px;
+	background-color: #1e1e1e;
+	margin:0;
+  padding:0;
+}
+footer ul{
+  margin:0;
+  padding:0;
+}
+.footer-item{
+  min-width:320px;
+  list-style-type: none;
+  display:inline;
+  color:white;
+  margin-right: 10px;
+}
+.footer-item a{
+  color:white;
+  text-decoration:none;
+}
+.footer-item a:hover{
+  color:white;
+  text-decoration:underline;
+}
+/*Rearranges the elements of the footer on smaller screen sizes so they all fit*/
+@media (max-width: 580px) {
+  footer{
+    height: 64px;
+  }
+  .footer-item:first-child{
+    display:block;
+  }
+}
+/*======CSS Styling for other miscellaneous =====*/
+/*applies a sharp black shadow effect used to make the pictures pop out*/
+.shadow {
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+}
+/*Used in the "View My Projects" and the "Submit" button*/
+.button {
+  display: block;
+  margin:24px auto 24px auto;
+  padding: 0 6px 0 6px;
+  text-decoration:none;
+  height: 84px;;
+  width:100%;
+  background-color:#383838;
+  color:#FFFFFF;
+  font-size: 2em;
+  font-weight:bold;
+  border-radius:5px;
+  text-align:center;
+  max-width:600px;
+  line-height:84px;
+  border:none;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.75);
+}
+.button:hover {
+  color:white;
+  text-decoration:none;
+  background-color:#515151;
+  transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -webkit-transition: background-color .5s ease-in-out;
+}
+.button:active {
+  text-decoration:none;
+  position:relative;
+  top:10px;
+  background-color:#383838;
+}
+/*==========The view on github buttons===============*/
+.view-github{
+  display: block;
+  margin:12px auto 12px auto;
+  text-decoration:none;
+  height: 48px;
+  width:100%;
+  max-width:400px;
+  background-color:#0277BD;
+  color:#FFFFFF;
+  font-size: 1.25em;
+  font-weight:bold;
+  border-radius:5px;
+  text-align:center;
+  line-height:48px;
+  border:none;
+}
+.view-github:hover {
+  color:white;
+  text-decoration:none;
+  background-color:#0288D1;
+  transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -webkit-transition: background-color .5s ease-in-out;
+}
+.view-github:active {
+  position:relative;
+  top:10px;
+  background-color:#01579B;
+}
+/*The error message that displays when form validation had failed*/
+#error-message{
+  height: 48px;
+  line-height:48px;
+  width: 100%;
+  border-radius: 5px;
+  background-color:#ef5350;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2em;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.5em;
+  display: none;
+  margin-bottom: 24px;
+}
+/*========Styling for the Contact Form========*/
+#contact-form {
+  width: 100%;
+  max-width:400px;
+  margin: auto;
+  text-align:center;
+}
+.input-form{
+  display:block;
+  margin:auto;
+  width: 100%;
+  height: 36px;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.25em;
+  background-color: #efefef;
+  border:1px solid #9fa7c6;
+  border-radius: 5px;
+  text-align:center;
+}
+.input-form:focus, textarea:focus{
+  opacity: .75;
+  outline: 0;
+  box-shadow: 0px 0px 1px 1px #0288D1;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}
+textarea{
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 120px;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.25em;
+  background-color: #efefef;
+  border:1px solid #9fa7c6;
+  border-radius: 5px;
+  resize: none;
+}
+/*==============Project Photos That are displayed at the view page==============*/
+.project-photo{
+  display:inline-block;
+  width: 100%;
+  margin:12px 0 12px 0;
+  text-decoration:none;
+}
+.project-photo:active,.project-photo:focus{
+  outline:none;
+  box-shadow: 0px 0px 2px 2px #0288D1;
+  border:none;
+}
+.project-photo:nth-child(odd){
+  margin-right:4%;
+}
+.project-photo img{
+  border-radius:5px !important;
+  display:inline-block;
+  width:100% !important;
+  height:auto;
+}
+@media (min-width: 700px){
+  .project-photo{
+    max-width:47.5%;
+  }
+}
