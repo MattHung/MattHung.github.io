@@ -7,6 +7,7 @@ module_main.controller("controller_main", function($scope){});
 
 var module_about=angular.module("module_about", []);
 var module_portfolio=angular.module("module_portfolio", []);
+var module_contact=angular.module("module_contact", []);
 
 //var module_about=angular.module("module_about", ['dymaicmodule']);
 //module_about.config(['$controllerProvider', '$compileProvider', '$provide', 'dynamicDirectiveManagerProvider',
