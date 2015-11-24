@@ -4,6 +4,11 @@
 app_module.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+            when('/sites/main_publish/', {
+                templateUrl:function($routeParams) {
+                    return sprintf("feature/main/main.html");
+                }               
+            }).
             when('/sites/:url/', {
                 templateUrl:function($routeParams) {
                     return sprintf("feature/%s/%s.html", $routeParams.url, $routeParams.url);

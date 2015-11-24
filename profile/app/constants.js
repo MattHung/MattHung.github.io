@@ -3,4 +3,5 @@
  */
 
 
-const Directory=sprintf("http://%s%sfeature/", window.location.host, window.location.pathname)
+const Directory=sprintf("http://%s%sfeature/", window.location.host, window.location.pathname);
+const PublicView_Key="publish";

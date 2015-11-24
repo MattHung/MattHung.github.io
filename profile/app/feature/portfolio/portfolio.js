@@ -16,7 +16,6 @@ module_portfolio.controller("controller_portfolio", ['$scope', '$sce', '$timeout
     function($scope, $sce, timer) {
         $scope.DisplayHtml="";
 
-
         $scope.InjectPlayer=function(html_id)
         {
             $(sprintf('#%s', html_id)).mediaelementplayer();

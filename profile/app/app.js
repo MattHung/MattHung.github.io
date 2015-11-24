@@ -49,4 +49,14 @@ var module_contact=angular.module("module_contact", []);
 //module_contact.controller("controller_contact", function($scope){});
 
 var app_module=angular.module("app_module", ["ngRoute", "module_main", "module_about", "module_portfolio", "module_contact"]);
-app_module.controller("controller_app", function($scope){});
+
+app_module.controller("controller_app",
+    function($scope, $location){
+        $scope.publishVersion = $location.path().indexOf(PublicView_Key)>=0;
+        $scope.brand_link = $scope.publishVersion? "#sites/main_publish" : "#sites/main";
+
+        $scope.isPublish = function(){
+            return $scope.publishVersion;
+        }
+
+});
