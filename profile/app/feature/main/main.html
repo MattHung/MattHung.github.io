@@ -22,8 +22,11 @@
                     <h2>My name is Matt Hung, a online game engineer and web developer.</h2>
                     <h2>I'm working on client / server / database game development and also a architect.</h2>
                     <h2>Love programming whatever anything about programming.</h2>
-                    <h2>Following link is my projects.</h2>
-                    <a href="#sites/portfolio" class="button">Voew All Projects</a>
+
+                    <div ng-if="!isPublish()">
+                        <h2>Following link is my projects.</h2>
+                        <a href="#sites/portfolio" class="button">Voew All Projects</a>
+                    </div>
 
                 </div>
             </div>
