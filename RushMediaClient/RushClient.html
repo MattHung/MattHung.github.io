@@ -1,11 +1,12 @@
 <html>
 <head>
     <script type="text/javascript" src="Setting.js"></script>
-	
 </head>
 <body onload="load()">
     <script type="text/javascript">
 //        logger.disableLogger();
+
+        logger.swithLogger("panel");
 
         function load()
         {
@@ -14,9 +15,11 @@
 
     </script>
 
-    <!--<script type="text/javascript" src="Converter.min.js"></script>-->    
-	
-	<canvas id="ScreenCanvas"></canvas>
-	<script type="text/javascript" src="main.js"></script>
+    <!--<script type="text/javascript" src="Converter.min.js"></script>-->
+
+    <canvas id="ScreenCanvas"></canvas>
+    <div id="panel"></div>
+
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

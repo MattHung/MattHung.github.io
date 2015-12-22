@@ -21,5 +21,16 @@ var logger = function()
         window['console']['log'] = function() {};
     };
 
+    pub.swithLogger = function swithLogger(tag_id)
+    {
+        oldConsoleLog = window['console']['log'];
+
+        window['console']['log'] = function(log)
+        {
+            log +="</br>";
+            document.getElementById(tag_id).innerHTML +=log;
+        };
+    }
+
     return pub;
 }();
