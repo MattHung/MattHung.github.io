@@ -2582,8 +2582,8 @@ module.exports = uClass;
 var WSAvcPlayer = require('../vendor');
 
 
-var canvas = document.createElement("canvas");
-document.body.appendChild(canvas);
+var canvas = document.getElementById("ScreenCanvas");
+
 // Create h264 player
 var wsavc = new WSAvcPlayer(canvas, "webgl", 1, 35);
 
