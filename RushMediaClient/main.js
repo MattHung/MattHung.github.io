@@ -4299,8 +4299,6 @@ var WSAvcPlayer = new Class({
 
   },
 
-
-
   onPictureDecodedWebGL : function (buffer, width, height) {
     if (!buffer) {
       return;
@@ -4374,20 +4372,55 @@ var WSAvcPlayer = new Class({
     this.avc.decode(data);
   },
 
+  onwsopen:function(open){
+
+  },
+
+  onwsmessage:function(message){},
+
+  onwserror:function(error){},
+
+  onwsclose:function(close){},
+
+  send:function(text){
+      if(this.ws.readyState != 1)
+          return;
+      this.ws.send(text);
+  },
+
   connect : function(url) {
     // Websocket initialization
     if (this.ws != undefined) {
       this.ws.close();
       delete this.ws;
     }
+
     this.ws = new WebSocket(url);
     this.ws.binaryType = "arraybuffer";
     this.ws.onopen = function() {
       console.log("WSAvcPlayer: Connected to " + url);
     }.bind(this);
+    this.ws.onopen = function(open){wsavc.onwsopen(open)};
+    this.ws.onerror = function(error){wsavc.onwserror(error)};
+    this.ws.onclose = function(close){wsavc.onwsclose(close)};
     this.ws.onmessage = function(evt) {
-      if(typeof evt.data == "string")
-        return this.cmd(JSON.parse(evt.data));
+      if(typeof evt.data == "string") {
+          var json_obj = JSON.parse(evt.data);
+
+          switch(json_obj.action){
+              case "init":
+                  this.Bitrate=json_obj.bitrate;
+                  return this.cmd(json_obj);
+              case "pong":
+                  this.Latency = (new Date().getTime()) - this.lastSendPingTick;
+                  break;
+              default:
+                  wsavc.onwsmessage(json_obj);
+                  break;
+          }
+
+          return;
+      }
 
       this.pktnum++;
       var data = new Uint8Array(evt.data);
@@ -4397,6 +4430,19 @@ var WSAvcPlayer = new Class({
       this.decode(data);
       this.prevframe = data;
     }.bind(this);
+
+    this.lastSendPingTick=0;
+    this.Latency=0;
+    setInterval(function(wsavcPlayer)
+    {
+        if(wsavcPlayer.ws.readyState != 1)
+            return;
+
+        wsavcPlayer.ws.send(JSON.stringify({action:"ping"}));
+        wsavcPlayer.lastSendPingTick = new Date().getTime();
+
+    }, 3000, this);
+
     this.ws.onclose = function()	{ 
       // websocket is closed.
       console.log("WSAvcPlayer: Connection closed")
