@@ -4278,7 +4278,6 @@ var WSAvcPlayer = new Class({
   Binds : ['onPictureDecodedWebGL', 'onPictureDecodedCanvas'],
 
   initialize : function(canvas, canvastype) {
-
     this.canvas     = canvas;
     this.canvastype = canvastype;
 
@@ -4297,6 +4296,8 @@ var WSAvcPlayer = new Class({
     this.rcvtime;
     this.prevframe;
 
+    this.threadPool = new ThreadPool(THREAD_COUNT, 'dummyCallback.js');
+    this.threadPool.init();
   },
 
   onPictureDecodedWebGL : function (buffer, width, height) {
@@ -4382,12 +4383,31 @@ var WSAvcPlayer = new Class({
 
   onwsclose:function(close){},
 
+  sleep:function(milliseconds) {
+      var start = new Date().getTime();
+      for (var i = 0; i < 1e7; i++) {
+          if ((new Date().getTime() - start) > milliseconds){
+             break;
+          }
+      }
+  },
+
+  process_message:function(evt)
+  {
+      wsavc.pktnum++;
+      var data = new Uint8Array(evt.data);
+      console.log("WSAvcPlayer: [Pkt " + this.pktnum + " (" + evt.data.byteLength + " bytes)]");
+      var date = new Date();
+      wsavc.rcvtime = date.getTime();
+      wsavc.decode(data);
+      wsavc.prevframe = data;
+  },
+
   send:function(text){
       if(this.ws.readyState != 1)
           return;
       this.ws.send(text);
   },
-
   connect : function(url) {
     // Websocket initialization
     if (this.ws != undefined) {
@@ -4422,13 +4442,7 @@ var WSAvcPlayer = new Class({
           return;
       }
 
-      this.pktnum++;
-      var data = new Uint8Array(evt.data);
-      console.log("WSAvcPlayer: [Pkt " + this.pktnum + " (" + evt.data.byteLength + " bytes)]");
-      var date = new Date();
-      this.rcvtime = date.getTime();
-      this.decode(data);
-      this.prevframe = data;
+      this.threadPool.addTask(new Task(this.process_message, evt));
     }.bind(this);
 
     this.lastSendPingTick=0;

@@ -1,8 +1,6 @@
 <html>
 <head>
-    <script type="text/javascript" src="threadPool.js"></script>
     <script type="text/javascript" src="Setting.js"></script>
-    <script type="text/javascript">const THREAD_COUNT = 3;</script>
 </head>
 <body onload="load()">
     <script type="text/javascript">
@@ -82,7 +80,7 @@
 
         function load()
         {
-            wsavc.connect("ws://192.168.154.197:50480");
+            wsavc.connect("ws://192.168.154.244:50480");
             wsavc.onwsopen = onopen;
             wsavc.onwsmessage = onwsmessage;
             wsavc.onwserror = onerror;
