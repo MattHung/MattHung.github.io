@@ -4298,13 +4298,8 @@ var WSAvcPlayer = new Class({
     this.rcvtime;
     this.prevframe;
 
-<<<<<<< HEAD:RushMediaClient/html5/main.js
     //this.ThreadPool=new ThreadPool(THREAD_COUNT, 'dummyCallback.js');
     //this.ThreadPool.init();
-=======
-    this.threadPool = new ThreadPool(THREAD_COUNT, 'dummyCallback.js');
-    this.threadPool.init();
->>>>>>> db478ca1042d47d1540025f372679306518df9b4:RushMediaClient/main.js
   },
 
   onPictureDecodedWebGL : function (buffer, width, height) {
@@ -4456,7 +4451,6 @@ var WSAvcPlayer = new Class({
           return;
       }
 
-<<<<<<< HEAD:RushMediaClient/html5/main.js
 	    this.fps++;
       
       if(isIE) {
@@ -4466,9 +4460,6 @@ var WSAvcPlayer = new Class({
       }
 
       this.RawFrames.push(new Task(this.process_message, evt, 0));
-=======
-      this.threadPool.addTask(new Task(this.process_message, evt));
->>>>>>> db478ca1042d47d1540025f372679306518df9b4:RushMediaClient/main.js
     }.bind(this);
 
     this.drawfps=function()

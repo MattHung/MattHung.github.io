@@ -1,8 +1,6 @@
 <html>
 <head>
-    <script type="text/javascript" src="threadPool.js"></script>
     <script type="text/javascript" src="Setting.js"></script>
-    <script type="text/javascript">const THREAD_COUNT = 3;</script>
 </head>
 <body onload="load()">
     <script type="text/javascript">
@@ -29,55 +27,51 @@
         }
 
         function onopen(open){
-<<<<<<< HEAD:RushMediaClient/html5/RushClient_backup.html
 //            switchResolution(640, 480, 2010);
-=======
-            switchResolution(getParameterByName("width"), getParameterByName("height"), getParameterByName("bitrate"));
->>>>>>> db478ca1042d47d1540025f372679306518df9b4:RushMediaClient/RushClient.html
         }
 
         function onwsmessage(json_obj){
+            switch(json_obj.action){
+                case "source_list":
+                        for(var i=0; i<json_obj.source.length; i++) {
+                            var resolution=json_obj.source[i].width.toString() + "x" + json_obj.source[i].height.toString();
+                            var option = Options[resolution];
+                            if(option==undefined) {
+                                Options[resolution] = [];
+                                option = Options[resolution];
+                            }
 
-//            switch(json_obj.action){
-//                case "source_list":
-//                        for(var i=0; i<json_obj.source.length; i++) {
-//                            var resolution=json_obj.source[i].width.toString() + "x" + json_obj.source[i].height.toString();
-//                            var option = Options[resolution];
-//                            if(option==undefined) {
-//                                Options[resolution] = [];
-//                                option = Options[resolution];
-//                            }
-//
-//                            Options[resolution].push(json_obj.source[i]);
-//                        }
-//
-//                        for(var option in Options) {
-//                            option = Options[option];
-//                            for (var i = 0; i < option.length; i++) {
-//                                var element = document.createElement("input");
-//                                //Assign different attributes to the element.
-//                                element.type = "button";
-//                                element.name = "button_" + (json_obj.source.length - 1).toString();  // And the name too?
-//
-//                                element.value = option[i].width.toString() +
-//                                "x" + option[i].height.toString() +
-//                                "   b:" + option[i].bitrate;
-//
-//                                element.setAttribute("width", option[i].width);
-//                                element.setAttribute("height", option[i].height);
-//                                element.setAttribute("bitrate", option[i].bitrate);
-//
-//                                element.onclick = function () { // Note this is a function
-//                                    switchResolution(this.getAttribute("width"), this.getAttribute("height"), this.getAttribute("bitrate"));
-//                                };
-//
-//                                document.getElementById("Settings").appendChild(element);
-//                            }
-//
-//                            document.getElementById("Settings").appendChild(document.createElement("br"));
-//                        }
-//                    break;
-//            }
+                            Options[resolution].push(json_obj.source[i]);
+                        }
+
+                        for(var option in Options) {
+                            option = Options[option];
+                            for (var i = 0; i < option.length; i++) {
+                                var element = document.createElement("input");
+                                //Assign different attributes to the element.
+                                element.type = "button";
+                                element.name = "button_" + (json_obj.source.length - 1).toString();  // And the name too?
+
+                                element.value = option[i].width.toString() +
+                                "x" + option[i].height.toString() +
+                                "   b:" + option[i].bitrate;
+
+                                element.setAttribute("width", option[i].width);
+                                element.setAttribute("height", option[i].height);
+                                element.setAttribute("bitrate", option[i].bitrate);
+
+                                element.onclick = function () { // Note this is a function
+                                    switchResolution(this.getAttribute("width"), this.getAttribute("height"), this.getAttribute("bitrate"));
+                                };
+
+                                document.getElementById("Settings").appendChild(element);
+                            }
+
+//                            element.outerHTML+="</br>"
+                            document.getElementById("Settings").appendChild(document.createElement("br"));
+                        }
+                    break;
+            }
         }
 
         function onerror(error){}
@@ -86,15 +80,15 @@
 
         function load()
         {
-            wsavc.connect("ws://54.200.169.163:50480");
+            wsavc.connect("ws://192.168.154.244:50480");
             wsavc.onwsopen = onopen;
             wsavc.onwsmessage = onwsmessage;
             wsavc.onwserror = onerror;
             wsavc.onwsclose = onclose;
 
-//            setInterval(function(){
-//                document.getElementById("Latency").innerHTML = "Latency =" + wsavc.Latency.toString() + " ms" ;
-//            }, 500);
+            setInterval(function(){
+                document.getElementById("Latency").innerHTML = "Latency =" + wsavc.Latency.toString() + " ms" ;
+            }, 500);
         }
 
     </script>
@@ -104,7 +98,7 @@
     <canvas id="ScreenCanvas"></canvas>
     <div id="Settings"></div>
 
-    <!--<div id="Latency"></div>-->
+    <div id="Latency"></div>
 
     <script type="text/javascript" src="main.js"></script>
 </body>
