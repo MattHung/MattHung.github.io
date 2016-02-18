@@ -4,11 +4,17 @@
 </head>
 <body onload="load()">
     <script type="text/javascript">
+        //        logger.swithLogger("panel");
         logger.disableLogger();
 
         var Options={};
 
-//        logger.swithLogger("panel");
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
 
         function switchResolution(w, h, b){
             var json_str = JSON.stringify({
@@ -21,7 +27,7 @@
         }
 
         function onopen(open){
-            switchResolution(640, 480, 2010);
+//            switchResolution(640, 480, 2010);
         }
 
         function onwsmessage(json_obj){

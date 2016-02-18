@@ -1,4 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+
 var kindOf = require('./kindOf');
 var isPlainObject = require('./isPlainObject');
 var mixIn = require('../object/mixIn');
@@ -2581,11 +2582,13 @@ module.exports = uClass;
 },{"mout/lang/createObject":2,"mout/lang/kindOf":7,"mout/object/hasOwn":10,"mout/object/merge":11,"mout/object/mixIn":12}],21:[function(require,module,exports){
 var WSAvcPlayer = require('../vendor');
 
+var canvas = document.createElement("canvas");
+canvas.id="ScreenCanvas";
 
-var canvas = document.getElementById("ScreenCanvas");
-
+document.body.appendChild(canvas);
 // Create h264 player
-var wsavc = new WSAvcPlayer(canvas, "webgl", 1, 35);
+//var wsavc = new WSAvcPlayer(canvas, "webgl", 1, 35);
+var wsavc = new WSAvcPlayer(canvas, "canvas", 1, 35);
 
 //for button callbacks
 window.wsavc = wsavc;
@@ -4114,7 +4117,6 @@ function assert(condition, message) {
   }
 }
 
-
 module.exports = assert;
 
 },{"./error":31}],31:[function(require,module,exports){
@@ -4278,7 +4280,6 @@ var WSAvcPlayer = new Class({
   Binds : ['onPictureDecodedWebGL', 'onPictureDecodedCanvas'],
 
   initialize : function(canvas, canvastype) {
-
     this.canvas     = canvas;
     this.canvastype = canvastype;
 
@@ -4297,6 +4298,8 @@ var WSAvcPlayer = new Class({
     this.rcvtime;
     this.prevframe;
 
+    //this.ThreadPool=new ThreadPool(THREAD_COUNT, 'dummyCallback.js');
+    //this.ThreadPool.init();
   },
 
   onPictureDecodedWebGL : function (buffer, width, height) {
@@ -4310,22 +4313,19 @@ var WSAvcPlayer = new Class({
     this.webGLCanvas.UTexture.fill(buffer.subarray(lumaSize, lumaSize + chromaSize));
     this.webGLCanvas.VTexture.fill(buffer.subarray(lumaSize + chromaSize, lumaSize + 2 * chromaSize));
     this.webGLCanvas.drawScene();
-    
-    //var date = new Date();
-    //console.log("WSAvcPlayer: Decode time: " + (date.getTime() - this.rcvtime) + " ms");
   },
 
   onPictureDecodedCanvas : function (buffer, width, height) {
-    if (!buffer) {
-      return;
-    }
+      if (!buffer)
+          return;
+
     var lumaSize = width * height;
     var chromaSize = lumaSize >> 2;
-    
+
     var ybuf = buffer.subarray(0, lumaSize);
     var ubuf = buffer.subarray(lumaSize, lumaSize + chromaSize);
     var vbuf = buffer.subarray(lumaSize + chromaSize, lumaSize + 2 * chromaSize);
-    
+
     for (var y = 0; y < height; y++) {
       for (var x = 0; x < width; x++) {
         var yIndex = x + y * width;
@@ -4334,7 +4334,7 @@ var WSAvcPlayer = new Class({
         var R = 1.164 * (ybuf[yIndex] - 16) + 1.596 * (vbuf[vIndex] - 128);
         var G = 1.164 * (ybuf[yIndex] - 16) - 0.813 * (vbuf[vIndex] - 128) - 0.391 * (ubuf[uIndex] - 128);
         var B = 1.164 * (ybuf[yIndex] - 16) + 2.018 * (ubuf[uIndex] - 128);
-        
+
         var rgbIndex = yIndex * 4;
         this.canvasBuffer.data[rgbIndex+0] = R;
         this.canvasBuffer.data[rgbIndex+1] = G;
@@ -4342,11 +4342,8 @@ var WSAvcPlayer = new Class({
         this.canvasBuffer.data[rgbIndex+3] = 0xff;
       }
     }
-    
+
     this.canvasCtx.putImageData(this.canvasBuffer, 0, 0);
-    
-    var date = new Date();
-    //console.log("WSAvcPlayer: Decode time: " + (date.getTime() - this.rcvtime) + " ms");
   },
 
 
@@ -4382,19 +4379,49 @@ var WSAvcPlayer = new Class({
 
   onwsclose:function(close){},
 
+  sleep:function(milliseconds) {
+      var start = new Date().getTime();
+      for (var i = 0; i < 1e7; i++) {
+          if ((new Date().getTime() - start) > milliseconds){
+             break;
+          }
+      }
+  },
+
+  process_message:function(evt)
+  {
+      wsavc.pktnum++;
+      var data = new Uint8Array(evt.data);
+      console.log("WSAvcPlayer: [Pkt " + this.pktnum + " (" + evt.data.byteLength + " bytes)]");
+      var date = new Date();
+      wsavc.rcvtime = date.getTime();
+      wsavc.decode(data);
+      wsavc.prevframe = data;
+  },
+
   send:function(text){
       if(this.ws.readyState != 1)
           return;
       this.ws.send(text);
   },
-
   connect : function(url) {
     // Websocket initialization
     if (this.ws != undefined) {
       this.ws.close();
       delete this.ws;
     }
-
+	
+	this.fps=0;
+  this.record_fps=0;
+	
+	setInterval(function(wsavcPlayer){
+		// console.info('fps: ' + String(wsavcPlayer.fps));
+    wsavcPlayer.record_fps=wsavcPlayer.fps;
+		wsavcPlayer.fps=0;		
+	}, 1000, this);
+    
+    this.RawFrames=[];
+    this.Tasks=[];
     this.ws = new WebSocket(url);
     this.ws.binaryType = "arraybuffer";
     this.ws.onopen = function() {
@@ -4404,12 +4431,14 @@ var WSAvcPlayer = new Class({
     this.ws.onerror = function(error){wsavc.onwserror(error)};
     this.ws.onclose = function(close){wsavc.onwsclose(close)};
     this.ws.onmessage = function(evt) {
+
       if(typeof evt.data == "string") {
           var json_obj = JSON.parse(evt.data);
 
           switch(json_obj.action){
               case "init":
                   this.Bitrate=json_obj.bitrate;
+                  this.Framerate=json_obj.framerate;
                   return this.cmd(json_obj);
               case "pong":
                   this.Latency = (new Date().getTime()) - this.lastSendPingTick;
@@ -4422,14 +4451,25 @@ var WSAvcPlayer = new Class({
           return;
       }
 
-      this.pktnum++;
-      var data = new Uint8Array(evt.data);
-      console.log("WSAvcPlayer: [Pkt " + this.pktnum + " (" + evt.data.byteLength + " bytes)]");
-      var date = new Date();
-      this.rcvtime = date.getTime();
-      this.decode(data);
-      this.prevframe = data;
+	    this.fps++;
+      
+      if(isIE) {
+          this.process_message(evt);
+          this.drawfps();
+          return;
+      }
+
+      this.RawFrames.push(new Task(this.process_message, evt, 0));
     }.bind(this);
+
+    this.drawfps=function()
+    {
+        var ctx = this.canvas.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("FPS: " + String(this.record_fps),10, 50);
+        ctx.fillText("Latency: " + String(this.Latency),10, 100);
+        ctx.fillText("Bitrate: " + String(this.Bitrate),10, 150);
+    };
 
     this.lastSendPingTick=0;
     this.Latency=0;
@@ -4442,6 +4482,36 @@ var WSAvcPlayer = new Class({
         wsavcPlayer.lastSendPingTick = new Date().getTime();
 
     }, 3000, this);
+
+    setInterval(function(wsavcPlayer)
+    {
+        var total =wsavcPlayer.RawFrames.length;
+
+        var interval = 1000.00 / total;
+
+        for(var i=0; i<total; i++){
+          var task = wsavcPlayer.RawFrames.shift();
+          task.delayTicks = i*interval;
+          task.executeTick = new Date().getTime() + task.delayTicks;
+          wsavcPlayer.Tasks.push(task);
+        }
+
+    }, 1000, this);
+
+    setInterval(function(wsavcPlayer)
+    {
+        var nowTime=new Date().getTime();
+        for(var i=wsavcPlayer.Tasks.length - 1; i>=0; i--)
+        {
+            if(nowTime > wsavcPlayer.Tasks[i].executeTick) {
+                var task = wsavcPlayer.Tasks[i];
+                task.callback(task.startMessage);
+                wsavcPlayer.drawfps();
+                wsavcPlayer.Tasks.splice(i, 1);                
+            }
+        }
+        
+    }, 10, this)
 
     this.ws.onclose = function()	{ 
       // websocket is closed.
@@ -4468,6 +4538,9 @@ var WSAvcPlayer = new Class({
       this.initCanvas(cmd.width, cmd.height);
       this.canvas.width  = cmd.width;
       this.canvas.height = cmd.height;
+
+      this.canvas.style.width = "80%";
+      this.canvas.style.height = "80%";
     }
   },
 
