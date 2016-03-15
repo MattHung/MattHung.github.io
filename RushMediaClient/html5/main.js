@@ -2587,8 +2587,13 @@ canvas.id="ScreenCanvas";
 
 document.body.appendChild(canvas);
 // Create h264 player
-//var wsavc = new WSAvcPlayer(canvas, "webgl", 1, 35);
-var wsavc = new WSAvcPlayer(canvas, "canvas", 1, 35);
+
+var RenderMode = "webgl";
+// var RenderMode = "canvas";
+var wsavc = new WSAvcPlayer(canvas, RenderMode, 1, 35);
+
+// var wsavc = new WSAvcPlayer(canvas, "webgl", 1, 35);
+// var wsavc = new WSAvcPlayer(canvas, "canvas", 1, 35);
 
 //for button callbacks
 window.wsavc = wsavc;
@@ -3921,7 +3926,8 @@ WebGLCanvas.prototype = {
   },
   onInitWebGL: function () {
     try {
-      this.gl = this.canvas.getContext("experimental-webgl");
+      // this.gl = this.canvas.getContext("experimental-webgl");
+      this.gl = this.canvas.getContext("webgl");
     } catch(e) {}
     
     if (!this.gl) {
@@ -4298,8 +4304,8 @@ var WSAvcPlayer = new Class({
     this.rcvtime;
     this.prevframe;
 
-    //this.ThreadPool=new ThreadPool(THREAD_COUNT, 'dummyCallback.js');
-    //this.ThreadPool.init();
+    this.ThreadPool=new ThreadPool(THREAD_COUNT, 'dummyCallback.js');
+    this.ThreadPool.init();
   },
 
   onPictureDecodedWebGL : function (buffer, width, height) {
@@ -4397,6 +4403,7 @@ var WSAvcPlayer = new Class({
       wsavc.rcvtime = date.getTime();
       wsavc.decode(data);
       wsavc.prevframe = data;
+      wsavc.drawfps();
   },
 
   send:function(text){
@@ -4459,16 +4466,35 @@ var WSAvcPlayer = new Class({
           return;
       }
 
-      this.RawFrames.push(new Task(this.process_message, evt, 0));
+	  this.ThreadPool.addTask(new Task(this.process_message, evt, 0));
+      //this.RawFrames.push(new Task(this.process_message, evt, 0));
     }.bind(this);
 
     this.drawfps=function()
     {
-        var ctx = this.canvas.getContext("2d");
-        ctx.font = "30px Arial";
-        ctx.fillText("FPS: " + String(this.record_fps),10, 50);
-        ctx.fillText("Latency: " + String(this.Latency),10, 100);
-        ctx.fillText("Bitrate: " + String(this.Bitrate),10, 150);
+      switch(wsavc.canvastype){
+        case "canvas":
+          var ctx = this.canvas.getContext("2d");
+          ctx.font = "30px Arial";
+          ctx.fillText("RenderMode: " + String(wsavc.canvastype),10, 50);
+          ctx.fillText("FPS: " + String(this.record_fps),10, 100);
+          ctx.fillText("Latency: " + String(this.Latency),10, 150);
+          ctx.fillText("Bitrate: " + String(this.Bitrate),10, 200);
+        break;
+
+        case "webgl":
+          // var ctx =  this.canvas.getContext("experimental-webgl").canvas.getContext("2d");;
+          // var ctx = this.canvas.getContext("webgl");
+          // ctx.font = "30px Arial";
+
+          // var cx = ctx.canvas.getContext("2d");
+          // ctx.canvas.fillText("RenderMode: " + String(wsavc.canvastype),10, 50);
+          // ctx.canvas.fillText("FPS: " + String(this.record_fps),10, 100);
+          // ctx.canvas.fillText("Latency: " + String(this.Latency),10, 150);
+          // ctx.canvas.fillText("Bitrate: " + String(this.Bitrate),10, 200);
+        break;
+      }
+        
     };
 
     this.lastSendPingTick=0;
@@ -4493,7 +4519,8 @@ var WSAvcPlayer = new Class({
           var task = wsavcPlayer.RawFrames.shift();
           task.delayTicks = i*interval;
           task.executeTick = new Date().getTime() + task.delayTicks;
-          wsavcPlayer.Tasks.push(task);
+          wsavcPlayer.ThreadPool.addTask(task);
+          // wsavcPlayer.Tasks.push(task);
         }
 
     }, 1000, this);
@@ -4505,8 +4532,7 @@ var WSAvcPlayer = new Class({
         {
             if(nowTime > wsavcPlayer.Tasks[i].executeTick) {
                 var task = wsavcPlayer.Tasks[i];
-                task.callback(task.startMessage);
-                wsavcPlayer.drawfps();
+                task.callback(task.startMessage);                
                 wsavcPlayer.Tasks.splice(i, 1);                
             }
         }

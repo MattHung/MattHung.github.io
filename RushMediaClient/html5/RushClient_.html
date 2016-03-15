@@ -31,9 +31,18 @@
             });
             wsavc.send(json_str);
         }
+		
+		function getConcurrentUser()
+		{
+			var json_str = JSON.stringify({
+					action: "get_concurent_user"
+				});
+            wsavc.send(json_str);
+		}
 
         function onopen(open){
             switchResolution(getParameterByName("width"), getParameterByName("height"), getParameterByName("bitrate"), getParameterByName("framerate"));
+			getConcurrentUser();
         }
 
         function onwsmessage(json_obj){
@@ -78,6 +87,9 @@
                            document.getElementById("Settings").appendChild(document.createElement("br"));
                        }
                    break;
+				 case "concurent_user":
+					var concurent_user = json_obj.value;
+					break;
            }
         }
 
@@ -88,7 +100,7 @@
         function load()
         {
 //            wsavc.connect("ws://103.224.71.111:50480");
-			wsavc.connect("ws://127.0.0.1:50480");
+			wsavc.connect("ws://192.168.164.234:50480");
 
             wsavc.onwsopen = onopen;
             wsavc.onwsmessage = onwsmessage;
