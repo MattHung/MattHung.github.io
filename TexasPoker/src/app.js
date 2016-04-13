@@ -49,7 +49,7 @@ LoginLayer=gameLayer.extend({
 
         this.registerMouseEvent(this.getNode("Guest"),
             function(node, mouseHitPoint){
-                PokerManager.getInstance().connect("ws://192.168.164.234:61230",
+                PokerManager.getInstance().connect("ws://54.200.169.163:61230",
                     function() {
                         //gameID, sessionID, platForm, subsidiaryID, subsidiaryAccount, subsidiaryUserID, browser, osType)
                         pokerPeer.getInstance().requestLogin("2", "1234qwer", 4, 0, "test001", 3345678, "", "");
