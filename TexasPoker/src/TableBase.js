@@ -124,6 +124,9 @@ TableBase=gameLayer.extend({
     },
 
     giveWinnings:function(PotNum, SeatID, Bonus){
+        var destination = this.getPlayer(SeatID).node.bet_chips.convertToWorldSpace(new cc.Point(0, 0));
+        this.UIPanel_Table.showWinningsAnim(PotNum, destination);
+
         this.doAction(SeatID, null, Bonus, null, null);
     },
 

@@ -132,6 +132,7 @@ Panel_Players = gameLayer.extend({
         this.node_players[seatID].properties.alias = alias;
         this.node_players[seatID].properties.chips = 0;
         this.node_players[seatID].properties.bet = 0;
+        this.node_players[seatID].properties.node = this.node_players[seatID];
     },
     removePlayer:function(seatID, playerID){
         if(seatID ==0)
@@ -154,7 +155,7 @@ Panel_Players = gameLayer.extend({
 
         var percent = (this.node_players[seatID].progressTimer.currentSec / this.node_players[seatID].progressTimer.totalSec)*100;
 
-        this.node_players[seatID].progressTimer.setPercentage()
+        this.node_players[seatID].progressTimer.setPercentage(percent);
 
         //count event secs
         cc.director.getScheduler().schedule(
@@ -447,6 +448,18 @@ Panel_Table = gameLayer.extend({
         return parent_node;
     },
 
+    showWinningsAnim:function(PotNum, destination){
+        var action = new cc.Sequence(
+            new cc.MoveTo(0.2, destination),
+            new cc.MoveTo(0.1, destination),
+            new cc.CallFunc(function(){
+                this.setVisible(false);
+            }.bind(this.pools[PotNum].node))
+        );
+
+        this.pools[PotNum].node.runAction(action);
+    },
+
     addPublicCard:function(order, cardNum){
         var cardNode = PokerCards.getInstance().popCard(cardNum);
         this.publicCards[order].node.setTexture(cardNode.getTexture());
@@ -457,6 +470,7 @@ Panel_Table = gameLayer.extend({
         var node = this.getChipStack(value);
         node.setPosition(this.pools[poolID].position);
         this.pools[poolID].parent.addChild(node);
+        this.pools[poolID].node = node;
     },
 
     clearPool:function(){

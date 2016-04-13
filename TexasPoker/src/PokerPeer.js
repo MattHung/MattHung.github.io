@@ -274,6 +274,8 @@ pokerPeer = CocosWidget.SocketPeer.extend({
         //7 : 回合開始 : 桌次種類(1) + 桌次編號(4)
         var TableType = ProtocolBuilder.Decode_ToByte(Message);
         var TableNo = ProtocolBuilder.Decode_ToInt(Message);
+
+        PokerManager.getInstance().roundOver();
     },
     _recv_8:function(Message){
         //8 : 盲注位置 : 莊家位置(1) + 大盲位置(1) +小盲位置(1)
@@ -359,8 +361,6 @@ pokerPeer = CocosWidget.SocketPeer.extend({
             var Bonus = ProtocolBuilder.Decode_ToInt(Message);
             PokerManager.getInstance().giveWinnings(PotNum, SeatID, Bonus);
         }
-
-        PokerManager.getInstance().roundOver();
     },
     _recv_16:function(Message){
         //16 : 玩家離座 : 座位編號(1) + 玩家ID(4))
