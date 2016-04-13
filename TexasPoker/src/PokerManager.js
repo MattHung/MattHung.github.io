@@ -10,7 +10,7 @@ BetActoin ={
 };
 
 PokerManager = function(){
-    this.FADEIN_SECS = 0.2;
+    this.FADEIN_SECS = 3;
     this.callback_onCreateTable =null;
     this.currentTableType = 1; // normal table
     this.currentTable = null;
