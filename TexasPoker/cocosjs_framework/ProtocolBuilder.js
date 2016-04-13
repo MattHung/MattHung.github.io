@@ -171,6 +171,13 @@ MemoryStream=function(){
     }.bind(this);
 };
 
+Uint8Array.prototype.slice = function(start, end){
+    var result = Array.from(this);
+
+    result = result.slice(start, end);
+    return result;
+};
+
 ProtocolBuilder = (function(){
     this._parser = new BinaryParser(false, true);
 
