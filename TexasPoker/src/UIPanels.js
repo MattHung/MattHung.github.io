@@ -152,6 +152,10 @@ Panel_Players = gameLayer.extend({
         this.node_players[seatID].progressTimer.currentSec = remainSecs / 1000;
         this.node_players[seatID].progressTimer.totalSec = remainSecs / 1000;
 
+        var percent = (this.node_players[seatID].progressTimer.currentSec / this.node_players[seatID].progressTimer.totalSec)*100;
+
+        this.node_players[seatID].progressTimer.setPercentage()
+
         //count event secs
         cc.director.getScheduler().schedule(
             function(){
