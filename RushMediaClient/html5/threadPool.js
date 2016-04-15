@@ -60,9 +60,9 @@ function Thread(threadPool, script){
         var task = _this.threadPool.getTask();
 
         if (task != null) {
-            console.log("before dummyCallback");
-            task.callback(task.startMessage);
-            console.log("after dummyCallback");
+            // console.log("before dummyCallback");
+            task.callback.apply(task.target, [task.startMessage]);
+            // console.log("after dummyCallback");
         }
     }
 }

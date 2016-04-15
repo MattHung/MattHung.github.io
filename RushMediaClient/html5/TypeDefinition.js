@@ -1,7 +1,8 @@
 /**
  * Created by matt1201 on 2016/1/21.
  */
-function Task(callback, msg, delayTicks) {
+function Task(callback, msg, delayTicks, target) {
+	this.target = target;
     this.executeTick=new Date().getTime() + (delayTicks==undefined ? 0:delayTicks);
     this.callback = callback;
     this.startMessage = msg;
