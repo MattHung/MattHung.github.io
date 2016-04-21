@@ -34,11 +34,11 @@ RushMedia=function(){
         var ua = navigator.userAgent;
 
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile/i.test(ua))
-            switchResolution(camera_id, 480, 272, 350, 15);
+            switchResolution(camera_id, 482, 272, 350, 15);
         else if (/Chrome/i.test(ua))
-            switchResolution(camera_id, 640, 360, 500, 15);
+            switchResolution(camera_id, 1136, 640, 600, 15);
         else
-            switchResolution(camera_id, 1136, 640, 700, 15);
+            switchResolution(camera_id, 1136, 640, 600, 15);
     }
 
     function onwsmessage(json_obj){
@@ -86,10 +86,12 @@ RushMedia=function(){
         }
     }
 
-    function onerror(error){}
+    function onerror(error){
+        logger.logger(error);
+    }
 
     function onclose(close){
-
+        logger.logger("close");
     }
 
     function loadVideo()
