@@ -3,18 +3,12 @@ const THREAD_COUNT = 3;
 var desigenedWidth =960;
 var desigenedHeight =540;
 
-var canvas = document.createElement('canvas');
-var ctx = canvas.getContext("2d");
+WSAvcPlayer = function(){
+  this.canvas = document.createElement('canvas');
+  this.canvas.id = "ScreenCanvas";
+  this.ctx = this.canvas.getContext("2d");
+  document.body.appendChild(this.canvas);
 
-var renderCanvas = document.createElement('canvas');
-var renderCtx = renderCanvas.getContext("2d");
-renderCanvas.id = "b";
-renderCanvas.width=desigenedWidth;
-renderCanvas.height=desigenedHeight;
-
-document.body.appendChild(renderCanvas);
-
-WSAvcPlayer = function(){  
   this.decoder = new Decoder(false);
   this.lastSendPingTick=0;
   this.Latency=0;
@@ -35,9 +29,7 @@ WSAvcPlayer = function(){
 
   setInterval(function(){    
     this.record_fps=this.fps;
-    this.fps=0;    
-
-    console.log(this.record_fps);
+    this.fps=0;
   }.bind(this), 1000);
 
   this.sendPing=function(wsavcPlayer){
@@ -52,12 +44,12 @@ WSAvcPlayer = function(){
       wsavcPlayer.ws.send(JSON.stringify({action:"calibrate_tick"}));
   };
 
-  this.decoder.drawfps=function()
+  this.drawfps=function()
   {      
-      ctx.font = "30px Arial";
-      ctx.fillText("FPS: " + String(this.record_fps),10, 50);
-      ctx.fillText("Latency: " + String(this.Latency),10, 100);
-      ctx.fillText("Bitrate: " + String(this.Bitrate),10, 150);
+      this.ctx.font = "30px Arial";
+      this.ctx.fillText("FPS: " + String(this.record_fps),10, 50);
+      this.ctx.fillText("Latency: " + String(this.Latency),10, 100);
+      this.ctx.fillText("Bitrate: " + String(this.Bitrate),10, 150);
   }.bind(this);
 
   this.decoder.onPictureDecoded = function(buffer, width, height, infos){
@@ -68,7 +60,7 @@ WSAvcPlayer = function(){
     var ubuf = buffer.subarray(lumaSize, lumaSize + chromaSize);
     var vbuf = buffer.subarray(lumaSize + chromaSize, lumaSize + 2 * chromaSize);
 
-    this.canvasBuffer = ctx.createImageData(width , height);
+    this.decoder.canvasBuffer = this.ctx.createImageData(width , height);
     for (var y = 0; y < height; y++) {
       for (var x = 0; x < width; x++) {
         var yIndex = x + y * width;
@@ -80,26 +72,39 @@ WSAvcPlayer = function(){
 
         var rgbIndex = yIndex * 4;
 
-        this.canvasBuffer.data[rgbIndex+0] = R + -1;
-        this.canvasBuffer.data[rgbIndex+1] = G + 3;
-        this.canvasBuffer.data[rgbIndex+2] = B + 1;
-        this.canvasBuffer.data[rgbIndex+3] = 0xff;
+        this.decoder.canvasBuffer.data[rgbIndex+0] = R + -1;
+        this.decoder.canvasBuffer.data[rgbIndex+1] = G + 3;
+        this.decoder.canvasBuffer.data[rgbIndex+2] = B + 1;
+        this.decoder.canvasBuffer.data[rgbIndex+3] = 0xff;
 
-        if(this.enableColorParam){
-          this.canvasBuffer.data[rgbIndex+0] += colorParam_R;
-          this.canvasBuffer.data[rgbIndex+1] += colorParam_G;
-          this.canvasBuffer.data[rgbIndex+2] += colorParam_B;
-          this.canvasBuffer.data[rgbIndex+3] += colorParam_A;
+        if(this.decoder.enableColorParam){
+          this.decoder.canvasBuffer.data[rgbIndex+0] += colorParam_R;
+          this.decoder.canvasBuffer.data[rgbIndex+1] += colorParam_G;
+          this.decoder.canvasBuffer.data[rgbIndex+2] += colorParam_B;
+          this.decoder.canvasBuffer.data[rgbIndex+3] += colorParam_A;
         }
       }
     }
 
-    ctx.putImageData(this.canvasBuffer, 0, 0);
+    this.ctx.putImageData(this.decoder.canvasBuffer, 0, 0);
 
     this.drawfps();
 
-    renderCtx.drawImage(canvas, 0, 0, width, height, 0, 0, desigenedWidth, desigenedHeight);
-  };
+    if(this.RenderingCallback){
+        this.RenderingCallback(this.canvas, width, height, this.canvasBuffer);
+        return;
+    }
+  }.bind(this);
+
+  // function(width, height, canvasBuffer)
+  this.setRenderCallback = function(callback_fun){
+    this.RenderingCallback=callback_fun;
+  }.bind(this);
+
+  // function(w, h, b, f)
+  this.setSwitchChannelCallback = function(callback_fun){
+    this.SwitchChannelCallback=callback_fun;
+  }.bind(this);
 
   this.getTimeStamp = function(data){
     var value =0;
@@ -129,14 +134,13 @@ WSAvcPlayer = function(){
                   this.Bitrate=json_obj.bitrate;
                   this.Framerate=json_obj.framerate;
 
-                  canvas.width  = json_obj.width;
-                  canvas.height = json_obj.height;
+                  this.canvas.width  = json_obj.width;
+                  this.canvas.height = json_obj.height;
 
-                  // canvas.style.width = "80%";
-                  // canvas.style.height = "80%";
+                  if(this.SwitchChannelCallback)
+                    this.SwitchChannelCallback(json_obj.width, json_obj.height, this.Bitrate, this.Framerate);
 
                   return;
-                  // return this.cmd(json_obj);
               case "pong":
                   this.Latency = (new Date().getTime()) - this.lastSendPingTick;
                   break;

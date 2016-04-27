@@ -18,10 +18,11 @@
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
 
-        function switchResolution(w, h, b, f){
-            var json_str = JSON.stringify({
-                action: "switch_chanel",
-                width: w,
+    function switchResolution(camera_id, w, h, b, f){
+        var json_str = JSON.stringify({
+            action: "switch_chanel",     
+            camera_id:camera_id,       
+            width: w,
                 height: h,
                 bitrate: b,
                 framerate: f
@@ -33,32 +34,49 @@
             switchResolution(getParameterByName("width"), getParameterByName("height"), getParameterByName("bitrate"), getParameterByName("framerate"));
         }
 
+        function compareID(element1, element2)
+        {
+          if(element1.camera_id!=element2.camera_id)
+            return element1.camera_id - element2.camera_id;
+          if(element1.width != element2.width)
+            return element1.width - element2.width;
+          return element1.bitrate - element2.bitrate;
+        }
+
         function onwsmessage(json_obj){
 
            switch(json_obj.action){
                case "source_list":
                        for(var i=0; i<json_obj.source.length; i++) {
-                           var resolution=json_obj.source[i].width.toString() + "x" + json_obj.source[i].height.toString();
-                           var option = Options[resolution];
+                           // var id=json_obj.source[i].camera_id.toString() + "@" +json_obj.source[i].width.toString() + "x" + json_obj.source[i].height.toString();
+                           var id=json_obj.source[i].camera_id.toString();
+                           var option = Options[id];
                            if(option==undefined) {
-                               Options[resolution] = [];
-                               option = Options[resolution];
+                               Options[id] = [];                               
+                               option = Options[id];
                            }
 
-                           Options[resolution].push(json_obj.source[i]);
+                           Options[id].push(json_obj.source[i]);
                        }
+
+                       // Options.sort(compareID);
 
                        for(var option in Options) {
                            option = Options[option];
+                           option.sort(compareID);
+
                            for (var i = 0; i < option.length; i++) {
                                var element = document.createElement("input");
                                //Assign different attributes to the element.
                                element.type = "button";
                                element.name = "button_" + (json_obj.source.length - 1).toString();  // And the name too?
 
-                               element.value = option[i].width.toString() +
-                               "x" + option[i].height.toString() +
-                               "   b:" + option[i].bitrate + " fr:" + option[i].framerate;
+                               element.value = option[i].camera_id.toString() +
+                                 "@"  +option[i].width.toString() +
+                                 "x" + option[i].height.toString() +
+                                 "   b:" + option[i].bitrate + " fr:" + option[i].framerate;
+
+                               element.setAttribute("camera_id", option[i].camera_id);
 
                                element.setAttribute("width", option[i].width);
                                element.setAttribute("height", option[i].height);
@@ -66,7 +84,8 @@
                                element.setAttribute("framerate", option[i].framerate);
 
                                element.onclick = function () { // Note this is a function
-                                   switchResolution(this.getAttribute("width"), this.getAttribute("height"), this.getAttribute("bitrate"), this.getAttribute("framerate"));
+                                   switchResolution(this.getAttribute("camera_id"), this.getAttribute("width"),
+                                   this.getAttribute("height"), this.getAttribute("bitrate"), this.getAttribute("framerate"));
                                };
 
                                document.getElementById("Settings").appendChild(element);
