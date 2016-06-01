@@ -1,4 +1,4 @@
-var camera_id =1;
+var camera_id =10008;
 
 RushMedia=function(){
     logger.disableLogger();
