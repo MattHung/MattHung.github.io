@@ -12,7 +12,7 @@
     "modules" : ["cocos2d", "cocostudio"],
 
     "jsList" : [
-        "cocosjs_framework/.h.js",
+        "cocosjs_framework/header.js",
         "cocosjs_framework/widget.js",
         "cocosjs_framework/utility.js",
         "cocosjs_framework/Canvas2Image.js",
