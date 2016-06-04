@@ -43,7 +43,7 @@ var HelloWorldLayer = cc.Layer.extend({
     init_video_0 : function(view){
         var video_source_0 = new RushMedia("video_0");
         var videoImageDraw = new CocosWidget.DrawNode();
-        var closeImageDraw = new CocosWidget.DrawNode();
+        // var closeImageDraw = new CocosWidget.DrawNode();
         
         video_source_0.loadVideo("ws://111.235.135.80:50480");
         video_source_0.setVisible(false);
@@ -53,7 +53,7 @@ var HelloWorldLayer = cc.Layer.extend({
                     // videoImageDraw.updateCanvasSource(sourceCanvas, 1280, 720, 580, 360);
                     // closeImageDraw.updateCanvasSource(sourceCanvas, 600, 200, 640, 360, 400, 150);
                     videoImageDraw.updateCanvasSource(sourceCanvas, 580, 360, 580, 360);                    
-                    closeImageDraw.updateCanvasSource(sourceCanvas, 350, 100, 640, 360, 175, 200);
+                    // closeImageDraw.updateCanvasSource(sourceCanvas, 350, 100, 640, 360, 175, 200);
                 }, 
                 function(w, h, b, f){        
                 
@@ -81,52 +81,52 @@ var HelloWorldLayer = cc.Layer.extend({
         videoImageDraw.setPosition(cc.p(635, 710));
         view.addChild(videoImageDraw, -1); 
 
-        closeImageDraw.updateCanvasSource(video_source_0.getCanvas());
+        // closeImageDraw.updateCanvasSource(video_source_0.getCanvas());
+        // closeImageDraw.setPosition(cc.p(1230, 710));
+        // view.addChild(closeImageDraw, -1); 
+    },
+    init_video_1 : function(view){
+        var video_source_1 = new RushMedia("video_1");
+        var closeImageDraw = new CocosWidget.DrawNode();
+        
+        video_source_1.loadVideo("ws://111.235.135.80:50480");
+        video_source_1.setVisible(false);
+        video_source_1.showStreamingInfo(false);
+        video_source_1.setCallback(
+                function(sourceCanvas, width, height, canvasBuffer){                    
+                    // closeImageDraw.updateCanvasSource(sourceCanvas, 300, 100, 580, 0, 175, 150);
+                    closeImageDraw.updateCanvasSource(sourceCanvas, 320, 240, 580, 360);
+                }, 
+                function(w, h, b, f){        
+                
+                },
+                function(message){
+            
+                }
+            );
+
+        video_source_1.setNetworkEvent(
+            function(open){
+                console.log("open");
+                video_source_1.switchChanel(10006, 320, 240, 280, 15);
+            }.bind(this),
+            function(error){
+                console.log("error");
+            }.bind(this),
+            function(close){
+                console.log("close");
+            }.bind(this)
+        );
+        
+        closeImageDraw.updateCanvasSource(video_source_1.getCanvas());
         closeImageDraw.setPosition(cc.p(1230, 710));
         view.addChild(closeImageDraw, -1); 
     },
-    // init_video_1 : function(view){
-    //     var video_source_1 = new RushMedia("video_1");
-    //     var closeImageDraw = new CocosWidget.DrawNode();
-        
-    //     video_source_1.loadVideo("ws://111.235.135.80:50480");
-    //     video_source_1.setVisible(false);
-    //     video_source_1.showStreamingInfo(true);
-    //     video_source_1.setCallback(
-    //             function(sourceCanvas, width, height, canvasBuffer){                    
-    //                 // closeImageDraw.updateCanvasSource(sourceCanvas, 300, 100, 580, 360, 175, 150);
-    //                 closeImageDraw.updateCanvasSource(sourceCanvas, 300, 100, 640, 360, 175, 100);
-    //             }, 
-    //             function(w, h, b, f){        
-                
-    //             },
-    //             function(message){
-            
-    //             }
-    //         );
-
-    //     video_source_1.setNetworkEvent(
-    //         function(open){
-    //             console.log("open");
-    //             video_source_1.switchChanel(10006, 482, 272, 350, 15);
-    //         }.bind(this),
-    //         function(error){
-    //             console.log("error");
-    //         }.bind(this),
-    //         function(close){
-    //             console.log("close");
-    //         }.bind(this)
-    //     );
-        
-    //     closeImageDraw.updateCanvasSource(video_source_1.getCanvas());
-    //     closeImageDraw.setPosition(cc.p(1230, 710));
-    //     view.addChild(closeImageDraw, -1); 
-    // },
 
     onInitRushVideo: function(view)
     {
         this.init_video_0(view);
-        // this.init_video_1(view);
+        this.init_video_1(view);
     },  
 
     initMediaData: function () {
