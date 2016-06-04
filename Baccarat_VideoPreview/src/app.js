@@ -95,7 +95,7 @@ var HelloWorldLayer = cc.Layer.extend({
         video_source_1.setCallback(
                 function(sourceCanvas, width, height, canvasBuffer){                    
                     // closeImageDraw.updateCanvasSource(sourceCanvas, 300, 100, 580, 0, 175, 150);
-                    closeImageDraw.updateCanvasSource(sourceCanvas, 320, 240, 580, 360);
+                    closeImageDraw.updateCanvasSource(sourceCanvas, 580, 360, 580, 360);
                 }, 
                 function(w, h, b, f){        
                 
@@ -108,7 +108,7 @@ var HelloWorldLayer = cc.Layer.extend({
         video_source_1.setNetworkEvent(
             function(open){
                 console.log("open");
-                video_source_1.switchChanel(10006, 320, 240, 280, 15);
+                video_source_1.switchChanel(10006, 580, 360, 280, 15);
             }.bind(this),
             function(error){
                 console.log("error");
