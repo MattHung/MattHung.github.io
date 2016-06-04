@@ -95,7 +95,7 @@ var HelloWorldLayer = cc.Layer.extend({
         video_source_1.setCallback(
                 function(sourceCanvas, width, height, canvasBuffer){                    
                     // closeImageDraw.updateCanvasSource(sourceCanvas, 300, 100, 580, 0, 175, 150);
-                    closeImageDraw.updateCanvasSource(sourceCanvas, 580, 360, 580, 360);
+                    closeImageDraw.updateCanvasSource(sourceCanvas, 580, 360, 520, 360);
                 }, 
                 function(w, h, b, f){        
                 
