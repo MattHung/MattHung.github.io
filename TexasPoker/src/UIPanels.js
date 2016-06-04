@@ -450,8 +450,8 @@ Panel_Table = gameLayer.extend({
 
     showWinningsAnim:function(PotNum, destination){
         var action = new cc.Sequence(
-            new cc.MoveTo(0.2, destination),
-            new cc.MoveTo(0.1, destination),
+            new cc.MoveTo(0.5, destination),
+            new cc.MoveTo(0.3, destination),
             new cc.CallFunc(function(){
                 this.setVisible(false);
             }.bind(this.pools[PotNum].node))
