@@ -52,7 +52,7 @@ var HelloWorldLayer = cc.Layer.extend({
                 function(sourceCanvas, width, height, canvasBuffer){                    
                     // videoImageDraw.updateCanvasSource(sourceCanvas, 1280, 720, 580, 360);
                     // closeImageDraw.updateCanvasSource(sourceCanvas, 600, 200, 640, 360, 400, 150);
-                    videoImageDraw.updateCanvasSource(sourceCanvas, 580, 360, 580, 360);                    
+                    videoImageDraw.updateCanvasSource(sourceCanvas, 640, 360, 505, 360);                    
                     // closeImageDraw.updateCanvasSource(sourceCanvas, 350, 100, 640, 360, 175, 200);
                 }, 
                 function(w, h, b, f){        
@@ -78,7 +78,8 @@ var HelloWorldLayer = cc.Layer.extend({
         );
         
         videoImageDraw.updateCanvasSource(video_source_0.getCanvas());
-        videoImageDraw.setPosition(cc.p(635, 710));
+        // videoImageDraw.setPosition(cc.p(635, 710));
+        videoImageDraw.setPosition(cc.p(710, 710));
         view.addChild(videoImageDraw, -1); 
 
         // closeImageDraw.updateCanvasSource(video_source_0.getCanvas());
