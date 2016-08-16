@@ -1,0 +1,26 @@
+sprite_small.png
+size: 108, 36
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Btn_Small [www.imagesplitter.net]-0-0.jpeg
+  rotate: false
+  xy: 0, 0
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+Btn_Small [www.imagesplitter.net]-1-0.jpeg
+  rotate: false
+  xy: 36, 0
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+Btn_Small [www.imagesplitter.net]-2-0.jpeg
+  rotate: false
+  xy: 72, 0
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
