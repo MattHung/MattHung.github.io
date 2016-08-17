@@ -1,0 +1,55 @@
+
+sheepPack.png
+size: 256,32
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sheep0001
+  rotate: false
+  xy: 2, 2
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+sheep0002
+  rotate: false
+  xy: 36, 2
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+sheep0003
+  rotate: false
+  xy: 70, 2
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+sheep0004
+  rotate: false
+  xy: 104, 2
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+sheep0005
+  rotate: false
+  xy: 138, 2
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+sheep0006
+  rotate: false
+  xy: 172, 2
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+sheep0007
+  rotate: false
+  xy: 206, 2
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
