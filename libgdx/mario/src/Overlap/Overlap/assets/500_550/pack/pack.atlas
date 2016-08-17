@@ -1,0 +1,328 @@
+
+pack.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BGSmallMary
+  rotate: false
+  xy: 2, 111
+  size: 130, 143
+  orig: 130, 143
+  offset: 0, 0
+  index: -1
+BtnBig
+  rotate: false
+  xy: 2, 59
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit01
+  rotate: false
+  xy: 134, 214
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit02
+  rotate: false
+  xy: 2, 29
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit03
+  rotate: false
+  xy: 13, 59
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit04
+  rotate: false
+  xy: 134, 184
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit05
+  rotate: false
+  xy: 145, 214
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit06
+  rotate: false
+  xy: 13, 29
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit07
+  rotate: false
+  xy: 24, 59
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit08
+  rotate: false
+  xy: 134, 154
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnFruit09
+  rotate: false
+  xy: 145, 184
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+BtnSmall
+  rotate: false
+  xy: 156, 214
+  size: 9, 28
+  orig: 9, 28
+  offset: 0, 0
+  index: -1
+CCGradePrize
+  rotate: false
+  xy: 35, 64
+  size: 17, 5
+  orig: 17, 5
+  offset: 0, 0
+  index: -1
+CCMaryPrize
+  rotate: false
+  xy: 134, 115
+  size: 13, 4
+  orig: 13, 4
+  offset: 0, 0
+  index: -1
+FrameMoneyEdit
+  rotate: false
+  xy: 2, 89
+  size: 36, 7
+  orig: 36, 7
+  offset: 0, 0
+  index: -1
+FrameMoneyEdit2
+  rotate: false
+  xy: 40, 89
+  size: 27, 7
+  orig: 27, 7
+  offset: 0, 0
+  index: -1
+FrameMoneyEdit3
+  rotate: false
+  xy: 84, 102
+  size: 36, 7
+  orig: 36, 7
+  offset: 0, 0
+  index: -1
+IcoFruit01
+  rotate: false
+  xy: 134, 121
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit02
+  rotate: false
+  xy: 156, 199
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit03
+  rotate: false
+  xy: 156, 184
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit04
+  rotate: false
+  xy: 145, 169
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit05
+  rotate: false
+  xy: 145, 154
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit06
+  rotate: false
+  xy: 146, 139
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit07
+  rotate: false
+  xy: 160, 169
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit08
+  rotate: false
+  xy: 160, 154
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit09
+  rotate: false
+  xy: 161, 139
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit10
+  rotate: false
+  xy: 149, 124
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit11
+  rotate: false
+  xy: 164, 124
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoFruit12
+  rotate: false
+  xy: 59, 74
+  size: 13, 13
+  orig: 13, 13
+  offset: 0, 0
+  index: -1
+IcoLight
+  rotate: false
+  xy: 2, 2
+  size: 3, 6
+  orig: 3, 6
+  offset: 0, 0
+  index: -1
+NumberBU
+  rotate: false
+  xy: 134, 250
+  size: 41, 4
+  orig: 41, 4
+  offset: 0, 0
+  index: -1
+NumberBU [www.imagesplitter.net]-0-0
+  rotate: false
+  xy: 35, 59
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+NumberBU [www.imagesplitter.net]-0-1
+  rotate: false
+  xy: 15, 24
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+NumberBU [www.imagesplitter.net]-0-2
+  rotate: false
+  xy: 24, 36
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+NumberBU [www.imagesplitter.net]-0-3
+  rotate: false
+  xy: 167, 239
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+NumberBU [www.imagesplitter.net]-0-4
+  rotate: false
+  xy: 149, 119
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+NumberBU [www.imagesplitter.net]-0-5
+  rotate: false
+  xy: 177, 251
+  size: 4, 3
+  orig: 4, 3
+  offset: 0, 0
+  index: -1
+NumberELE
+  rotate: false
+  xy: 134, 244
+  size: 39, 4
+  orig: 39, 4
+  offset: 0, 0
+  index: -1
+NumberELEzero
+  rotate: false
+  xy: 2, 10
+  size: 11, 17
+  orig: 11, 17
+  offset: 0, 0
+  index: -1
+NumberMY
+  rotate: false
+  xy: 2, 98
+  size: 80, 11
+  orig: 80, 11
+  offset: 0, 0
+  index: -1
+btnClear
+  rotate: false
+  xy: 35, 71
+  size: 10, 16
+  orig: 10, 16
+  offset: 0, 0
+  index: -1
+btnGetGrade
+  rotate: false
+  xy: 47, 71
+  size: 10, 16
+  orig: 10, 16
+  offset: 0, 0
+  index: -1
+btnLeave
+  rotate: false
+  xy: 24, 41
+  size: 10, 16
+  orig: 10, 16
+  offset: 0, 0
+  index: -1
+btnStart
+  rotate: false
+  xy: 134, 136
+  size: 10, 16
+  orig: 10, 16
+  offset: 0, 0
+  index: -1
+iconMoney
+  rotate: false
+  xy: 122, 104
+  size: 6, 5
+  orig: 6, 5
+  offset: 0, 0
+  index: -1
+lightbg
+  rotate: false
+  xy: 54, 66
+  size: 3, 3
+  orig: 3, 3
+  offset: 0, 0
+  index: -1
