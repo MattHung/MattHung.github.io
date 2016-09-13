@@ -49,10 +49,10 @@ LoginLayer=gameLayer.extend({
 
         this.registerMouseEvent(this.getNode("Guest"),
             function(node, mouseHitPoint){
-                PokerManager.getInstance().connect("ws://54.213.41.88:61230",
+                PokerManager.getInstance().connect("ws:/220.134.243.106:61230",
                     function() {
                         //gameID, sessionID, platForm, subsidiaryID, subsidiaryAccount, subsidiaryUserID, browser, osType)
-                        pokerPeer.getInstance().requestLogin("2", "1234qwer", 4, 0, "test001", 3345678, "", "");
+                        pokerPeer.getInstance().requestLogin("2", "robot", 4, 0, "play02", 148499947, "", "");
                     },
 
                     function() {
@@ -102,7 +102,7 @@ LobbyLayer=gameLayer.extend({
 
                         //1:要求入桌 : 桌次種類(1) + 桌次編號(4)
                         var Message = new MemoryStream();
-                        ProtocolBuilder.Encode_FromByte(Message, this.currentTableType);
+                        ProtocolBuilder.Encode_FromByte(Message, PokerManager.getInstance().currentTableType);
                         ProtocolBuilder.Encode_FromInt(Message, tableID);
                         pokerPeer.getInstance().sendMessage(1, Message);
                     });

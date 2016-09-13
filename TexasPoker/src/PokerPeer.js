@@ -12,7 +12,7 @@ pokerPeer = CocosWidget.SocketPeer.extend({
     AccountSave:{},
 
     getPlayerID:function(){
-        return this.AccountSave.Save.RoleID;
+        return this.AccountSave.UserID;
     },
 
     getConnected:function(){
@@ -28,10 +28,10 @@ pokerPeer = CocosWidget.SocketPeer.extend({
         //    1:要求登入: GameID(e) +SessionID(s) + Platform(1) + subsidiaryID(4) + subsidiaryAccount(s) + subsidiaryRoleID(4) + Browser(s) + OSType(s)
 
         var msg = new MemoryStream();
-        ProtocolBuilder.Encode_FromByte(msg, 0);
+        ProtocolBuilder.Encode_FromInt(msg, 0);
         ProtocolBuilder.Encode_FromByte(msg, 1);
 
-        ProtocolBuilder.Encode_FromEnum(msg, gameID);
+        ProtocolBuilder.Encode_FromInt(msg, gameID);
         ProtocolBuilder.Encode_FromString(msg, sessionID);
         ProtocolBuilder.Encode_FromByte(msg, platForm);
 
@@ -47,7 +47,7 @@ pokerPeer = CocosWidget.SocketPeer.extend({
             var msg = new MemoryStream();
             msg.initialBuffer(new Uint8Array(evt.data));
 
-            var header = ProtocolBuilder.Decode_ToByte(msg);
+            var header = ProtocolBuilder.Decode_ToInt(msg);
 
             if(header==0){
                 this.systemReceive(msg);
@@ -70,7 +70,7 @@ pokerPeer = CocosWidget.SocketPeer.extend({
         if(!this.getConnected())
             return;
         var response = new MemoryStream();
-        ProtocolBuilder.Encode_FromByte(response, headNO);
+        ProtocolBuilder.Encode_FromInt(response, headNO);
         response.concatenate(msg.getData());
         this.sendBinary(response);
     },
