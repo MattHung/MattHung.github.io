@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>config editor</title>
+
+<script src="jquery-2.2.4.min.js"></script>
+<script src="bootstrap-3.3.6-dist\js\bootstrap.min.js"></script>
+<script src="json-to-table.js"></script>
+
+<link rel="stylesheet" href="bootstrap-3.3.6-dist\css\bootstrap.min.css" >
+
+<script>
+	function getQueryVariable(variable) {
+	  var query = window.location.search.substring(1);
+	  var vars = query.split("&");
+	  for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");
+		if (pair[0] == variable) {
+		  return pair[1];
+		}
+	  } 	  
+	}
+
+	var host = window.location.hostname;	
+	var use_proxy = getQueryVariable('proxy_forward')!=undefined;
+	var proxy_forward = getQueryVariable('proxy_forward');
+	var proxy_server = getQueryVariable('proxy_server');
+
+	var url_path = "http://" + (use_proxy?proxy_forward:host) + ":" + (getQueryVariable('dport')==undefined?8088:getQueryVariable('dport')).toString() +"/Eject";
+	var url_acc_shield = "http://" + (use_proxy?proxy_forward:host) + ":" + (getQueryVariable('aport')==undefined?1688:getQueryVariable('aport')).toString() + "/?callback=?";
+
+	var src_json_obj ="";
+
+	function convert_url(url) {
+		if(!use_proxy)
+			return url;
+
+		return "http://" + proxy_server  +"/?proxy=" + url;		
+	}
+	
+	function updateTable(json_table){
+		src_json_obj = json_table;
+		var jsonHtmlTable = ConvertJsonToTable(json_table, 'jsonTable', null, 'Download', true);
+		var btn_convert_to_json = document.createElement("BUTTON")
+		var t = document.createTextNode("Save!");      
+		btn_convert_to_json.appendChild(t);      
+		btn_convert_to_json.className = "btn btn-warning";
+		btn_convert_to_json.id = "convert-table";
+
+		$('#panel')[0].innerHTML  = jsonHtmlTable;	
+		$('#panel')[0].appendChild(btn_convert_to_json);
+	}
+
+	function requestConfig(file){
+		var url = url_path + "?callback=?&game_id=30101&config=" + file;
+
+		url = convert_url(url);
+
+		var result = $.getJSON(url,function(json){
+			updateTable(json);
+
+			//save
+			$('#convert-table').click( function() {
+				var json =  ConvertTableToJson();
+
+				var json_obj = JSON.parse(json);
+
+				for(var i=0; i<json_obj.length; i++)
+				{
+					var json_row_src = src_json_obj[i];
+					var json_row = json_obj[i];
+
+					for(var key in json_row)
+						if(json_row_src[key]!=json_row[key]){
+							var send_url = url + "&save_row=" + i.toString() + "&save_key=" + key + "&save_value=" + json_row[key];;
+							$.getJSON(send_url,function(json){
+								requestConfig(file);								
+								alert("save completed !")
+							});
+						}
+				}
+			});
+		});
+	}
+
+	function requestSystemInfo(){		
+		var url = url_path + "?callback=?&game_id=30101&system_info"
+		url = convert_url(url);
+
+		var result = $.getJSON(url,function(json){
+			var	info_object = json[0];
+
+			var html_reset_profit = '';
+
+			if(!$('#reset-profit').length){
+				var btn_reset = document.createElement("BUTTON")
+				var t = document.createTextNode("Reset Pool");
+				btn_reset.appendChild(t);                 		
+				btn_reset.type = "button";
+				btn_reset.className = "btn btn-danger";
+				btn_reset.id = "reset-profit";
+				html_reset_profit = btn_reset.outerHTML;
+				$('#panel_profit')[0].appendChild(btn_reset);
+				// $('#panel_profit')[0].insertBefore(btn_reset, $('#profit_rate')[0]);
+
+				$('#reset-profit').click( function() {
+					$.getJSON(url_path + "?callback=?&game_id=30101&system_info&reset_pool=true",function(json){});
+				});
+			}
+
+			var css_prefix =  '<span class="label label-pill label-default">';
+			var css_suffix =  '</span>';
+
+			$('#ccu')[0].innerHTML  =  css_prefix + "CCU : " + info_object["CCU"] + css_suffix;
+			$('#room_count')[0].innerHTML  =  css_prefix + "Room Count  : " + info_object["RoomCount"] + css_suffix;
+			$('#total_bet')[0].innerHTML  =  css_prefix + "Total Bet : " + info_object["TotalBet"] + css_suffix;
+			$('#total_payoff')[0].innerHTML  =  css_prefix + "Total PayOff : " + info_object["TotalPayoff"] +  css_suffix;
+			$('#profit_rate')[0].innerHTML  =  css_prefix + "Profit Rate : " + info_object["ProfitRatio"] + css_suffix;
+			
+		});
+	}
+
+	function requestFishDefine(){
+		requestConfig("FishDefine");
+	}
+
+	function requestBulletDefine(){
+		requestConfig("BulletDefine");
+	}
+
+	function requestProfitDefine(){
+		requestConfig("ProfitDefine");
+	}
+
+	function padLeft(nr, n, str){
+    	return Array(n-String(nr).length+1).join(str||'0')+nr;
+	}
+
+	function requestBlockedHalls(){
+		var url = url_acc_shield + "&api=HallIDisable&method=get&gametype=30101";
+		url = convert_url(url);
+
+		var result = $.getJSON(url,function(data){
+			var block_halls_list = [];
+			var block_halls_row ="";
+			var count = 0;
+
+			var hall_ids = data.split("*");
+
+			for(var i=0; i<hall_ids.length; i++)
+			{
+				if(hall_ids[i]=="")
+					continue;
+
+				block_halls_row = block_halls_row + "," + padLeft(hall_ids[i], 10, '0');
+				count++;
+
+				if(count % 20 == 0){
+					block_halls_list.push(block_halls_row);
+					block_halls_row="";
+				}
+			}
+
+			block_halls_list.push(block_halls_row);			
+			
+			var jsonHtmlTable = ConvertJsonToTable(block_halls_list, 'jsonTable', null, 'Download', true);			
+			$('#panel')[0].innerHTML  = jsonHtmlTable;	
+
+			var btn_clear = document.createElement("BUTTON")
+			var t = document.createTextNode("Clear All!");      
+			btn_clear.appendChild(t);      
+			btn_clear.className = "btn btn-warning";
+			btn_clear.id = "halls_btn_clear";
+
+			var btn_add = document.createElement("BUTTON");
+			var t = document.createTextNode("Add");      			
+			btn_add.appendChild(t);      
+			btn_add.className = "btn btn-info";
+			btn_add.id = "halls_btn_add";	
+			btn_add.style.paddingLeft="50px";
+
+			var btn_remove = document.createElement("BUTTON");
+			var t = document.createTextNode("Remove");      			
+			btn_remove.appendChild(t);      
+			btn_remove.className = "btn btn-danger";
+			btn_remove.id = "halls_btn_remove";			
+			// btn_remove.style.paddingLeft="50px";
+
+			var text_hall = document.createElement('input'); 
+			text_hall.id="hall_id";
+			text_hall.type = "text"; 
+			text_hall.className = "form-control input-group-addon";
+
+			var btn_span = document.createElement("SPAN");
+			btn_span.className = "input-group-btn";
+			btn_span.appendChild(btn_add);
+			btn_span.appendChild(btn_remove);
+			
+			var iDiv = document.createElement('div');
+			iDiv.id = 'block';
+			iDiv.className = 'input-group input-group-lg';
+
+			iDiv.appendChild(btn_span);
+			iDiv.appendChild(text_hall);
+
+
+			$('#panel')[0].insertBefore(btn_clear, $('#panel')[0].firstChild);
+			$('#panel')[0].insertBefore(iDiv, btn_clear);
+
+			$('#halls_btn_clear').click( function() {				
+				$.getJSON(url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=",function(json){
+					requestBlockedHalls();
+				});
+			});
+
+			function formatHallObject(){
+				var result = "";
+				for(var i=hall_ids.length-1; i>=0; i--)
+				if(hall_ids[i]=="")
+					hall_ids.splice(i, 1);
+
+				hall_ids.sort(function(a, b){return parseInt(a)-parseInt(b)});
+
+				for(var i=0; i<hall_ids.length; i++){
+					if(hall_ids[i]=="")
+						continue;
+
+					result+='*' + hall_ids[i];					
+				}
+
+				return result;
+			};
+
+			var data="";
+
+			$('#halls_btn_remove').click( function() {	
+				var index = hall_ids.indexOf($('#hall_id')[0].value);	
+
+				if(index < 0)
+					return;
+
+				hall_ids.splice(index, 1);
+
+				data = formatHallObject();
+
+				$.getJSON(url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=" + data,function(json){
+					requestBlockedHalls();
+				});
+			});
+
+			$('#halls_btn_add').click( function() {	
+				var index = hall_ids.indexOf($('#hall_id')[0].value);	
+
+				if(index >= 0)
+					return;
+
+				hall_ids.push($('#hall_id')[0].value);
+
+				data = formatHallObject();
+
+				$.getJSON(url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=" + data,function(json){
+					requestBlockedHalls();
+				});
+			});
+			
+		});
+	}
+
+	function initial(){
+		setInterval(
+			function(){			  
+			 requestSystemInfo(); 
+			}.bind(this), 300
+		);
+	}
+
+</script>
+
+</head>
+
+<body onload="initial()">
+  <div id="panel_profit">
+	  <h3 id="ccu"> CCU : 0</h3>
+	  <h3 id="room_count"> Room Count : 0</h3>
+	  <h3 id="total_bet"> Total Bet : 0</h3>
+	  <h3 id="total_payoff"> Total PayOff : 0</h3>
+	  <h3 id="profit_rate"> Profit Rate : 0</h3>
+  </div>
+
+  </br></br>
+
+  <button class="btn btn-primary" onclick="requestFishDefine()">Get FishDefine</button>
+  <button class="btn btn-primary" onclick="requestBulletDefine()">Get BulletDefine</button>  
+  <button class="btn btn-primary" onclick="requestProfitDefine()">Get ProfitDefine</button>  
+  <button class="btn btn-primary" onclick="requestBlockedHalls()">Get BlockedHalls</button>  
+
+  <div id="panel" style="padding-left: 10px">
+
+  </div>
+</body>
+
+</html>
