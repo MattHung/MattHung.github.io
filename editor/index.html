@@ -208,7 +208,10 @@
 			$('#panel')[0].insertBefore(iDiv, btn_clear);
 
 			$('#halls_btn_clear').click( function() {				
-				$.getJSON(url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=",function(json){
+				var url = url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=";
+				url = convert_url(url);
+
+				$.getJSON(url,function(json){
 					requestBlockedHalls();
 				});
 			});
@@ -243,7 +246,10 @@
 
 				data = formatHallObject();
 
-				$.getJSON(url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=" + data,function(json){
+				var url = url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=" + data;
+				url = convert_url(url);
+
+				$.getJSON(url, function(json){
 					requestBlockedHalls();
 				});
 			});
@@ -258,7 +264,10 @@
 
 				data = formatHallObject();
 
-				$.getJSON(url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=" + data,function(json){
+				var url = url_acc_shield + "&api=HallIDisable&method=set&gametype=30101&data=" + data;
+				url = convert_url(url);
+
+				$.getJSON(url,function(json){
 					requestBlockedHalls();
 				});
 			});
