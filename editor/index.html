@@ -91,22 +91,10 @@
 			var	info_object = json[0];
 
 			var html_reset_profit = '';
-
-			if(!$('#reset-profit').length){
-				var btn_reset = document.createElement("BUTTON")
-				var t = document.createTextNode("Reset Pool");
-				btn_reset.appendChild(t);                 		
-				btn_reset.type = "button";
-				btn_reset.className = "btn btn-danger";
-				btn_reset.id = "reset-profit";
-				html_reset_profit = btn_reset.outerHTML;
-				$('#panel_profit')[0].appendChild(btn_reset);
-				// $('#panel_profit')[0].insertBefore(btn_reset, $('#profit_rate')[0]);
-
-				$('#reset-profit').click( function() {
-					$.getJSON(url_path + "?callback=?&game_id=30101&system_info&reset_pool=true",function(json){});
-				});
-			}
+			
+			$('#reset-profit').click( function() {
+				$.getJSON(url_path + "?callback=?&game_id=30101&system_info&reset_pool=true",function(json){});
+			});
 
 			var css_prefix =  '<span class="label label-pill label-default">';
 			var css_suffix =  '</span>';
@@ -118,6 +106,30 @@
 			$('#profit_rate')[0].innerHTML  =  css_prefix + "Profit Rate : " + info_object["ProfitRatio"] + css_suffix;
 			
 		});
+	}
+
+	function requestHallProfitInfo(hall_id){
+		hall_id = parseInt(hall_id, 10);
+		if (hall_id === parseInt(hall_id, 10)){
+			var url = url_path + "?callback=?&game_id=30101&system_info&hall_id=" + hall_id.toString();
+			url = convert_url(url);
+
+			var result = $.getJSON(url,function(json){
+				var	info_object = json;
+
+				var css_prefix =  '<span class="label label-pill label-default">';
+				var css_suffix =  '</span>';
+				
+				$('#hall_total_bet')[0].innerHTML  =  css_prefix + "Total Bet : " + info_object["TotalBet"] + css_suffix;
+				$('#hall_total_payoff')[0].innerHTML  =  css_prefix + "Total PayOff : " + info_object["TotalPayoff"] +  css_suffix;
+				$('#hall_profit_rate')[0].innerHTML  =  css_prefix + "Profit Rate : " + info_object["ProfitRatio"] + css_suffix;				
+			});
+
+		}
+
+		// <h3 id="hall_total_bet"> Total Bet : 0</h3>
+		// 		<h3 id="hall_total_payoff"> Total PayOff : 0</h3>
+		// 		<h3 id="hall_profit_rate"> Profit Rate : 0</h3>
 	}
 
 	function requestFishDefine(){
@@ -279,6 +291,8 @@
 		setInterval(
 			function(){			  
 			 requestSystemInfo(); 
+			requestHallProfitInfo($('#hall_text')[0].value);
+
 			}.bind(this), 300
 		);
 	}
@@ -289,12 +303,35 @@
 
 <body onload="initial()">
   <div id="panel_profit">
+
+  	<div class="container-fluid">
 	  <h3 id="ccu"> CCU : 0</h3>
 	  <h3 id="room_count"> Room Count : 0</h3>
 	  <h3 id="total_bet"> Total Bet : 0</h3>
 	  <h3 id="total_payoff"> Total PayOff : 0</h3>
 	  <h3 id="profit_rate"> Profit Rate : 0</h3>
-  </div>
+
+	  <button id="reset-profit" class="btn btn-danger"">Reset Pool</button>
+  	</div>
+
+  	<br><br>
+
+	<div class="container-fluid">
+		<div class="panel-group">
+			<div class="panel panel-info">
+				<div class="panel-heading">Hall Info</div>
+
+				<div class="form-group">
+					<label for="HallID">HallID:</label>
+					<input id = hall_text type="text" class="form-control" id="HallID">
+				</div>
+
+				<h3 id="hall_total_bet"> Total Bet : 0</h3>
+				<h3 id="hall_total_payoff"> Total PayOff : 0</h3>
+				<h3 id="hall_profit_rate"> Profit Rate : 0</h3>
+			</div>
+		</div>
+	</div>
 
   </br></br>
 
