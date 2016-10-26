@@ -51,6 +51,20 @@
 		$('#panel')[0].appendChild(btn_convert_to_json);
 	}
 
+	function updateProfitBasis(hall_id, value) {
+		var file = "ProfitDefine_hall";
+		var url = url_path + "?callback=?&game_id=30101&config=" + file;
+
+		url = convert_url(url);
+
+		var send_url = url + "&save_row=" + hall_id.toString() + "&save_key=" + "Profit_rate" + "&save_value=" + value;
+		$.getJSON(send_url,function(json){
+			file = "ProfitDefine";
+			requestConfig(file);								
+			alert("save completed !")
+		});
+	}
+
 	function requestConfig(file){
 		var url = url_path + "?callback=?&game_id=30101&config=" + file;
 
@@ -69,15 +83,15 @@
 				{
 					var json_row_src = src_json_obj[i];
 					var json_row = json_obj[i];
-
+					
 					for(var key in json_row)
-						if(json_row_src[key]!=json_row[key]){
-							var send_url = url + "&save_row=" + i.toString() + "&save_key=" + key + "&save_value=" + json_row[key];;
-							$.getJSON(send_url,function(json){
-								requestConfig(file);								
-								alert("save completed !")
-							});
-						}
+					if(json_row_src[key]!=json_row[key]){
+						var send_url = url + "&save_row=" + i.toString() + "&save_key=" + key + "&save_value=" + json_row[key];;
+						$.getJSON(send_url,function(json){
+							requestConfig(file);								
+							alert("save completed !")
+						});
+					}					
 				}
 			});
 		});
@@ -123,13 +137,10 @@
 				$('#hall_total_bet')[0].innerHTML  =  css_prefix + "Total Bet : " + info_object["TotalBet"] + css_suffix;
 				$('#hall_total_payoff')[0].innerHTML  =  css_prefix + "Total PayOff : " + info_object["TotalPayoff"] +  css_suffix;
 				$('#hall_profit_rate')[0].innerHTML  =  css_prefix + "Profit Rate : " + info_object["ProfitRatio"] + css_suffix;				
+
+				$('#hall_profit_basis')[0].innerHTML  =  css_prefix + "Profit Basis : " + info_object["ProfitDatum"] + css_suffix;
 			});
-
 		}
-
-		// <h3 id="hall_total_bet"> Total Bet : 0</h3>
-		// 		<h3 id="hall_total_payoff"> Total PayOff : 0</h3>
-		// 		<h3 id="hall_profit_rate"> Profit Rate : 0</h3>
 	}
 
 	function requestFishDefine(){
@@ -287,11 +298,25 @@
 		});
 	}
 
+	function initialClickEvent() {
+		$('#hall_profit_basis_btn').click( function() {
+			var profit_basis = parseFloat($('#hall_profit_basis_text')[0].value);
+
+			var hall_id = $('#hall_text')[0].value;
+			
+			if (profit_basis === parseFloat(profit_basis)){
+				updateProfitBasis(hall_id, profit_basis);
+			}
+		});
+	}
+
 	function initial(){
+		initialClickEvent();
+
 		setInterval(
 			function(){			  
 			 requestSystemInfo(); 
-			requestHallProfitInfo($('#hall_text')[0].value);
+			 requestHallProfitInfo($('#hall_text')[0].value);
 
 			}.bind(this), 300
 		);
@@ -328,7 +353,16 @@
 
 				<h3 id="hall_total_bet"> Total Bet : 0</h3>
 				<h3 id="hall_total_payoff"> Total PayOff : 0</h3>
-				<h3 id="hall_profit_rate"> Profit Rate : 0</h3>
+				<h3 id="hall_profit_rate"> Profit Rate : 0</h3>				
+				
+				<h3 id="hall_profit_basis"> Profit Basis : 0</h3>
+				
+				<div class="input-group">
+			      <span class="input-group-btn">
+			        <button id = "hall_profit_basis_btn" class="btn btn-secondary" type="button">Confirm</button>
+			      </span>
+			      <input id = "hall_profit_basis_text" type="text" class="form-control" placeholder="Value Of Profit Basis">
+			    </div>
 			</div>
 		</div>
 	</div>
