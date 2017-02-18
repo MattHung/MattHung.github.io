@@ -5,6 +5,7 @@
   <script type="text/javascript" src="TypeDefinition.js"></script>
   <script type="text/javascript" src="TimeCalibrator.js"></script>
   <script type="text/javascript" src="Decoder.js"></script>
+  <script type="text/javascript" src="YUVCanvas.js"></script>
 </head>
 <body onload="load()">
     <script type="text/javascript" src="main.js"></script>
@@ -18,15 +19,15 @@
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
 
-    function switchResolution(camera_id, w, h, b, f){
-        var json_str = JSON.stringify({
-            action: "switch_chanel",     
-            camera_id:camera_id,       
-            width: w,
-                height: h,
-                bitrate: b,
-                framerate: f
-            });
+        function switchResolution(camera_id, w, h, b, f){
+            var json_str = JSON.stringify({
+                action: "switch_chanel",     
+                camera_id:camera_id,       
+                width: w,
+                    height: h,
+                    bitrate: b,
+                    framerate: f
+                });
             wsavc.send(json_str);
         }
 
@@ -103,8 +104,20 @@
 
         function load()
         {
-            wsavc.connect("ws://111.235.135.80:50480");
+          wsavc = new WSAvcPlayer();
+
+          if(!wsavc.getWebGLAvailable())
+            return;
+
+          // wsavc.connect("ws://192.168.164.234:50480");
+            wsavc.connect("ws://103.240.216.94:50480");
+
+            // wsavc.connect("ws://etog.by589.com");
+            // wsavc.connect("ws://192.168.164.232:50480");
+            // wsavc.connect("ws://10.253.10.102:50480");
             
+			//wsavc.connect("ws://127.0.0.1:50480");
+
             wsavc.onwsopen = onopen;
             wsavc.onwsmessage = onwsmessage;
             wsavc.onwserror = onerror;
