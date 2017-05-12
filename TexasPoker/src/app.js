@@ -28,6 +28,8 @@ MessageLayer = gameLayer.extend({
 LoginLayer=gameLayer.extend({
     ctor: function () {
         this._super(res.LoginScene_json);
+        
+        PokerManager.getInstance().currentTable = null;
 
         CocosWidget.eventRegister.getInstance().setRootNode(this.getNode("Scene"));
 
