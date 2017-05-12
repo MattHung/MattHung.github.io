@@ -1,0 +1,145 @@
+RoomTypes
+    Baccarat(1),
+    GodOfGambler(2);
+
+
+C->S
+  請求離開房間: LeaveRoom: {RoomID: 0}
+
+  請求賭神廳排行榜資訊 : Billboard :{}
+  請求賭神廳報名歷史紀錄 : EnrollHistory :{}
+
+  請求房間列表: RoomList : {RoomType: 1}
+  請求進入房間: EnterRoom: {RoomID: 10001}
+  請求入座: TakeSeat: {RoomID: 10001, SeatID:1}
+  請求下注: PlaceBet: {Hide:0, Pass: 0, Bet: [{BetArea: 1, Amount:10}]}
+  
+  請求儲存籌碼設定: ChipSetting:{Setting:""}
+
+BetArea:
+    Draw(1),
+    PlayerWin(2),
+    BakerWin(3),
+    BankerPairs(4),
+    PlayerPairs(5),
+    AnyPairs(6),
+    PerfectPairs(7),
+    Big(8),
+    Small(9),
+    SuperSixPoint(10);
+
+
+
+  4:請求下注: 下注區域(1) + 下注額(4) 
+S->C
+  離開房間結果 : LeaveRoom: { Result: 1, UserID:1000, SeatID:1, "Cause":"disconnect"}
+  離開座位: LeaveSeat:{"SeatID":1, "UserID":1000, "Cause":"disconnect"}
+
+public enum LeaveCause {
+    KickLoser("KickLoser"),
+    kickAll("kickAll"),
+    SessionOver("SessionOver"),
+    Active("Active"),
+    KickSeat("KickSeat"),
+    Disconnect("Disconnect"),
+    KickIdle("KickIdle"),
+    MergeTable("MergeTable");
+}
+
+
+  房間列表 : RoomList : {Rooms: [room_info]}
+	room_info:
+		{"RoomType":1,"Rooms":[{"RoomID":20001,"DealerName":"", MinBet:0, MaxBet:0}]}
+        	{"RoomType":2,"Rooms":[{"RoomID":10001,"DealerName":"", MinBet:0, MaxBet:0, Quit:false, "Name":"test測試桌","Status":"None", "SessionID":2151, "RegiesterFee":104, "Service_fee":8, "Total_Turn":1,"Turn_Count":0,
+									"TotalReward":36688,"ChampionReward":0,"TotalTickets":2,"RegisteredPlayers":[],"RankReward":[50,30,20]}]}
+
+  傳送玩家帳號資訊: UserName: {"UserName":"***aaa", "UserID":1000} 
+
+
+  廣播籌碼資訊: ChipInfo : {"SeatID":1,"User":1384,"Chips":300000}
+
+  廣播局號: RoundID : {"RoomID":1001,"RoundID": 0, "ShoeInfo":"1-1"}
+
+  廣播併桌訊息: MergeTable : {"RoomID":1001, "SourceTable":1000, "DestTable":1001}
+
+  傳送名次資訊: RankInfo : {"RoundID":1000,"Rank":1,"Award":333}
+
+
+  進入房間結果 : EnterRoom: { Result: 1, RoomID: 10001, TableID:0, RestoreSession:false}
+		1:成功
+		2:已在房間內
+		3:無此房間
+
+		11:入房失敗(兌換分數失敗)
+		12:等待入房中
+		13:人數已滿
+		14:已報名過此賽事
+		15:有效投注額不足
+
+  請求入座結果 : TakeSeat: {SeatID:1, Result:1}
+//result:         0:無此房間
+//                1:入座成功
+//                2:座位已有玩家
+
+  	
+  請求下注: PlaceBet: {"SeatID":1, "UserID":001, "BetArea": 1, "Hide":0, "Pass:0", "Amount":10, "Result":1}
+  Result: 1:成功
+          2:餘額不足
+	  3:非可下注時間
+          4:無效下注區		
+	  5:下注失敗(API Error)
+	  6:無效下注額
+
+          11:不可同時下注莊家與閒家
+	  12:至少需要下注莊家或閒家
+
+  過牌暗注資訊 : BetControl:{"HideCount": 3, "PassCount": 2}
+
+
+  廣播房間資訊: RoomInfo: [{"SeatID":1,"UserID":0}]
+
+
+  廣播牌局狀態: RoundStatus: {"Status": "RoundStart"}
+
+  廣播荷官資訊: DealerInfo: {"Name":"name"};
+  
+  開始下注: CountDown: {"RemainTick":25000}
+
+  廣播公牌資訊: CardInfo: {"Order":1, "CardNum":1, "Visible":true}
+  Order: 1~6,   Player1, Player2
+		Banker1, Banker2
+		DrawCard1, DrawCard2
+  CardNum: 1~52
+  
+
+  廣播牌局結果:GameResult: {"hit_areas":[{"HitArea":2}],"winners":[{"SeatID":1,"UserID":1,"HitArea":2,"BetAmount:30", "WinMoney":20}]}
+		
+
+  賽事結果: SessionRank: {"1":{"Rank":1,"UserName":"user_1938","Bonus":25000},
+			  "2":{"Rank":2,"UserName":"user_1883","Bonus":15000},
+			  "3":{"Rank":3,"UserName":"user_1489","Bonus":10000},
+			  "4":{"Rank":4,"UserName":"user_1254","Bonus":0},
+			  "5":{"Rank":5,"UserName":"user_1310","Bonus":0}}
+
+
+  牌局註銷: RevokeRound:{"RoomID":1001}
+
+  廣播路紙: RoadMap: {MapStr:"33-5, 22-5"}	
+  路紙清除: ClearRoadMap:{"RoomID":1001}
+
+
+  賭神廳排行榜資訊 : Billboard : {"Today":"[{\"UserID\":1810,\"UserName\":\"cckhj3302\",\"Payoff\":14900,\"dateTime\":\"2017/1/6 上午 09:34:29\"}]",
+				  "Past":"[{\"UserID\":1810,\"UserName\":\"cckhj3302\",\"Payoff\":14900,\"dateTime\":\"2017/1/6 上午 09:34:29\"}]"}
+
+
+  賭神廳報名歷史紀錄 : EnrollHistory:{"TotalPage":1,"Page":1,"Data":"[{\"N\":\"user_1885\",\"F\":100,\"R\":1000029215,\"DT\":\"2017-02-03 02:33:26\",\"D\":\"2017-02-03\"}]"}
+
+  玩家下注限額資訊 : BetLimitation: {"BL":0,"BH":1000000,"P":1000000,"T":1000000}
+
+  玩家籌碼設定資訊: ChipSetting:{Setting:""}
+
+
+
+
+
+

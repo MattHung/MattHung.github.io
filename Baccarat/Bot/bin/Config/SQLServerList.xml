@@ -1,0 +1,4 @@
+<SQLServerList>
+  <Server Name="Account" Host="127.0.0.1" UserName="root" Password="gr8password" Port="3306" DataBase="TexasPoker" TableName="users" />
+  <Server Name="Settings" Host="127.0.0.1" UserName="root" Password="gr8password" Port="3306" DataBase="TexasPoker" TableName="settings" />
+</SQLServerList>

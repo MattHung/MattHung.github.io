@@ -1,0 +1,6 @@
+<save>
+  <CannonLocation Name="Cannon_1" X="2880" Y="2075" fire_degree_min="180" fire_degree_max="360" Bound_Left="1920" Bound_Top="2160" Bound_Right="3840" Bound_Bottom="1080" Direction="Down" />
+  <CannonLocation Name="Cannon_2" X="960" Y="2075" fire_degree_min="180" fire_degree_max="360" Bound_Left="0" Bound_Top="2160" Bound_Right="1920" Bound_Bottom="1080" Direction="Down" />
+  <CannonLocation Name="Cannon_3" X="960" Y="85" fire_degree_min="0" fire_degree_max="180" Bound_Left="0" Bound_Top="1080" Bound_Right="1920" Bound_Bottom="0" Direction="Up" />
+  <CannonLocation Name="Cannon_4" X="2880" Y="85" fire_degree_min="0" fire_degree_max="180" Bound_Left="1920" Bound_Top="1080" Bound_Right="3840" Bound_Bottom="0" Direction="Up" />
+</save>

@@ -1,0 +1,12 @@
+3/11 : ranked players when same score , TotalBet => TakeSeatTime
+       no ranked player when player quit
+       rearrange player when merge table
+       add final turn
+       cancel session when participators not satisfy rank count	
+       
+    
+      當玩家同分數時, 排序順序為 此賽事總下注額 => 入座時間
+      當玩家主動離房時, 不給予賽事結果
+      重新排序玩家當併桌時
+      新增 final turn
+      取消賽事進行當參賽者不足以發放名次 (final turn 例外) 	

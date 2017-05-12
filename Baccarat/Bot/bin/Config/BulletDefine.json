@@ -1,0 +1,7 @@
+[
+  {"Level":1,"Speed":1000,"Width":45,"Height":45, "Power":80},
+  {"Level":2,"Speed":1000,"Width":50,"Height":55, "Power":90},
+  {"Level":3,"Speed":1000,"Width":50,"Height":55, "Power":100},
+  {"Level":4,"Speed":1000,"Width":30,"Height":70, "Power":110},
+  {"Level":5,"Speed":1000,"Width":45,"Height":90, "Power":120},  
+]
