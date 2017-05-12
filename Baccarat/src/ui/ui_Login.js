@@ -71,7 +71,7 @@ var ui_Login = gameLayer.extend({
     },
     getWShost:function(){
         if(this._devLogin)
-            return "ws://127.0.0.1:61230";
+            return "ws://220.134.243.106:61230";
 
         if (!cc.sys.isNative) {
             if((window.location.protocol=="http") || (window.location.protocol=="http:"))
