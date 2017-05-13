@@ -173,6 +173,7 @@ var ui_TableArea = gameLayer.extend({//ChipsCoin
 
     enterTable: function (sender, mouseHitPoint) {
         this.mouseCheck.enter = true;
+        this.mouseCheck.position = cc.p(0,0);
         this.mouseCheck.button = sender;
     },
 
@@ -630,7 +631,7 @@ var ui_TableArea = gameLayer.extend({//ChipsCoin
                 if (!eventInTransparentMask(node, mouseHitPoint))
                     this.betOn(this.BetBtnNo.Play, node);
             }.bind(this), this.enterTable.bind(this), this.overTable.bind(this));
-        this.registerMouseEvent(this.getNode("Table_Node/Btn_Banker"), null,
+        this.registerMouseEvent(this.getNode("Table_Node/Btn_Banker"),
             function (node, mouseHitPoint) {
                 if (!eventInTransparentMask(node, mouseHitPoint))
                     this.betOn(this.BetBtnNo.Bank, node);
