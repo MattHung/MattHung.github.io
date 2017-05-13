@@ -1,11 +1,7 @@
 var res = {
     HelloWorld_png: "res/HelloWorld.png",
     WhiteBg_png: "res/Gambler_res/whiteBG.png",
-    MsgBox_BG:"res/Msg_Box/MsgBox_BG.png",
-    MainScene_json: "res/MainScene.json",
-    GamblerScene_json: "res/GamblerScene.json",
-    LoginPanel_json: "res/LoginScene.json",
-    RoomScene_json: "res/RoomScene.json",
+    MsgBox_BG:"res/Msg_Box/MsgBox_BG.png",    
     ClippingNode_png: "res/ClippingNode.png",
     Language_en_json: "res/language/language_en.json",
     Language_cn_json: "res/language/language_cn.json",
