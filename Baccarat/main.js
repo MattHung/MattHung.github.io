@@ -71,13 +71,18 @@ cc.game.onStart = function(){
     // The game will be resized when browser size change
     cc.view.resizeWithBrowserSize(true);
     //load resources
-    var loaderScene = cc.LoaderScene.preload(g_resources, function () {
+    cc.LoaderScene.preload(g_resources, function () {
         cc.director.runScene(new LoginScene());
-    }, this);    
+    }, this);
+    // var loaderScene = cc.LoaderScene.preload(g_resources, function () {
+    //     cc.director.runScene(new LoginScene());
+    // }, this);    
 
-    loaderScene._label.setColor(cc.color(210, 159, 159));    
-    loaderScene._label.setFontSize(45);
-    loaderScene._label.setPositionY(200);
-    loaderScene._label.setLocalZOrder(100);
+    // loaderScene._label.setColor(cc.color(210, 159, 159));    
+    // loaderScene._label.setFontSize(45);
+    // loaderScene._label.setPositionY(200);
+    // loaderScene._label.setLocalZOrder(100);
+
+    screenWidget.getInstance().adjustResolution();
 };
 cc.game.run();

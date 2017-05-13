@@ -53,7 +53,7 @@ var screenWidget = (function(){
             cc.log("k:" + k + " x:" + x + " y:" + y);
 
             // resize the design resolution
-            cc.view.setDesignResolutionSize( designWidth + x / k, designHeight + y / k, cc.ResolutionPolicy.SHOW_ALL);
+            cc.view.setDesignResolutionSize( designWidth + x / k, designHeight + y / k, cc.ResolutionPolicy.EXACT_FIT);
         }
 
         function CheckMouseHitArea(rect)
