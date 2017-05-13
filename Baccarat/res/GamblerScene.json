@@ -9403,7 +9403,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/bg_peek.png",
+                      "Path": "Gambler_res/common/bg_peek.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -9448,7 +9448,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/bg_peek_banker_win.png",
+                      "Path": "Gambler_res/common/bg_peek_banker_win.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -9493,7 +9493,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/bg_peek_player_win.png",
+                      "Path": "Gambler_res/common/bg_peek_player_win.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -9763,7 +9763,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -9808,7 +9808,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -9898,7 +9898,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -9943,7 +9943,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10160,7 +10160,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_info/pic_info_red.png",
+                  "Path": "Gambler_res/common/comm_info/pic_info_red.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -10205,7 +10205,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_info/pic_info_green.png",
+                  "Path": "Gambler_res/common/comm_info/pic_info_green.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -10250,7 +10250,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_info/pic_info_yellow.png",
+                  "Path": "Gambler_res/common/comm_info/pic_info_yellow.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -10359,7 +10359,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10404,7 +10404,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10449,7 +10449,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10494,7 +10494,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10539,7 +10539,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_4.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_4.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10584,7 +10584,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_5.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_5.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10629,7 +10629,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_6.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_6.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10674,7 +10674,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10719,7 +10719,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_8.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_8.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10764,7 +10764,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_9.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_9.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10809,7 +10809,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10854,7 +10854,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_11.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_11.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10899,7 +10899,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_12.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_12.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10944,7 +10944,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_13.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_13.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -10989,7 +10989,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11034,7 +11034,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11079,7 +11079,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11124,7 +11124,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_4.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_4.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11169,7 +11169,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_5.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_5.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11214,7 +11214,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_6.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_6.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11259,7 +11259,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11304,7 +11304,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_8.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_8.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11349,7 +11349,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_9.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_9.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11394,7 +11394,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11439,7 +11439,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_11.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_11.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11484,7 +11484,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_12.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_12.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11529,7 +11529,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_13.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_13.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11574,7 +11574,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11619,7 +11619,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11664,7 +11664,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11709,7 +11709,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_4.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_4.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11754,7 +11754,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_5.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_5.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11799,7 +11799,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_6.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_6.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11844,7 +11844,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11889,7 +11889,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_8.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_8.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11934,7 +11934,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_9.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_9.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -11979,7 +11979,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12024,7 +12024,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_11.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_11.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12069,7 +12069,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_12.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_12.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12114,7 +12114,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_13.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_13.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12159,7 +12159,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12204,7 +12204,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12249,7 +12249,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12294,7 +12294,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_4.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_4.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12339,7 +12339,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_5.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_5.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12384,7 +12384,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_6.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_6.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12429,7 +12429,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12474,7 +12474,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_8.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_8.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12519,7 +12519,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_9.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_9.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12564,7 +12564,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12609,7 +12609,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_11.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_11.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12654,7 +12654,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_12.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_12.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -12699,7 +12699,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_13.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_13.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -15191,7 +15191,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/comm_counter/pic_counter_all_1.png",
+                      "Path": "Gambler_res/common/comm_counter/pic_counter_all_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -15236,7 +15236,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/comm_counter/pic_counter_center.png",
+                      "Path": "Gambler_res/common/comm_counter/pic_counter_center.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -15303,7 +15303,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_1.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_1.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15348,7 +15348,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_2.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_2.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15393,7 +15393,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_3.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_3.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15438,7 +15438,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_4.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_4.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15483,7 +15483,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_5.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_5.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15528,7 +15528,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_6.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_6.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15573,7 +15573,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_7.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_7.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15618,7 +15618,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_8.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_8.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15663,7 +15663,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_9.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_9.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15710,7 +15710,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_10.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_10.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15755,7 +15755,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_11.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_11.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15800,7 +15800,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_12.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_12.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -15845,7 +15845,7 @@
                       {
                         "FileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_counter/pic_counter_13.png",
+                          "Path": "Gambler_res/common/comm_counter/pic_counter_13.png",
                           "Plist": ""
                         },
                         "BlendFunc": {
@@ -16673,12 +16673,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_setting_chips_down.png",
+                          "Path": "Gambler_res/common/btn_setting_chips_down.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_setting_chips_up.png",
+                          "Path": "Gambler_res/common/btn_setting_chips_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -16748,12 +16748,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_setting_chips_down.png",
+                          "Path": "Gambler_res/common/btn_setting_chips_down.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_setting_chips_up.png",
+                          "Path": "Gambler_res/common/btn_setting_chips_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -16854,12 +16854,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_1_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_1_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_1_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_1_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -16929,12 +16929,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_5_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_5_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_5_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_5_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17004,12 +17004,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_10_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_10_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_10_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_10_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17079,12 +17079,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_50_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_50_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_50_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_50_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17154,12 +17154,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_100_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_100_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_100_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_100_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17229,12 +17229,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_500_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_500_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_500_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_500_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17304,12 +17304,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_1000_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_1000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_1000_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_1000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17379,12 +17379,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_5000_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_5000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_5000_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_5000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17454,12 +17454,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_10000_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_10000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_10000_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_10000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17529,12 +17529,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_50000_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_50000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_50000_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_50000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17604,12 +17604,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_100000_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_100000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm_chip/chip_100000_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_100000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -18188,12 +18188,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_control.png",
+                          "Path": "Gambler_res/common/btn_control.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_control.png",
+                          "Path": "Gambler_res/common/btn_control.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -18263,12 +18263,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_exit.png",
+                          "Path": "Gambler_res/common/btn_exit.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_exit.png",
+                          "Path": "Gambler_res/common/btn_exit.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -18337,12 +18337,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_music_off.png",
+                          "Path": "Gambler_res/common/btn_music_off.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_mute_on.png",
+                          "Path": "Gambler_res/common/btn_mute_on.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -18412,12 +18412,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_music_off.png",
+                          "Path": "Gambler_res/common/btn_music_off.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_music_off.png",
+                          "Path": "Gambler_res/common/btn_music_off.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -18563,12 +18563,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_full_screen.png",
+                          "Path": "Gambler_res/common/btn_full_screen.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_full_screen.png",
+                          "Path": "Gambler_res/common/btn_full_screen.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -18638,12 +18638,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_stop_video.png",
+                          "Path": "Gambler_res/common/btn_stop_video.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_stop_video.png",
+                          "Path": "Gambler_res/common/btn_stop_video.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -18713,12 +18713,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_bet_history.png",
+                          "Path": "Gambler_res/common/btn_bet_history.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/btn_bet_history.png",
+                          "Path": "Gambler_res/common/btn_bet_history.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -20003,7 +20003,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20048,7 +20048,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20093,7 +20093,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20138,7 +20138,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_4.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_4.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20183,7 +20183,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_5.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_5.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20228,7 +20228,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_6.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_6.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20273,7 +20273,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20318,7 +20318,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_8.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_8.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20363,7 +20363,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_9.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_9.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20408,7 +20408,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20453,7 +20453,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_11.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_11.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20498,7 +20498,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_12.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_12.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20543,7 +20543,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_clubs_13.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_clubs_13.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20588,7 +20588,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20633,7 +20633,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20678,7 +20678,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20723,7 +20723,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_4.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_4.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20768,7 +20768,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_5.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_5.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20813,7 +20813,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_6.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_6.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20858,7 +20858,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20903,7 +20903,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_8.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_8.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20948,7 +20948,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_9.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_9.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -20993,7 +20993,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21038,7 +21038,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_11.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_11.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21083,7 +21083,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_12.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_12.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21128,7 +21128,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_diamonds_13.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_diamonds_13.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21173,7 +21173,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21218,7 +21218,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21263,7 +21263,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21308,7 +21308,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_4.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_4.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21353,7 +21353,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_5.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_5.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21398,7 +21398,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_6.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_6.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21443,7 +21443,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21488,7 +21488,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_8.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_8.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21533,7 +21533,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_9.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_9.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21578,7 +21578,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21623,7 +21623,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_11.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_11.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21668,7 +21668,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_12.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_12.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21713,7 +21713,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_heart_13.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_heart_13.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21758,7 +21758,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_1.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_1.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21803,7 +21803,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_2.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_2.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21848,7 +21848,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_3.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_3.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21893,7 +21893,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_4.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_4.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21938,7 +21938,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_5.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_5.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -21983,7 +21983,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_6.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_6.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -22028,7 +22028,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_7.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_7.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -22073,7 +22073,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_8.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_8.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -22118,7 +22118,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_9.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_9.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -22163,7 +22163,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_10.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_10.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -22208,7 +22208,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_11.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_11.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -22253,7 +22253,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_12.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_12.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -22298,7 +22298,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/poker/pic_poker_spades_13.png",
+                      "Path": "Gambler_res/common/poker/pic_poker_spades_13.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -27106,7 +27106,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/comm_chip/pic_chip_choose.png",
+                      "Path": "Gambler_res/common/comm_chip/pic_chip_choose.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -35126,12 +35126,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_1_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_1_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35201,12 +35201,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_5_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_5_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35276,12 +35276,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_10_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_10_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35351,12 +35351,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_50_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_50_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35426,12 +35426,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_100_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_100_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35501,12 +35501,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_500_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_500_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_500_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_500_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35576,12 +35576,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_1000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_1000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35651,12 +35651,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_5000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_5000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35726,12 +35726,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_10000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_10000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35801,12 +35801,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_50000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_50000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35876,12 +35876,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_100000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100000_down.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_100000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35951,12 +35951,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/chip_save/btn_chip_save_down.png",
+                  "Path": "Gambler_res/common/chip_save/btn_chip_save_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/chip_save/btn_chip_save_up.png",
+                  "Path": "Gambler_res/common/chip_save/btn_chip_save_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36026,12 +36026,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_1_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_1_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36101,12 +36101,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_5_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_5_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36176,12 +36176,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_10_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_10_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36251,12 +36251,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_50_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_50_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36326,12 +36326,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_100_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_100_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36401,12 +36401,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_500_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_500_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_500_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_500_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36476,12 +36476,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_1000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_1000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36551,12 +36551,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_5000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_5000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36626,12 +36626,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_10000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_10000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36701,12 +36701,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_50000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_50000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36776,12 +36776,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_100000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100000_up.png",
+                  "Path": "Gambler_res/common/comm_chip/chip_chip_100000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -37402,7 +37402,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/chip_save/btn_chip_save_over.png",
+                  "Path": "Gambler_res/common/chip_save/btn_chip_save_over.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -37466,137 +37466,6 @@
         "Default/Button_Normal.png",
         "Default/Button_Press.png",
         "Default/Slider_PressBar.png",
-        "Gambler_res/_common/bg_peek.png",
-        "Gambler_res/_common/bg_peek_banker_win.png",
-        "Gambler_res/_common/bg_peek_player_win.png",
-        "Gambler_res/_common/btn_bet_history.png",
-        "Gambler_res/_common/btn_control.png",
-        "Gambler_res/_common/btn_exit.png",
-        "Gambler_res/_common/btn_full_screen.png",
-        "Gambler_res/_common/btn_music_off.png",
-        "Gambler_res/_common/btn_mute_on.png",
-        "Gambler_res/_common/btn_setting_chips_down.png",
-        "Gambler_res/_common/btn_setting_chips_up.png",
-        "Gambler_res/_common/btn_stop_video.png",
-        "Gambler_res/_common/chip_save/btn_chip_save_down.png",
-        "Gambler_res/_common/chip_save/btn_chip_save_over.png",
-        "Gambler_res/_common/chip_save/btn_chip_save_up.png",
-        "Gambler_res/_common/comm_chip/chip_1_no.png",
-        "Gambler_res/_common/comm_chip/chip_1_up.png",
-        "Gambler_res/_common/comm_chip/chip_10_no.png",
-        "Gambler_res/_common/comm_chip/chip_10_up.png",
-        "Gambler_res/_common/comm_chip/chip_100_no.png",
-        "Gambler_res/_common/comm_chip/chip_100_up.png",
-        "Gambler_res/_common/comm_chip/chip_1000_no.png",
-        "Gambler_res/_common/comm_chip/chip_1000_up.png",
-        "Gambler_res/_common/comm_chip/chip_10000_no.png",
-        "Gambler_res/_common/comm_chip/chip_10000_up.png",
-        "Gambler_res/_common/comm_chip/chip_100000_no.png",
-        "Gambler_res/_common/comm_chip/chip_100000_up.png",
-        "Gambler_res/_common/comm_chip/chip_5_no.png",
-        "Gambler_res/_common/comm_chip/chip_5_up.png",
-        "Gambler_res/_common/comm_chip/chip_50_no.png",
-        "Gambler_res/_common/comm_chip/chip_50_up.png",
-        "Gambler_res/_common/comm_chip/chip_500_no.png",
-        "Gambler_res/_common/comm_chip/chip_500_up.png",
-        "Gambler_res/_common/comm_chip/chip_5000_no.png",
-        "Gambler_res/_common/comm_chip/chip_5000_up.png",
-        "Gambler_res/_common/comm_chip/chip_50000_no.png",
-        "Gambler_res/_common/comm_chip/chip_50000_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_1_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_1_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_10_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_10_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_100_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_100_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_1000_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_1000_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_10000_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_10000_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_100000_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_100000_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_5_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_5_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_50_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_50_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_500_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_500_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_5000_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_5000_up.png",
-        "Gambler_res/_common/comm_chip/chip_chip_50000_down.png",
-        "Gambler_res/_common/comm_chip/chip_chip_50000_up.png",
-        "Gambler_res/_common/comm_chip/pic_chip_choose.png",
-        "Gambler_res/_common/comm_info/pic_info_green.png",
-        "Gambler_res/_common/comm_info/pic_info_red.png",
-        "Gambler_res/_common/comm_info/pic_info_yellow.png",
-        "Gambler_res/_common/comm_counter/pic_counter_1.png",
-        "Gambler_res/_common/comm_counter/pic_counter_10.png",
-        "Gambler_res/_common/comm_counter/pic_counter_11.png",
-        "Gambler_res/_common/comm_counter/pic_counter_12.png",
-        "Gambler_res/_common/comm_counter/pic_counter_13.png",
-        "Gambler_res/_common/comm_counter/pic_counter_2.png",
-        "Gambler_res/_common/comm_counter/pic_counter_3.png",
-        "Gambler_res/_common/comm_counter/pic_counter_4.png",
-        "Gambler_res/_common/comm_counter/pic_counter_5.png",
-        "Gambler_res/_common/comm_counter/pic_counter_6.png",
-        "Gambler_res/_common/comm_counter/pic_counter_7.png",
-        "Gambler_res/_common/comm_counter/pic_counter_8.png",
-        "Gambler_res/_common/comm_counter/pic_counter_9.png",
-        "Gambler_res/_common/comm_counter/pic_counter_all_1.png",
-        "Gambler_res/_common/comm_counter/pic_counter_center.png",
-        "Gambler_res/_common/poker/pic_poker_2.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_1.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_10.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_11.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_12.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_13.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_2.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_3.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_4.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_5.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_6.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_7.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_8.png",
-        "Gambler_res/_common/poker/pic_poker_clubs_9.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_1.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_10.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_11.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_12.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_13.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_2.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_3.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_4.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_5.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_6.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_7.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_8.png",
-        "Gambler_res/_common/poker/pic_poker_diamonds_9.png",
-        "Gambler_res/_common/poker/pic_poker_heart_1.png",
-        "Gambler_res/_common/poker/pic_poker_heart_10.png",
-        "Gambler_res/_common/poker/pic_poker_heart_11.png",
-        "Gambler_res/_common/poker/pic_poker_heart_12.png",
-        "Gambler_res/_common/poker/pic_poker_heart_13.png",
-        "Gambler_res/_common/poker/pic_poker_heart_2.png",
-        "Gambler_res/_common/poker/pic_poker_heart_3.png",
-        "Gambler_res/_common/poker/pic_poker_heart_4.png",
-        "Gambler_res/_common/poker/pic_poker_heart_5.png",
-        "Gambler_res/_common/poker/pic_poker_heart_6.png",
-        "Gambler_res/_common/poker/pic_poker_heart_7.png",
-        "Gambler_res/_common/poker/pic_poker_heart_8.png",
-        "Gambler_res/_common/poker/pic_poker_heart_9.png",
-        "Gambler_res/_common/poker/pic_poker_spades_1.png",
-        "Gambler_res/_common/poker/pic_poker_spades_10.png",
-        "Gambler_res/_common/poker/pic_poker_spades_11.png",
-        "Gambler_res/_common/poker/pic_poker_spades_12.png",
-        "Gambler_res/_common/poker/pic_poker_spades_13.png",
-        "Gambler_res/_common/poker/pic_poker_spades_2.png",
-        "Gambler_res/_common/poker/pic_poker_spades_3.png",
-        "Gambler_res/_common/poker/pic_poker_spades_4.png",
-        "Gambler_res/_common/poker/pic_poker_spades_5.png",
-        "Gambler_res/_common/poker/pic_poker_spades_6.png",
-        "Gambler_res/_common/poker/pic_poker_spades_7.png",
-        "Gambler_res/_common/poker/pic_poker_spades_8.png",
-        "Gambler_res/_common/poker/pic_poker_spades_9.png",
         "Gambler_res/back.png",
         "Gambler_res/back_no.png",
         "Gambler_res/bet_Area/bet/bet_area_bet_1_up.png",
@@ -37743,6 +37612,137 @@
         "Gambler_res/comm_set_music/pic_reel_off.png",
         "Gambler_res/comm_set_music/pic_sound.png",
         "Gambler_res/comm_set_music/pic_voice.png",
+        "Gambler_res/common/bg_peek.png",
+        "Gambler_res/common/bg_peek_banker_win.png",
+        "Gambler_res/common/bg_peek_player_win.png",
+        "Gambler_res/common/btn_bet_history.png",
+        "Gambler_res/common/btn_control.png",
+        "Gambler_res/common/btn_exit.png",
+        "Gambler_res/common/btn_full_screen.png",
+        "Gambler_res/common/btn_music_off.png",
+        "Gambler_res/common/btn_mute_on.png",
+        "Gambler_res/common/btn_setting_chips_down.png",
+        "Gambler_res/common/btn_setting_chips_up.png",
+        "Gambler_res/common/btn_stop_video.png",
+        "Gambler_res/common/chip_save/btn_chip_save_down.png",
+        "Gambler_res/common/chip_save/btn_chip_save_over.png",
+        "Gambler_res/common/chip_save/btn_chip_save_up.png",
+        "Gambler_res/common/comm_chip/chip_1_no.png",
+        "Gambler_res/common/comm_chip/chip_1_up.png",
+        "Gambler_res/common/comm_chip/chip_10_no.png",
+        "Gambler_res/common/comm_chip/chip_10_up.png",
+        "Gambler_res/common/comm_chip/chip_100_no.png",
+        "Gambler_res/common/comm_chip/chip_100_up.png",
+        "Gambler_res/common/comm_chip/chip_1000_no.png",
+        "Gambler_res/common/comm_chip/chip_1000_up.png",
+        "Gambler_res/common/comm_chip/chip_10000_no.png",
+        "Gambler_res/common/comm_chip/chip_10000_up.png",
+        "Gambler_res/common/comm_chip/chip_100000_no.png",
+        "Gambler_res/common/comm_chip/chip_100000_up.png",
+        "Gambler_res/common/comm_chip/chip_5_no.png",
+        "Gambler_res/common/comm_chip/chip_5_up.png",
+        "Gambler_res/common/comm_chip/chip_50_no.png",
+        "Gambler_res/common/comm_chip/chip_50_up.png",
+        "Gambler_res/common/comm_chip/chip_500_no.png",
+        "Gambler_res/common/comm_chip/chip_500_up.png",
+        "Gambler_res/common/comm_chip/chip_5000_no.png",
+        "Gambler_res/common/comm_chip/chip_5000_up.png",
+        "Gambler_res/common/comm_chip/chip_50000_no.png",
+        "Gambler_res/common/comm_chip/chip_50000_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_1_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_1_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_10_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_10_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_100_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_100_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_1000_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_1000_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_10000_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_10000_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_100000_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_100000_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_5_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_5_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_50_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_50_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_500_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_500_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_5000_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_5000_up.png",
+        "Gambler_res/common/comm_chip/chip_chip_50000_down.png",
+        "Gambler_res/common/comm_chip/chip_chip_50000_up.png",
+        "Gambler_res/common/comm_chip/pic_chip_choose.png",
+        "Gambler_res/common/comm_counter/pic_counter_1.png",
+        "Gambler_res/common/comm_counter/pic_counter_10.png",
+        "Gambler_res/common/comm_counter/pic_counter_11.png",
+        "Gambler_res/common/comm_counter/pic_counter_12.png",
+        "Gambler_res/common/comm_counter/pic_counter_13.png",
+        "Gambler_res/common/comm_counter/pic_counter_2.png",
+        "Gambler_res/common/comm_counter/pic_counter_3.png",
+        "Gambler_res/common/comm_counter/pic_counter_4.png",
+        "Gambler_res/common/comm_counter/pic_counter_5.png",
+        "Gambler_res/common/comm_counter/pic_counter_6.png",
+        "Gambler_res/common/comm_counter/pic_counter_7.png",
+        "Gambler_res/common/comm_counter/pic_counter_8.png",
+        "Gambler_res/common/comm_counter/pic_counter_9.png",
+        "Gambler_res/common/comm_counter/pic_counter_all_1.png",
+        "Gambler_res/common/comm_counter/pic_counter_center.png",
+        "Gambler_res/common/comm_info/pic_info_green.png",
+        "Gambler_res/common/comm_info/pic_info_red.png",
+        "Gambler_res/common/comm_info/pic_info_yellow.png",
+        "Gambler_res/common/poker/pic_poker_2.png",
+        "Gambler_res/common/poker/pic_poker_clubs_1.png",
+        "Gambler_res/common/poker/pic_poker_clubs_10.png",
+        "Gambler_res/common/poker/pic_poker_clubs_11.png",
+        "Gambler_res/common/poker/pic_poker_clubs_12.png",
+        "Gambler_res/common/poker/pic_poker_clubs_13.png",
+        "Gambler_res/common/poker/pic_poker_clubs_2.png",
+        "Gambler_res/common/poker/pic_poker_clubs_3.png",
+        "Gambler_res/common/poker/pic_poker_clubs_4.png",
+        "Gambler_res/common/poker/pic_poker_clubs_5.png",
+        "Gambler_res/common/poker/pic_poker_clubs_6.png",
+        "Gambler_res/common/poker/pic_poker_clubs_7.png",
+        "Gambler_res/common/poker/pic_poker_clubs_8.png",
+        "Gambler_res/common/poker/pic_poker_clubs_9.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_1.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_10.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_11.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_12.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_13.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_2.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_3.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_4.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_5.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_6.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_7.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_8.png",
+        "Gambler_res/common/poker/pic_poker_diamonds_9.png",
+        "Gambler_res/common/poker/pic_poker_heart_1.png",
+        "Gambler_res/common/poker/pic_poker_heart_10.png",
+        "Gambler_res/common/poker/pic_poker_heart_11.png",
+        "Gambler_res/common/poker/pic_poker_heart_12.png",
+        "Gambler_res/common/poker/pic_poker_heart_13.png",
+        "Gambler_res/common/poker/pic_poker_heart_2.png",
+        "Gambler_res/common/poker/pic_poker_heart_3.png",
+        "Gambler_res/common/poker/pic_poker_heart_4.png",
+        "Gambler_res/common/poker/pic_poker_heart_5.png",
+        "Gambler_res/common/poker/pic_poker_heart_6.png",
+        "Gambler_res/common/poker/pic_poker_heart_7.png",
+        "Gambler_res/common/poker/pic_poker_heart_8.png",
+        "Gambler_res/common/poker/pic_poker_heart_9.png",
+        "Gambler_res/common/poker/pic_poker_spades_1.png",
+        "Gambler_res/common/poker/pic_poker_spades_10.png",
+        "Gambler_res/common/poker/pic_poker_spades_11.png",
+        "Gambler_res/common/poker/pic_poker_spades_12.png",
+        "Gambler_res/common/poker/pic_poker_spades_13.png",
+        "Gambler_res/common/poker/pic_poker_spades_2.png",
+        "Gambler_res/common/poker/pic_poker_spades_3.png",
+        "Gambler_res/common/poker/pic_poker_spades_4.png",
+        "Gambler_res/common/poker/pic_poker_spades_5.png",
+        "Gambler_res/common/poker/pic_poker_spades_6.png",
+        "Gambler_res/common/poker/pic_poker_spades_7.png",
+        "Gambler_res/common/poker/pic_poker_spades_8.png",
+        "Gambler_res/common/poker/pic_poker_spades_9.png",
         "Gambler_res/font/arial.ttf",
         "Gambler_res/GameResult/pic_result_frame_1.png",
         "Gambler_res/GameResult/pic_result_frame_2.png",

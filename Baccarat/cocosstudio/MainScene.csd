@@ -2247,8 +2247,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm_chip/chip_1_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm_chip/chip_1_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_1_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_1_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -2262,7 +2262,7 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm_chip/chip_5_no.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_5_no.png" Plist="" />
                         <NormalFileData Type="Normal" Path="MainScene_res/chip_Bet/chip_chip_bet_5.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
