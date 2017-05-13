@@ -10160,7 +10160,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _info/pic_info_red.png",
+                  "Path": "Gambler_res/_common/comm_info/pic_info_red.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -10205,7 +10205,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _info/pic_info_green.png",
+                  "Path": "Gambler_res/_common/comm_info/pic_info_green.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -10250,7 +10250,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _info/pic_info_yellow.png",
+                  "Path": "Gambler_res/_common/comm_info/pic_info_yellow.png",
                   "Plist": ""
                 },
                 "BlendFunc": {
@@ -16854,12 +16854,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_1_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_1_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_1_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_1_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -16929,12 +16929,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_5_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_5_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_5_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_5_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17004,12 +17004,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_10_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_10_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_10_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_10_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17079,12 +17079,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_50_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_50_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_50_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_50_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17154,12 +17154,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_100_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_100_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_100_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_100_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17229,12 +17229,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_500_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_500_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_500_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_500_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17304,12 +17304,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_1000_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_1000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_1000_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_1000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17379,12 +17379,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_5000_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_5000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_5000_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_5000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17454,12 +17454,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_10000_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_10000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_10000_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_10000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17529,12 +17529,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_50000_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_50000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_50000_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_50000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -17604,12 +17604,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_100000_no.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_100000_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_100000_up.png",
+                          "Path": "Gambler_res/_common/comm_chip/chip_100000_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -27106,7 +27106,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "Gambler_res/_common/comm _chip/pic_chip_choose.png",
+                      "Path": "Gambler_res/_common/comm_chip/pic_chip_choose.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -35126,12 +35126,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_1_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_1_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35201,12 +35201,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_5_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_5_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35276,12 +35276,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_10_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_10_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35351,12 +35351,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_50_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_50_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35426,12 +35426,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_100_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_100_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35501,12 +35501,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_500_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_500_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_500_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_500_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35576,12 +35576,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_1000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_1000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35651,12 +35651,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_5000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_5000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35726,12 +35726,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_10000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_10000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35801,12 +35801,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_50000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_50000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -35876,12 +35876,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_100000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100000_down.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_100000_down.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100000_down.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36026,12 +36026,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_1_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_1_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36101,12 +36101,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_5_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_5_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36176,12 +36176,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_10_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_10_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36251,12 +36251,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_50_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_50_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36326,12 +36326,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_100_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_100_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36401,12 +36401,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_500_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_500_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_500_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_500_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36476,12 +36476,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_1000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_1000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_1000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36551,12 +36551,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_5000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_5000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_5000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36626,12 +36626,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_10000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_10000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_10000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36701,12 +36701,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_50000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_50000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_50000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -36776,12 +36776,12 @@
                 },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_100000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100000_up.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Gambler_res/_common/comm _chip/chip_chip_100000_up.png",
+                  "Path": "Gambler_res/_common/comm_chip/chip_chip_100000_up.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -37481,54 +37481,54 @@
         "Gambler_res/_common/chip_save/btn_chip_save_down.png",
         "Gambler_res/_common/chip_save/btn_chip_save_over.png",
         "Gambler_res/_common/chip_save/btn_chip_save_up.png",
-        "Gambler_res/_common/comm _chip/chip_1_no.png",
-        "Gambler_res/_common/comm _chip/chip_1_up.png",
-        "Gambler_res/_common/comm _chip/chip_10_no.png",
-        "Gambler_res/_common/comm _chip/chip_10_up.png",
-        "Gambler_res/_common/comm _chip/chip_100_no.png",
-        "Gambler_res/_common/comm _chip/chip_100_up.png",
-        "Gambler_res/_common/comm _chip/chip_1000_no.png",
-        "Gambler_res/_common/comm _chip/chip_1000_up.png",
-        "Gambler_res/_common/comm _chip/chip_10000_no.png",
-        "Gambler_res/_common/comm _chip/chip_10000_up.png",
-        "Gambler_res/_common/comm _chip/chip_100000_no.png",
-        "Gambler_res/_common/comm _chip/chip_100000_up.png",
-        "Gambler_res/_common/comm _chip/chip_5_no.png",
-        "Gambler_res/_common/comm _chip/chip_5_up.png",
-        "Gambler_res/_common/comm _chip/chip_50_no.png",
-        "Gambler_res/_common/comm _chip/chip_50_up.png",
-        "Gambler_res/_common/comm _chip/chip_500_no.png",
-        "Gambler_res/_common/comm _chip/chip_500_up.png",
-        "Gambler_res/_common/comm _chip/chip_5000_no.png",
-        "Gambler_res/_common/comm _chip/chip_5000_up.png",
-        "Gambler_res/_common/comm _chip/chip_50000_no.png",
-        "Gambler_res/_common/comm _chip/chip_50000_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_1_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_1_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_10_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_10_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_100_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_100_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_1000_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_1000_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_10000_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_10000_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_100000_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_100000_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_5_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_5_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_50_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_50_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_500_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_500_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_5000_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_5000_up.png",
-        "Gambler_res/_common/comm _chip/chip_chip_50000_down.png",
-        "Gambler_res/_common/comm _chip/chip_chip_50000_up.png",
-        "Gambler_res/_common/comm _chip/pic_chip_choose.png",
-        "Gambler_res/_common/comm _info/pic_info_green.png",
-        "Gambler_res/_common/comm _info/pic_info_red.png",
-        "Gambler_res/_common/comm _info/pic_info_yellow.png",
+        "Gambler_res/_common/comm_chip/chip_1_no.png",
+        "Gambler_res/_common/comm_chip/chip_1_up.png",
+        "Gambler_res/_common/comm_chip/chip_10_no.png",
+        "Gambler_res/_common/comm_chip/chip_10_up.png",
+        "Gambler_res/_common/comm_chip/chip_100_no.png",
+        "Gambler_res/_common/comm_chip/chip_100_up.png",
+        "Gambler_res/_common/comm_chip/chip_1000_no.png",
+        "Gambler_res/_common/comm_chip/chip_1000_up.png",
+        "Gambler_res/_common/comm_chip/chip_10000_no.png",
+        "Gambler_res/_common/comm_chip/chip_10000_up.png",
+        "Gambler_res/_common/comm_chip/chip_100000_no.png",
+        "Gambler_res/_common/comm_chip/chip_100000_up.png",
+        "Gambler_res/_common/comm_chip/chip_5_no.png",
+        "Gambler_res/_common/comm_chip/chip_5_up.png",
+        "Gambler_res/_common/comm_chip/chip_50_no.png",
+        "Gambler_res/_common/comm_chip/chip_50_up.png",
+        "Gambler_res/_common/comm_chip/chip_500_no.png",
+        "Gambler_res/_common/comm_chip/chip_500_up.png",
+        "Gambler_res/_common/comm_chip/chip_5000_no.png",
+        "Gambler_res/_common/comm_chip/chip_5000_up.png",
+        "Gambler_res/_common/comm_chip/chip_50000_no.png",
+        "Gambler_res/_common/comm_chip/chip_50000_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_1_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_1_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_10_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_10_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_100_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_100_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_1000_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_1000_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_10000_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_10000_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_100000_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_100000_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_5_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_5_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_50_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_50_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_500_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_500_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_5000_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_5000_up.png",
+        "Gambler_res/_common/comm_chip/chip_chip_50000_down.png",
+        "Gambler_res/_common/comm_chip/chip_chip_50000_up.png",
+        "Gambler_res/_common/comm_chip/pic_chip_choose.png",
+        "Gambler_res/_common/comm_info/pic_info_green.png",
+        "Gambler_res/_common/comm_info/pic_info_red.png",
+        "Gambler_res/_common/comm_info/pic_info_yellow.png",
         "Gambler_res/_common/comm_counter/pic_counter_1.png",
         "Gambler_res/_common/comm_counter/pic_counter_10.png",
         "Gambler_res/_common/comm_counter/pic_counter_11.png",

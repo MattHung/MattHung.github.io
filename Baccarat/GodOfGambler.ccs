@@ -10,7 +10,7 @@
               <Image Name="btn_chip_save_over.png" />
               <Image Name="btn_chip_save_up.png" />
             </Folder>
-            <Folder Name="comm _chip">
+            <Folder Name="comm_chip">
               <Image Name="chip_1_no.png" />
               <Image Name="chip_1_up.png" />
               <Image Name="chip_10_no.png" />
@@ -116,7 +116,7 @@
               <Image Name="chip_pic_bet2.png" />
               <Image Name="pic_chip_choose.png" />
             </Folder>
-            <Folder Name="comm _info">
+            <Folder Name="comm_info">
               <Image Name="pic_info_green.png" />
               <Image Name="pic_info_red.png" />
               <Image Name="pic_info_yellow.png" />
