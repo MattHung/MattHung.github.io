@@ -5,7 +5,7 @@
 var RoomLayer = gameLayer.extend({
 
     ctor: function () {
-        this._super(scene_json.RoomScene_json);
+        this._super(res.RoomScene_json);
 
         this.initEventSet();
         GameManager.getInstance().initialRoomSceneUI(this.root_node);

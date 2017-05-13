@@ -8,7 +8,7 @@ var MainLayer = gameLayer.extend({
 
     ctor: function () {
 
-        this._super(scene_json.GamblerScene_json);
+        this._super(res.GamblerScene_json);
 
         this.onInitRushVideo(this);
         this.tmpVisibleSet();
