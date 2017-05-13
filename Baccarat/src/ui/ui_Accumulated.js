@@ -210,7 +210,7 @@ var ui_Accumulated = gameLayer.extend({
 
     downClose: function (sender) {
         var pic = sender.getChildByName(sender.getName() + "_over");
-        pic.setVisible(false);
+        // pic.setVisible(false);
     },
 
     enterClose: function (sender) {
