@@ -1639,7 +1639,7 @@
             <Position X="0.0001" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0000" />
+            <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
           <AbstractNodeData Name="Ranking_Node" ActionTag="51490761" Tag="434" IconVisible="True" RightMargin="1000.0000" TopMargin="700.0000" ctype="SingleNodeObjectData">
