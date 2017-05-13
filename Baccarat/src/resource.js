@@ -9,6 +9,13 @@ var res = {
     Sound_json: "res/Sound/SoundMusic.json"
 };
 
+var scene_json = {
+    MainScene_json: "res/MainScene.json",
+    GamblerScene_json: "res/GamblerScene.json",
+    LoginPanel_json: "res/LoginScene.json",
+    RoomScene_json: "res/RoomScene.json",
+}
+
 var rp = {};
 rp.resPath = "src/Vendor/CYRoadMap/res/";
 

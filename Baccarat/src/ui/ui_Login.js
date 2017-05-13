@@ -39,7 +39,7 @@ var ui_Login = gameLayer.extend({
     _devLogin:false,
 
     ctor: function (){
-        this._super(res.LoginPanel_json);
+        this._super(scene_json.LoginPanel_json);
 
         CocosWidget.eventRegister.getInstance().setRootNode(this.root_node);
 
