@@ -3,7 +3,8 @@
  */
 
 // test server
- var VIDEO_SOURCE_URL = "ws://video.godofgb.com:50480";
+ // var VIDEO_SOURCE_URL = "ws://video.godofgb.com:50480";
+  var VIDEO_SOURCE_URL = "ws://220.134.243.106:50480";
 
 //production server
  // var VIDEO_SOURCE_URL = "ws://vdstr.godofgb.com";
