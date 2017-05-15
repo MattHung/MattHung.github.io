@@ -60,6 +60,7 @@ var ui_Login = gameLayer.extend({
         this._field_password.setString("0000");
 
         this._btn_login = this.getNode("Btn_done");
+        this._btn_login.setLocalZOrder(100);
         setCookie("SESSION_ID", "");
 
         this.registerMouseEvent(this._btn_login, function(node, mouseHitPoint){

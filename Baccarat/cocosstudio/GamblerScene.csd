@@ -2333,7 +2333,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/bg_peek.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/bg_peek.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="bankerWin_bg" ActionTag="387700582" Tag="1721" IconVisible="False" LeftMargin="163.2668" RightMargin="-311.2668" TopMargin="-646.6594" BottomMargin="454.6594" ctype="SpriteObjectData">
@@ -2344,7 +2344,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/bg_peek_banker_win.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/bg_peek_banker_win.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="playerWin_bg" ActionTag="-2085487711" Tag="1720" IconVisible="False" LeftMargin="13.2218" RightMargin="-161.2218" TopMargin="-646.6594" BottomMargin="454.6594" ctype="SpriteObjectData">
@@ -2355,7 +2355,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/bg_peek_player_win.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/bg_peek_player_win.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="txt_Banker" ActionTag="-367405355" Tag="1172" IconVisible="False" LeftMargin="177.6894" RightMargin="-251.6894" TopMargin="-636.1387" BottomMargin="613.1387" FontSize="20" LabelText="Banker   " HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -2414,7 +2414,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Player_Poker_2" ActionTag="-941216239" Tag="1724" IconVisible="False" LeftMargin="8.6967" RightMargin="-236.6967" TopMargin="-724.1252" BottomMargin="404.1252" ctype="SpriteObjectData">
@@ -2425,7 +2425,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Player_Poker_3" ActionTag="421973739" Tag="1725" IconVisible="False" LeftMargin="-73.4405" RightMargin="-246.5595" TopMargin="-602.6407" BottomMargin="374.6407" ctype="SpriteObjectData">
@@ -2447,7 +2447,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Banker_Poker_2" ActionTag="1311725623" Tag="1727" IconVisible="False" LeftMargin="155.4948" RightMargin="-383.4948" TopMargin="-724.1262" BottomMargin="404.1262" ctype="SpriteObjectData">
@@ -2458,7 +2458,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Banker_Poker_3" ActionTag="986167348" Tag="1728" IconVisible="False" LeftMargin="77.3601" RightMargin="-397.3601" TopMargin="-602.6407" BottomMargin="374.6407" ctype="SpriteObjectData">
@@ -2519,7 +2519,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="Gambler_res/_common/comm _info/pic_info_red.png" Plist="" />
+                <FileData Type="Normal" Path="Gambler_res/common/comm_info/pic_info_red.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="Bet_bg" ActionTag="1322880155" Tag="1731" IconVisible="False" LeftMargin="12.1307" RightMargin="-312.1307" TopMargin="-687.9111" BottomMargin="653.9111" ctype="SpriteObjectData">
@@ -2530,7 +2530,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="Gambler_res/_common/comm _info/pic_info_green.png" Plist="" />
+                <FileData Type="Normal" Path="Gambler_res/common/comm_info/pic_info_green.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="Wait_NewGame_bg" ActionTag="543609580" Tag="1732" IconVisible="False" LeftMargin="12.1307" RightMargin="-312.1307" TopMargin="-687.9111" BottomMargin="653.9111" ctype="SpriteObjectData">
@@ -2541,7 +2541,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="Gambler_res/_common/comm _info/pic_info_yellow.png" Plist="" />
+                <FileData Type="Normal" Path="Gambler_res/common/comm_info/pic_info_yellow.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="txt_WaitNewGame" ActionTag="1453798482" Tag="1729" IconVisible="False" LeftMargin="52.1307" RightMargin="-272.1307" TopMargin="-679.5853" BottomMargin="662.5853" TouchEnable="True" FontSize="16" IsCustomSize="True" LabelText="等待新局開始" PlaceHolderText="" MaxLengthText="10" ctype="TextFieldObjectData">
@@ -2564,7 +2564,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_1" ActionTag="697728383" Tag="1738" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2575,7 +2575,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_2" ActionTag="380158069" Tag="1743" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2586,7 +2586,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_3" ActionTag="-299252907" Tag="1744" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2597,7 +2597,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_4" ActionTag="1350607474" Tag="1745" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2608,7 +2608,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_4.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_4.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_5" ActionTag="764872294" Tag="1746" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2619,7 +2619,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_5.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_5.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_6" ActionTag="-1434635805" Tag="1747" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2630,7 +2630,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_6.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_6.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_7" ActionTag="54859337" Tag="1748" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2641,7 +2641,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_8" ActionTag="-1120345788" Tag="1749" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2652,7 +2652,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_8.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_8.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_9" ActionTag="-1263589483" Tag="1789" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2663,7 +2663,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_9.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_9.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_10" ActionTag="1048599651" Tag="1739" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2674,7 +2674,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_11" ActionTag="-2061873173" Tag="1740" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2685,7 +2685,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_11.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_11.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_12" ActionTag="2020046339" Tag="1741" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2696,7 +2696,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_12.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_12.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_13" ActionTag="-662202151" Tag="1742" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2707,7 +2707,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_13.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_13.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_1" ActionTag="-1782308098" Tag="1750" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2718,7 +2718,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_2" ActionTag="565288311" Tag="1755" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2729,7 +2729,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_3" ActionTag="-1825543206" Tag="1756" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2740,7 +2740,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_4" ActionTag="-129463602" Tag="1757" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2751,7 +2751,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_4.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_4.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_5" ActionTag="826806228" Tag="1758" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2762,7 +2762,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_5.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_5.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_6" ActionTag="-1725208516" Tag="1759" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2773,7 +2773,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_6.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_6.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_7" ActionTag="-1818466043" Tag="1760" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2784,7 +2784,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_8" ActionTag="-637311685" Tag="1761" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2795,7 +2795,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_8.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_8.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_9" ActionTag="1871812638" Tag="1762" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2806,7 +2806,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_9.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_9.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_10" ActionTag="418740720" Tag="1751" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2817,7 +2817,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_11" ActionTag="-1159412444" Tag="1752" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2828,7 +2828,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_11.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_11.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_12" ActionTag="390245744" Tag="1753" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2839,7 +2839,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_12.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_12.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_13" ActionTag="-1161771889" Tag="1754" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2850,7 +2850,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_13.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_13.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_1" ActionTag="-940984618" Tag="1763" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2861,7 +2861,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_2" ActionTag="2094900693" Tag="1768" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2872,7 +2872,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_3" ActionTag="853121483" Tag="1769" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2883,7 +2883,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_4" ActionTag="1901309739" Tag="1770" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2894,7 +2894,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_4.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_4.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_5" ActionTag="-8944634" Tag="1771" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2905,7 +2905,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_5.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_5.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_6" ActionTag="712371144" Tag="1772" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2916,7 +2916,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_6.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_6.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_7" ActionTag="-1182271966" Tag="1773" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2927,7 +2927,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_8" ActionTag="168166015" Tag="1774" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2938,7 +2938,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_8.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_8.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_9" ActionTag="-793767657" Tag="1775" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2949,7 +2949,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_9.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_9.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_10" ActionTag="-1487114235" Tag="1764" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2960,7 +2960,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_11" ActionTag="437572739" Tag="1765" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2971,7 +2971,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_11.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_11.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_12" ActionTag="1931803098" Tag="1766" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2982,7 +2982,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_12.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_12.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_13" ActionTag="-102774714" Tag="1767" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -2993,7 +2993,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_13.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_13.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_1" ActionTag="-1917771417" Tag="1776" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3004,7 +3004,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_2" ActionTag="-189512395" Tag="1781" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3015,7 +3015,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_3" ActionTag="-1273630851" Tag="1782" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3026,7 +3026,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_4" ActionTag="1390778723" Tag="1783" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3037,7 +3037,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_4.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_4.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_5" ActionTag="-1921347136" Tag="1784" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3048,7 +3048,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_5.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_5.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_6" ActionTag="-11767845" Tag="1785" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3059,7 +3059,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_6.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_6.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_7" ActionTag="-1232256235" Tag="1786" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3070,7 +3070,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_8" ActionTag="-738206912" Tag="1787" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3081,7 +3081,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_8.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_8.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_9" ActionTag="-1991100606" Tag="1788" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3092,7 +3092,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_9.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_9.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_10" ActionTag="-85100173" Tag="1777" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3103,7 +3103,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_11" ActionTag="-1258649184" Tag="1778" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3114,7 +3114,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_11.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_11.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_12" ActionTag="141986202" Tag="1779" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3125,7 +3125,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_12.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_12.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_13" ActionTag="-346957198" Tag="1780" IconVisible="False" LeftMargin="-180.4656" RightMargin="-47.5344" TopMargin="-729.9811" BottomMargin="409.9811" ctype="SpriteObjectData">
@@ -3136,7 +3136,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_13.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_13.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                 </Children>
@@ -3752,7 +3752,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_all_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_all_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_counter_center" ActionTag="89857696" Tag="1816" IconVisible="False" LeftMargin="53.7952" RightMargin="-117.7952" TopMargin="-632.3727" BottomMargin="568.3727" ctype="SpriteObjectData">
@@ -3763,7 +3763,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_center.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_center.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="CountDownPic" ActionTag="1469911804" Tag="1828" IconVisible="True" ctype="SingleNodeObjectData">
@@ -3777,7 +3777,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_1.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_1.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_2" ActionTag="864234747" Tag="1807" IconVisible="False" LeftMargin="103.6659" RightMargin="-125.6659" TopMargin="-643.7357" BottomMargin="621.7357" ctype="SpriteObjectData">
@@ -3788,7 +3788,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_2.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_2.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_3" ActionTag="-1956766673" Tag="1808" IconVisible="False" LeftMargin="117.3495" RightMargin="-135.3495" TopMargin="-628.1835" BottomMargin="604.1835" ctype="SpriteObjectData">
@@ -3799,7 +3799,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_3.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_3.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_4" ActionTag="400505510" Tag="1809" IconVisible="False" LeftMargin="121.7847" RightMargin="-135.7847" TopMargin="-606.7365" BottomMargin="582.7365" ctype="SpriteObjectData">
@@ -3810,7 +3810,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_4.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_4.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_5" ActionTag="247543150" Tag="1810" IconVisible="False" LeftMargin="111.4800" RightMargin="-131.4800" TopMargin="-587.2885" BottomMargin="565.2885" ctype="SpriteObjectData">
@@ -3821,7 +3821,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_5.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_5.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_6" ActionTag="1221755130" Tag="1811" IconVisible="False" LeftMargin="94.9028" RightMargin="-116.9028" TopMargin="-572.0903" BottomMargin="554.0903" ctype="SpriteObjectData">
@@ -3832,7 +3832,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_6.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_6.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_7" ActionTag="1137294972" Tag="1812" IconVisible="False" LeftMargin="72.9407" RightMargin="-96.9407" TopMargin="-563.2482" BottomMargin="551.2482" ctype="SpriteObjectData">
@@ -3843,7 +3843,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_7.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_7.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_8" ActionTag="588984843" Tag="1813" IconVisible="False" LeftMargin="53.0065" RightMargin="-77.0065" TopMargin="-571.6572" BottomMargin="553.6572" ctype="SpriteObjectData">
@@ -3854,7 +3854,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_8.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_8.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_9" ActionTag="-529502334" Tag="1814" RotationSkewX="1.0125" RotationSkewY="1.0107" IconVisible="False" LeftMargin="39.9143" RightMargin="-59.9143" TopMargin="-586.2603" BottomMargin="564.2603" ctype="SpriteObjectData">
@@ -3865,7 +3865,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_9.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_9.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_10" ActionTag="916089484" Tag="1803" IconVisible="False" LeftMargin="38.0732" RightMargin="-52.0732" TopMargin="-606.2753" BottomMargin="582.2753" ctype="SpriteObjectData">
@@ -3876,7 +3876,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_10.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_10.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_11" ActionTag="1344633600" Tag="1804" IconVisible="False" LeftMargin="37.0205" RightMargin="-55.0205" TopMargin="-627.1830" BottomMargin="603.1830" ctype="SpriteObjectData">
@@ -3887,7 +3887,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_11.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_11.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_12" ActionTag="-1711523664" Tag="1805" IconVisible="False" LeftMargin="46.2439" RightMargin="-68.2439" TopMargin="-642.7362" BottomMargin="620.7362" ctype="SpriteObjectData">
@@ -3898,7 +3898,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_12.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_12.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="pic_counter_13" ActionTag="-1944080314" Tag="1806" IconVisible="False" LeftMargin="63.2579" RightMargin="-85.2579" TopMargin="-648.4999" BottomMargin="632.4999" ctype="SpriteObjectData">
@@ -3909,7 +3909,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Gambler_res/_common/comm_counter/pic_counter_13.png" Plist="" />
+                        <FileData Type="Normal" Path="Gambler_res/common/comm_counter/pic_counter_13.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                     </Children>
@@ -4117,8 +4117,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_setting_chips_down.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_setting_chips_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_setting_chips_down.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_setting_chips_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4132,8 +4132,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_setting_chips_down.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_setting_chips_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_setting_chips_down.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_setting_chips_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4158,8 +4158,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_1_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_1_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_1_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_1_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4173,8 +4173,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_5_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_5_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_5_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_5_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4188,8 +4188,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_10_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_10_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_10_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_10_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4203,8 +4203,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_50_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_50_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_50_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_50_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4218,8 +4218,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_100_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_100_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_100_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_100_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4233,8 +4233,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_500_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_500_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_500_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_500_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4248,8 +4248,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_1000_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_1000_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_1000_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_1000_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4263,8 +4263,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_5000_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_5000_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_5000_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_5000_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4278,8 +4278,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_10000_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_10000_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_10000_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_10000_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4293,8 +4293,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_50000_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_50000_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_50000_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_50000_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4308,8 +4308,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_100000_no.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_100000_up.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_100000_no.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_100000_up.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4452,8 +4452,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_control.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_control.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_control.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_control.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4467,8 +4467,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_exit.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_exit.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_exit.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_exit.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4482,8 +4482,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_music_off.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_mute_on.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_music_off.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_mute_on.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4497,8 +4497,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_music_off.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_music_off.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_music_off.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_music_off.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4527,8 +4527,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_full_screen.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_full_screen.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_full_screen.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_full_screen.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4542,8 +4542,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_stop_video.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_stop_video.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_stop_video.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_stop_video.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4557,8 +4557,8 @@
                         <PreSize X="0.0000" Y="0.0000" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Gambler_res/_common/btn_bet_history.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Gambler_res/_common/btn_bet_history.png" Plist="" />
+                        <PressedFileData Type="Normal" Path="Gambler_res/common/btn_bet_history.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Gambler_res/common/btn_bet_history.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4892,7 +4892,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_2" ActionTag="-686311684" Tag="976" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4903,7 +4903,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_3" ActionTag="257434778" Tag="977" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4914,7 +4914,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_4" ActionTag="-2008196974" Tag="978" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4925,7 +4925,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_4.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_4.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_5" ActionTag="639831281" Tag="979" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4936,7 +4936,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_5.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_5.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_6" ActionTag="-365678935" Tag="980" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4947,7 +4947,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_6.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_6.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_7" ActionTag="435897913" Tag="981" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4958,7 +4958,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_8" ActionTag="-259345974" Tag="982" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4969,7 +4969,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_8.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_8.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_9" ActionTag="-1169436210" Tag="983" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4980,7 +4980,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_9.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_9.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_10" ActionTag="153052106" Tag="972" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -4991,7 +4991,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_11" ActionTag="1161083397" Tag="973" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5002,7 +5002,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_11.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_11.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_12" ActionTag="-425328296" Tag="974" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5013,7 +5013,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_12.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_12.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_clubs_13" ActionTag="1942638099" Tag="975" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5024,7 +5024,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_clubs_13.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_clubs_13.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_1" ActionTag="-665801085" Tag="984" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5035,7 +5035,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_2" ActionTag="1178989725" Tag="989" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5046,7 +5046,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_3" ActionTag="1872666030" Tag="990" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5057,7 +5057,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_4" ActionTag="-1289985067" Tag="991" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5068,7 +5068,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_4.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_4.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_5" ActionTag="1650949347" Tag="992" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5079,7 +5079,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_5.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_5.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_6" ActionTag="793448718" Tag="993" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5090,7 +5090,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_6.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_6.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_7" ActionTag="-1652990805" Tag="994" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5101,7 +5101,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_8" ActionTag="1997505827" Tag="995" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5112,7 +5112,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_8.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_8.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_9" ActionTag="447815981" Tag="996" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5123,7 +5123,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_9.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_9.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_10" ActionTag="224163352" Tag="985" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5134,7 +5134,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_11" ActionTag="-1565215931" Tag="986" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5145,7 +5145,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_11.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_11.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_12" ActionTag="-615468926" Tag="987" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5156,7 +5156,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_12.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_12.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_diamonds_13" ActionTag="-769772008" Tag="988" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5167,7 +5167,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_diamonds_13.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_diamonds_13.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_1" ActionTag="70124210" Tag="997" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5178,7 +5178,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_2" ActionTag="2089204566" Tag="1002" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5189,7 +5189,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_3" ActionTag="1350482" Tag="1003" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5200,7 +5200,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_4" ActionTag="-658878673" Tag="1004" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5211,7 +5211,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_4.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_4.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_5" ActionTag="-696034238" Tag="1005" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5222,7 +5222,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_5.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_5.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_6" ActionTag="-1030625374" Tag="1006" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5233,7 +5233,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_6.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_6.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_7" ActionTag="1902287573" Tag="1007" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5244,7 +5244,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_8" ActionTag="-1276892381" Tag="1008" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5255,7 +5255,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_8.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_8.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_9" ActionTag="2017655138" Tag="1009" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5266,7 +5266,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_9.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_9.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_10" ActionTag="-1316671763" Tag="998" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5277,7 +5277,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_11" ActionTag="1313340367" Tag="999" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5288,7 +5288,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_11.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_11.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_12" ActionTag="1173037214" Tag="1000" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5299,7 +5299,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_12.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_12.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_heart_13" ActionTag="455555534" Tag="1001" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5310,7 +5310,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_heart_13.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_heart_13.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_1" ActionTag="-487249228" Tag="1012" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5321,7 +5321,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_1.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_1.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_2" ActionTag="-1132130192" Tag="1017" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5332,7 +5332,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_2.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_2.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_3" ActionTag="847812471" Tag="1018" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5343,7 +5343,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_3.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_3.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_4" ActionTag="-1389185386" Tag="1019" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5354,7 +5354,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_4.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_4.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_5" ActionTag="-1273336966" Tag="1020" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5365,7 +5365,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_5.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_5.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_6" ActionTag="1503502014" Tag="1021" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5376,7 +5376,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_6.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_6.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_7" ActionTag="-2042801069" Tag="1022" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5387,7 +5387,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_7.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_7.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_8" ActionTag="968175482" Tag="1023" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5398,7 +5398,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_8.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_8.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_9" ActionTag="-134922432" Tag="1024" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5409,7 +5409,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_9.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_9.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_10" ActionTag="1567785143" Tag="1013" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5420,7 +5420,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_10.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_10.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_11" ActionTag="-440054829" Tag="1014" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5431,7 +5431,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_11.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_11.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_12" ActionTag="665119309" Tag="1015" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5442,7 +5442,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_12.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_12.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="pic_poker_spades_13" ActionTag="-1101997650" Tag="1016" IconVisible="False" LeftMargin="-330.0620" RightMargin="102.0620" TopMargin="-251.7930" BottomMargin="-68.2070" ctype="SpriteObjectData">
@@ -5453,7 +5453,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/poker/pic_poker_spades_13.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/poker/pic_poker_spades_13.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                 </Children>
@@ -6662,7 +6662,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="Gambler_res/_common/comm _chip/pic_chip_choose.png" Plist="" />
+                    <FileData Type="Normal" Path="Gambler_res/common/comm_chip/pic_chip_choose.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                 </Children>
@@ -7827,7 +7827,7 @@
             <Position X="0.0001" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0000" />
+            <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
           <AbstractNodeData Name="Table_Lan_Pic_Node" ActionTag="1690328078" Tag="1664" IconVisible="True" RightMargin="1000.0000" TopMargin="700.0000" ctype="SingleNodeObjectData">
@@ -8652,8 +8652,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_1_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_1_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_1_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_1_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8667,8 +8667,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_5_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_5_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_5_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_5_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8682,8 +8682,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_10_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_10_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_10_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_10_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8697,8 +8697,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_50_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_50_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_50_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_50_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8712,8 +8712,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_100_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_100_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_100_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_100_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8727,8 +8727,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_500_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_500_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_500_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_500_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8742,8 +8742,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_1000_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_1000_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_1000_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_1000_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8757,8 +8757,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_5000_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_5000_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_5000_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_5000_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8772,8 +8772,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_10000_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_10000_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_10000_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_10000_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8787,8 +8787,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_50000_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_50000_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_50000_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_50000_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8802,8 +8802,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_100000_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_100000_down.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_100000_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_100000_down.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8817,8 +8817,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/chip_save/btn_chip_save_down.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/chip_save/btn_chip_save_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/chip_save/btn_chip_save_down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/chip_save/btn_chip_save_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8832,8 +8832,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_1_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_1_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_1_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_1_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8847,8 +8847,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_5_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_5_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_5_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_5_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8862,8 +8862,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_10_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_10_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_10_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_10_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8877,8 +8877,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_50_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_50_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_50_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_50_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8892,8 +8892,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_100_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_100_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_100_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_100_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8907,8 +8907,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_500_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_500_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_500_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_500_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8922,8 +8922,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_1000_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_1000_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_1000_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_1000_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8937,8 +8937,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_5000_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_5000_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_5000_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_5000_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8952,8 +8952,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_10000_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_10000_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_10000_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_10000_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8967,8 +8967,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_50000_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_50000_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_50000_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_50000_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -8982,8 +8982,8 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_100000_up.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Gambler_res/_common/comm _chip/chip_chip_100000_up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_100000_up.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Gambler_res/common/comm_chip/chip_chip_100000_up.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -9138,7 +9138,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="Gambler_res/_common/chip_save/btn_chip_save_over.png" Plist="" />
+                <FileData Type="Normal" Path="Gambler_res/common/chip_save/btn_chip_save_over.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
             </Children>

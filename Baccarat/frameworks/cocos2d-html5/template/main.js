@@ -11,7 +11,7 @@ cc.game.onStart = function(){
     }else{
         cc.loader.resPath = "res/HD";
     }
-    cc.view.setDesignResolutionSize(designSize.width, designSize.height, cc.ResolutionPolicy.SHOW_ALL);
+    // cc.view.setDesignResolutionSize(designSize.width, designSize.height, cc.ResolutionPolicy.SHOW_ALL);
 
     //load resources
     cc.LoaderScene.preload(g_resources, function () {

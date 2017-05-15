@@ -9175,12 +9175,12 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_1_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_1_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_1_up.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_1_up.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
@@ -9250,7 +9250,7 @@
                         },
                         "PressedFileData": {
                           "Type": "Normal",
-                          "Path": "Gambler_res/_common/comm _chip/chip_5_no.png",
+                          "Path": "Gambler_res/common/comm_chip/chip_5_no.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
@@ -21148,9 +21148,9 @@
         "Default/Button_Disable.png",
         "Default/Button_Press.png",
         "Default/Sprite.png",
-        "Gambler_res/_common/comm _chip/chip_1_no.png",
-        "Gambler_res/_common/comm _chip/chip_1_up.png",
-        "Gambler_res/_common/comm _chip/chip_5_no.png",
+        "Gambler_res/common/comm_chip/chip_1_no.png",
+        "Gambler_res/common/comm_chip/chip_1_up.png",
+        "Gambler_res/common/comm_chip/chip_5_no.png",
         "MainScene_res/bankerBid.png",
         "MainScene_res/bet_area/bet/bet_area_bet_1.png",
         "MainScene_res/bet_area/bet/bet_area_bet_2.png",

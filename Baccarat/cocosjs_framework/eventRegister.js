@@ -53,6 +53,7 @@ eventRegister=cc.Class.extend({
         sender.callback_mouseUp = callback_mouseUp;
         sender.callback_mouseEnter = callback_mouseEnter;
         sender.callback_mouseOver = callback_mouseOver;        
+        sender.node.sender = sender;
 
         this.setWidget(node);
         this.setTouchEvent(node);
@@ -83,6 +84,7 @@ eventRegister=cc.Class.extend({
     setWidget: function (node) {
         if (!(node instanceof ccui.Widget))
             return;
+        node.setTouchEnabled(false);
     },
 
     clear:function(){
@@ -99,13 +101,13 @@ eventRegister=cc.Class.extend({
 
             onTouchBegan: function (touch, event) {
                 this.onMouseMove(touch.getLocation());
-                return this.onMouseDown(touch.getLocation());
+                return this.onMouseDown(touch.getLocation(), event._currentTarget);
             }.bind(this),
             onTouchMoved: function (touch, event) {
-                return this.onMouseMove(touch.getLocation());
+                return this.onMouseMove(touch.getLocation(), event._currentTarget);
             }.bind(this),
             onTouchEnded: function (touch, event) {
-                return this.onMouseUp(touch.getLocation());
+                return this.onMouseUp(touch.getLocation(), event._currentTarget);
             }.bind(this)
         });
 
@@ -177,8 +179,8 @@ eventRegister=cc.Class.extend({
         return false;
     },
 
-    onMouseDown:function(point){
-        var hit_node = this.castNode(point);
+    onMouseDown:function(point, node){
+        var hit_node = this.castNode(point);        
 
         if(!hit_node)
             return false;
