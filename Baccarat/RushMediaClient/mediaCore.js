@@ -151,7 +151,7 @@ WSAvcPlayer = function(canvas_name){
       }
 
       var timeStamp = this.getTimeStamp(evt.data);
-      var frame = evt.data.slice(8, evt.data.byteLength);
+      var frame = evt.data.slice(4, evt.data.byteLength);
 
       // if(!this.timeCalibrator.checkTimeStamp(timeStamp))
       //     return;
