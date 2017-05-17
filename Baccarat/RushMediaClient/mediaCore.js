@@ -151,7 +151,7 @@ WSAvcPlayer = function(canvas_name){
       }
 
       var timeStamp = this.getTimeStamp(evt.data);
-      var frame = evt.data.slice(4, evt.data.byteLength);
+      var frame = evt.data.slice(8, evt.data.byteLength);
 
       // if(!this.timeCalibrator.checkTimeStamp(timeStamp))
       //     return;
@@ -175,10 +175,10 @@ WSAvcPlayer = function(canvas_name){
 
       var packet = wsavcPlayer.frames[0];
 
-      // if(wsavcPlayer.timeCalibrator.getRemoteTick() >=packet.timeStamp) {          
+      if(wsavcPlayer.timeCalibrator.getRemoteTick() >=packet.timeStamp) {          
         ThreadPool.addTask(new Task(wsavcPlayer.decoder.decode, packet.frame, 0, wsavcPlayer.decoder));
         wsavcPlayer.frames.shift();
-      // }
+      }
   }.bind(this),
 
   this.send= function(msg){
