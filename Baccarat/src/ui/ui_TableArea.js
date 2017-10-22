@@ -58,7 +58,6 @@ var ui_TableArea = gameLayer.extend({//ChipsCoin
         this.initTable();
         this.btnConstruct();
         this.settingMouseCheck();
-        this.scheduleUpdate();
     },
 
     initQuickBet: function () {

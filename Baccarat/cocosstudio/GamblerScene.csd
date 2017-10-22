@@ -1562,7 +1562,7 @@
               <AbstractNodeData Name="GameInfo_Node" ActionTag="-846596003" Tag="1140" IconVisible="True" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="Tittle" ActionTag="460287521" Tag="731" IconVisible="False" LeftMargin="600.1058" RightMargin="-870.1058" TopMargin="-691.4517" BottomMargin="672.4517" TouchEnable="True" FontSize="18" IsCustomSize="True" LabelText="賭神-百家樂比賽-100 元場" PlaceHolderText="" MaxLengthText="10" ctype="TextFieldObjectData">
+                  <AbstractNodeData Name="Tittle" ActionTag="460287521" Tag="731" IconVisible="False" LeftMargin="600.1058" RightMargin="-870.1058" TopMargin="-691.4517" BottomMargin="672.4517" TouchEnable="True" FontSize="18" IsCustomSize="True" LabelText="百家樂-100 元場" PlaceHolderText="" MaxLengthText="10" ctype="TextFieldObjectData">
                     <Size X="270.0000" Y="19.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="735.1058" Y="681.9517" />
@@ -4321,7 +4321,7 @@
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="SetChipGroup_Node" ActionTag="-855412613" Tag="891" IconVisible="True" ctype="SingleNodeObjectData">
+                  <AbstractNodeData Name="SetChipGroup_Node" ActionTag="-855412613" VisibleForFrame="False" Tag="891" IconVisible="True" ctype="SingleNodeObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <Children>
                       <AbstractNodeData Name="Btn_Previous" ActionTag="-486193814" Tag="1033" IconVisible="False" LeftMargin="655.4774" RightMargin="-737.4774" TopMargin="-65.7377" BottomMargin="29.7377" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="52" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -4392,7 +4392,7 @@
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Pic_Node" ActionTag="-1795195373" Tag="847" IconVisible="True" ctype="SingleNodeObjectData">
+                  <AbstractNodeData Name="Pic_Node" ActionTag="-1795195373" VisibleForFrame="False" Tag="847" IconVisible="True" ctype="SingleNodeObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <Children>
                       <AbstractNodeData Name="Btn_Previous" ActionTag="-1764383342" Tag="848" IconVisible="True" LeftMargin="697.8990" RightMargin="-697.8990" TopMargin="-48.3747" BottomMargin="48.3747" ctype="SingleNodeObjectData">
@@ -7827,7 +7827,7 @@
             <Position X="0.0001" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition />
+            <PrePosition X="0.0000" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
           <AbstractNodeData Name="Table_Lan_Pic_Node" ActionTag="1690328078" Tag="1664" IconVisible="True" RightMargin="1000.0000" TopMargin="700.0000" ctype="SingleNodeObjectData">

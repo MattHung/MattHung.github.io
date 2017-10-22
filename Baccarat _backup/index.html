@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+    <meta charset="utf-8">
+    <title>GOGLive</title>
+    <!-- <link rel="icon" type="image/GIF" href="res/favicon.ico"/> -->
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        body, canvas, div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+
+    <!-- <script type="application/javascript">
+        function launchIntoFullscreen(element) {
+            if(element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if(element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if(element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if(element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+    </script> -->
+</head>
+<body style="padding:0; margin: 0; background: #000;">
+<!-- <body style="padding:0; margin: 0;"> -->
+
+<canvas id="gameCanvas" width="1000" height="700"></canvas>
+<script>
+
+    (function () {
+        var gameCanvas = document.getElementById("gameCanvas");
+        var nav = window.navigator;
+        var ua = nav.userAgent.toLowerCase();
+        var uaResult = /android (\d+(?:\.\d+)+)/i.exec(ua) || /android (\d+(?:\.\d+)+)/i.exec(nav.platform);
+        if (uaResult) {
+            var osVersion = parseInt(uaResult[1]) || 0;
+            var browserCheck = ua.match(/(qzone|micromessenger|qqbrowser)/i);
+            if (browserCheck) {
+                var ctx = gameCanvas.getContext('2d');
+                ctx.fillStyle = '#000000';
+                ctx.fillRect(0, 0, 1, 1);
+            }
+        }
+    })();
+
+//    launchIntoFullscreen(document.documentElement);
+</script>
+
+ <script src="frameworks/cocos2d-html5/CCBoot.js"></script>
+<!--<script src="frameworks/cocos2d-html5/cocos2d-js-v3.10.js"></script>-->
+<script cocos src="main.js"></script>
+
+<script type="text/javascript" src="RushMediaClient/YUVCanvas.js"></script>
+<script type="text/javascript" src="RushMediaClient/dummyCallback.js"></script>
+<script type="text/javascript" src="RushMediaClient/threadPool.js"></script>
+<script type="text/javascript" src="RushMediaClient/setting.js"></script>
+<script type="text/javascript" src="RushMediaClient/typeDefinition.js"></script>
+<script type="text/javascript" src="RushMediaClient/Decoder.js"></script>
+<script type="text/javascript" src="RushMediaClient/TimeCalibrator.js"></script>
+<script type="text/javascript" src="RushMediaClient/mediaCore.js"></script>
+<script type="text/javascript" src="RushMediaClient/mediaData.js"></script>
+<script type="text/javascript" src="RushMediaClient/rushMedia.js"></script>
+
+</body>
+</html>

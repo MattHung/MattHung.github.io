@@ -6154,7 +6154,7 @@
                   {
                     "FontSize": 18,
                     "IsCustomSize": true,
-                    "LabelText": "賭神-百家樂比賽-100 元場",
+                    "LabelText": "百家樂-100 元場",
                     "PlaceHolderText": "",
                     "MaxLengthText": 10,
                     "TouchEnable": true,
@@ -17985,6 +17985,7 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
+                    "VisibleForFrame": false,
                     "Name": "SetChipGroup_Node",
                     "ctype": "SingleNodeObjectData"
                   },
@@ -18148,6 +18149,7 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
+                    "VisibleForFrame": false,
                     "Name": "Pic_Node",
                     "ctype": "SingleNodeObjectData"
                   },

@@ -17,28 +17,28 @@ var ui_SignRoomEffect = gameLayer.extend({
 
     initBtn: function () {
         this.btn_element = {};
-        this.btn_element.btn_music = this.getNode("Setting_Node/Sound_Node/Btn_Music");
-        this.btn_element.btn_screen = this.getNode("Setting_Node/Screen_Node/Btn_Screen");
-        this.btn_element.btn_helper = this.getNode("OtherObject_Node/RoomInfoOtherObject/Gog_Live_Node/Btn_Comp");
+        // this.btn_element.btn_music = this.getNode("Setting_Node/Sound_Node/Btn_Music");
+        // this.btn_element.btn_screen = this.getNode("Setting_Node/Screen_Node/Btn_Screen");
+        // this.btn_element.btn_helper = this.getNode("OtherObject_Node/RoomInfoOtherObject/Gog_Live_Node/Btn_Comp");
         this.btn_element.pic_over = this.getNode("SettingBtn_Node/pic_over");
         this.btn_element.pic_down = this.getNode("SettingBtn_Node/pic_over");
         this.btn_element.pic_music_on = this.getNode("Setting_Node/Sound_Node/pic_music");
         this.btn_element.pic_music_off = this.getNode("Setting_Node/Sound_Node/pic_music_off");
         this.btn_element.pic_helper = this.getNode("OtherObject_Node/RoomInfoOtherObject/Gog_Live_Node/Btn_Comp/Btn_Comp_over");
         this.btn_element.txt_helper = this.getNode("OtherObject_Node/RoomInfoOtherObject/Gog_Live_Node/txt_Comp");
-        this.registerMouseEvent(this.btn_element.btn_music, this.mouseDownSound.bind(this), this.mouseUpSound.bind(this), this.enterBtn.bind(this), this.overBtn.bind(this));
-        this.registerMouseEvent(this.btn_element.btn_screen, this.mouseDownSound.bind(this), this.screenUp.bind(this), this.enterBtn.bind(this), this.overBtn.bind(this));
-        this.registerMouseEvent(this.btn_element.btn_helper, this.picHelperVisible.bind(this,false), this.upHelper.bind(this), this.picHelperVisible.bind(this,true), this.picHelperVisible.bind(this,false));
+        // this.registerMouseEvent(this.btn_element.btn_music, this.mouseDownSound.bind(this), this.mouseUpSound.bind(this), this.enterBtn.bind(this), this.overBtn.bind(this));
+        // this.registerMouseEvent(this.btn_element.btn_screen, this.mouseDownSound.bind(this), this.screenUp.bind(this), this.enterBtn.bind(this), this.overBtn.bind(this));
+        // this.registerMouseEvent(this.btn_element.btn_helper, this.picHelperVisible.bind(this,false), this.upHelper.bind(this), this.picHelperVisible.bind(this,true), this.picHelperVisible.bind(this,false));
 
-        this.btn_element.btn_music._isClick = ui_Effect.getInstance().isMute();
-        this.btn_element.btn_screen._isClick = ui_Effect.getInstance().isFullScreen();
+        // this.btn_element.btn_music._isClick = ui_Effect.getInstance().isMute();
+        // this.btn_element.btn_screen._isClick = ui_Effect.getInstance().isFullScreen();
 
-        this.btn_element.pic_music_off.setPosition(this.btn_element.pic_music_on.getPosition());
-        this.btn_element.pic_music_off.setVisible(this.btn_element.btn_music._isClick);
-        this.btn_element.pic_music_on.setVisible(!this.btn_element.btn_music._isClick);
-        this.btn_element.pic_helper.setVisible(false);
+        // this.btn_element.pic_music_off.setPosition(this.btn_element.pic_music_on.getPosition());
+        // this.btn_element.pic_music_off.setVisible(this.btn_element.btn_music._isClick);
+        // this.btn_element.pic_music_on.setVisible(!this.btn_element.btn_music._isClick);
+        // this.btn_element.pic_helper.setVisible(false);
 
-        this.btn_element.txt_helper.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
+        // this.btn_element.txt_helper.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
 
         if (ui_Effect.getInstance().isMute())
             setRoomBackgroundMusic(false);
@@ -140,11 +140,11 @@ var ui_SignRoomEffect = gameLayer.extend({
     },
 
     update: function (dt) {
-        this.showBtnBack(this.btn_element.btn_screen, ui_Effect.getInstance().isFullScreen());
-        this.showBtnBack(this.btn_element.btn_music, ui_Effect.getInstance().isMute());
+        // this.showBtnBack(this.btn_element.btn_screen, ui_Effect.getInstance().isFullScreen());
+        // this.showBtnBack(this.btn_element.btn_music, ui_Effect.getInstance().isMute());
 
-        if (language_manager.getInstance().getTextID(173) != this.btn_element.txt_helper.getString())
-            this.btn_element.txt_helper.setString(language_manager.getInstance().getTextID(173));
+        // if (language_manager.getInstance().getTextID(173) != this.btn_element.txt_helper.getString())
+        //     this.btn_element.txt_helper.setString(language_manager.getInstance().getTextID(173));
     },
 
 

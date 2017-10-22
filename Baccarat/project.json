@@ -25,6 +25,7 @@
     "cocosjs_framework/SocketPeer.js",
     "cocosjs_framework/ClientPeer.js",
     "cocosjs_framework/underscore.js",
+    "cocosjs_framework/Profiler.js",
 
     "src/resource.js",
     "src/app.js",

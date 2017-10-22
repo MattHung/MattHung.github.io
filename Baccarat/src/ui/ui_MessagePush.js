@@ -52,11 +52,11 @@ var ui_Msg = gameLayer.extend({
 
         if(language_manager.getInstance().getLanguage()==0){
             var s = "System notification:：Game maintenance time is every Friday AM 7:00.";
-            this._text = new cc.LabelTTF(s,"Arial",12);
+            this._text = new cc.LabelTTF(s,"Msjh",12);
         }
         else
             var s = "系統公告：遊戲維護時間為每周AM 7:00。";
-            (this._text = new cc.LabelTTF(s,"Arial",12));
+            (this._text = new cc.LabelTTF(s,"Msjh",12));
 
         this._text.setPosition(initTextPositionX,initTextPositionY);
         this._text.setColor(cc.color(255,255,255,1));

@@ -197,17 +197,13 @@ var ui_BetChip = gameLayer.extend({
     updateWebVisible: function () {
         if (this._betNodes.webArray == null || this.VisibleArray.WebVisible == null)return;
         for (var i = 0; i < this._betNodes.webArray.length; i++) {
-            switch (this.VisibleArray.WebVisible[i]) {
-                case ChipState.VISIBLE_TRUE:
-                    this._betNodes.webArray[i].setVisible(true);
-                    break;
-                case ChipState.VISIBLE_FALSE:
-                    this._betNodes.webArray[i].setVisible(false);
-                    break;
-                case ChipState.NOT_EXIST:
-                    this._betNodes.webArray[i].setVisible(false);
-                    break;
-            }
+            var setVisible = false;
+
+            if(this.VisibleArray.WebVisible[i]==ChipState.VISIBLE_TRUE)
+                setVisible = true;
+
+            if(this._betNodes.webArray[i].visible != setVisible)
+                this._betNodes.webArray[i].setVisible(setVisible);
         }
     },
 
@@ -615,30 +611,30 @@ var ui_BetChip = gameLayer.extend({
 
 
     languagePicSet: function (parent_string) {
-        var picNode = null;
-        switch (parent_string) {
-            case "Other_Node/no":
-                picNode = this.controlPic.disable_icon;
-                break;
-            case "Other_Node/up":
-                picNode = this.controlPic.general_icon;
-                break;
-            case "Other_Node/no/cn":
-                picNode = this.controlPic.disable_cn;
-                break;
-            case "Other_Node/up/cn":
-                picNode = this.controlPic.general_cn;
-                break;
-        }
+        // var picNode = null;
+        // switch (parent_string) {
+        //     case "Other_Node/no":
+        //         picNode = this.controlPic.disable_icon;
+        //         break;
+        //     case "Other_Node/up":
+        //         picNode = this.controlPic.general_icon;
+        //         break;
+        //     case "Other_Node/no/cn":
+        //         picNode = this.controlPic.disable_cn;
+        //         break;
+        //     case "Other_Node/up/cn":
+        //         picNode = this.controlPic.general_cn;
+        //         break;
+        // }
 
-        for (var i = 0; i < this.controlPic.control_node.getChildrenCount(); i++) {
-            var bet_control = this.controlPic.control_node.children[i];
-            if (bet_control.getChildByName(parent_string.split("/")[1]))
-                continue;
-            bet_control.removeAllChildren();
-            this.hoverSpriteSet(picNode.children[i].getTexture().url, bet_control);
-            bet_control.children[0].setName(parent_string.split("/")[1]);
-        }
+        // for (var i = 0; i < this.controlPic.control_node.getChildrenCount(); i++) {
+        //     var bet_control = this.controlPic.control_node.children[i];
+        //     if (bet_control.getChildByName(parent_string.split("/")[1]))
+        //         continue;
+        //     bet_control.removeAllChildren();
+        //     this.hoverSpriteSet(picNode.children[i].getTexture().url, bet_control);
+        //     bet_control.children[0].setName(parent_string.split("/")[1]);
+        // }
     },
 
 
@@ -979,9 +975,9 @@ var ui_BetChip = gameLayer.extend({
     },
 
     update: function (dt) {
-        this.updateLanguage();
+        // this.updateLanguage();
         this.updateChipControl();
-        this.updateWatchBox();
+        // this.updateWatchBox();
         this.updateHide();
 
         this.updateWebVisible();

@@ -1,0 +1,499 @@
+{
+  "ID": "aa47270c-788d-4917-9e6a-a3fef9d9551f",
+  "Version": "3.10.0.0",
+  "Name": "LoginScene",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 945,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Login_res/bg.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 495.5676,
+              "Y": 347.4232
+            },
+            "Scale": {
+              "ScaleX": 0.6712,
+              "ScaleY": 0.6712
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4956,
+              "Y": 0.4963
+            },
+            "PreSize": {
+              "X": 0.454,
+              "Y": 0.4457
+            },
+            "LeftMargin": 268.5676,
+            "RightMargin": 277.4324,
+            "TopMargin": 196.5768,
+            "BottomMargin": 191.4232,
+            "Tag": 946,
+            "ActionTag": 2059197517,
+            "Size": {
+              "X": 454.0,
+              "Y": 312.0
+            },
+            "Name": "bg",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "AnchorPoint": {},
+            "Position": {
+              "X": 11.8585,
+              "Y": 27.0456
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.0119,
+              "Y": 0.0386
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 11.8585,
+            "RightMargin": 988.1415,
+            "TopMargin": 672.9544,
+            "BottomMargin": 27.0456,
+            "Tag": 950,
+            "Children": [
+              {
+                "FontSize": 20,
+                "LabelText": "帳號：",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 403.6171,
+                  "Y": 386.5983
+                },
+                "Scale": {
+                  "ScaleX": 0.6712,
+                  "ScaleY": 0.6712
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 373.6171,
+                "RightMargin": -433.6171,
+                "TopMargin": -396.5983,
+                "BottomMargin": 376.5983,
+                "Tag": 947,
+                "ActionTag": -221969015,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 20.0
+                },
+                "Name": "account",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Login_res/account_frame.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 493.9525,
+                  "Y": 385.9871
+                },
+                "Scale": {
+                  "ScaleX": 0.5702,
+                  "ScaleY": 0.5702
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 361.4525,
+                "RightMargin": -626.4525,
+                "TopMargin": -413.9871,
+                "BottomMargin": 357.9871,
+                "Tag": 949,
+                "ActionTag": 1389481852,
+                "Size": {
+                  "X": 265.0,
+                  "Y": 56.0
+                },
+                "Name": "account_frame",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 20,
+                "IsCustomSize": true,
+                "LabelText": "",
+                "PlaceHolderText": "",
+                "MaxLengthText": 10,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 495.0231,
+                  "Y": 385.9884
+                },
+                "Scale": {
+                  "ScaleX": 0.6712,
+                  "ScaleY": 0.6712
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 395.0231,
+                "RightMargin": -595.0231,
+                "TopMargin": -395.9884,
+                "BottomMargin": 375.9884,
+                "Tag": 948,
+                "ActionTag": 244249036,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 20.0
+                },
+                "Name": "input_account",
+                "ctype": "TextFieldObjectData"
+              }
+            ],
+            "ActionTag": 1408711565,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "account_Node",
+            "ctype": "SingleNodeObjectData"
+          },
+          {
+            "AnchorPoint": {},
+            "Position": {
+              "X": 11.8585,
+              "Y": 27.0456
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.0119,
+              "Y": 0.0386
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 11.8585,
+            "RightMargin": 988.1415,
+            "TopMargin": 672.9544,
+            "BottomMargin": 27.0456,
+            "Tag": 958,
+            "Children": [
+              {
+                "FontSize": 20,
+                "LabelText": "密碼：",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 402.8344,
+                  "Y": 341.3416
+                },
+                "Scale": {
+                  "ScaleX": 0.6712,
+                  "ScaleY": 0.6712
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 372.8344,
+                "RightMargin": -432.8344,
+                "TopMargin": -351.3416,
+                "BottomMargin": 331.3416,
+                "Tag": 955,
+                "ActionTag": -1918371487,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 20.0
+                },
+                "Name": "password",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Login_res/account_frame.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 493.1743,
+                  "Y": 340.7299
+                },
+                "Scale": {
+                  "ScaleX": 0.5702,
+                  "ScaleY": 0.5702
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 360.6743,
+                "RightMargin": -625.6743,
+                "TopMargin": -368.7299,
+                "BottomMargin": 312.7299,
+                "Tag": 956,
+                "ActionTag": 1896812248,
+                "Size": {
+                  "X": 265.0,
+                  "Y": 56.0
+                },
+                "Name": "password_frame",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 20,
+                "IsCustomSize": true,
+                "LabelText": "",
+                "PlaceHolderText": "",
+                "MaxLengthText": 10,
+                "PasswordEnable": true,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 494.2443,
+                  "Y": 340.7316
+                },
+                "Scale": {
+                  "ScaleX": 0.6712,
+                  "ScaleY": 0.6712
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 394.2443,
+                "RightMargin": -594.2443,
+                "TopMargin": -350.7316,
+                "BottomMargin": 330.7316,
+                "Tag": 957,
+                "ActionTag": -1201453623,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 20.0
+                },
+                "Name": "input_password",
+                "ctype": "TextFieldObjectData"
+              }
+            ],
+            "ActionTag": 532402289,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "password_Node",
+            "ctype": "SingleNodeObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "Login_res/done-press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "Login_res/done.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 65,
+            "Scale9Height": 30,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 492.149,
+              "Y": 301.1109
+            },
+            "Scale": {
+              "ScaleX": 0.5523,
+              "ScaleY": 0.5523
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4921,
+              "Y": 0.4302
+            },
+            "PreSize": {
+              "X": 0.095,
+              "Y": 0.0743
+            },
+            "LeftMargin": 444.649,
+            "RightMargin": 460.351,
+            "TopMargin": 372.8891,
+            "BottomMargin": 275.1109,
+            "Tag": 959,
+            "ActionTag": 384248699,
+            "Size": {
+              "X": 95.0,
+              "Y": 52.0
+            },
+            "Name": "Btn_done",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1000.0,
+          "Y": 700.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Login_res/account_frame.png",
+        "Login_res/bg.png",
+        "Login_res/done.png",
+        "Login_res/done-press.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

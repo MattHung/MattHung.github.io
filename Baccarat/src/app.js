@@ -10,7 +10,7 @@ var MainLayer = gameLayer.extend({
 
         this._super(res.GamblerScene_json);
 
-        this.onInitRushVideo(this);
+        // this.onInitRushVideo(this);
         this.tmpVisibleSet();
 
         this.initEventSet();

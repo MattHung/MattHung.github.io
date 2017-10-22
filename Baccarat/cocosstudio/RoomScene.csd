@@ -39,17 +39,6 @@
             <FileData Type="Normal" Path="RoomScene_res/Room/tx_gog_live_title_us.png" Plist="" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="tx_gog_live_title_tw" ActionTag="1177548627" Tag="1134" IconVisible="False" LeftMargin="112.1483" RightMargin="717.8517" TopMargin="39.0000" BottomMargin="639.0000" ctype="SpriteObjectData">
-            <Size X="170.0000" Y="22.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="197.1483" Y="650.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.1971" Y="0.9286" />
-            <PreSize X="0.1700" Y="0.0314" />
-            <FileData Type="Normal" Path="RoomScene_res/Room/tx_gog_live_title_tw.png" Plist="" />
-            <BlendFunc Src="1" Dst="771" />
-          </AbstractNodeData>
           <AbstractNodeData Name="RoomInfo_Node" ActionTag="-1018176798" Tag="1357" IconVisible="True" LeftMargin="0.0001" RightMargin="999.9999" TopMargin="700.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
@@ -1639,7 +1628,7 @@
             <Position X="0.0001" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition />
+            <PrePosition X="0.0000" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
           <AbstractNodeData Name="Ranking_Node" ActionTag="51490761" Tag="434" IconVisible="True" RightMargin="1000.0000" TopMargin="700.0000" ctype="SingleNodeObjectData">
@@ -2998,48 +2987,6 @@
                   </AbstractNodeData>
                   <AbstractNodeData Name="Gog_Live_Node" ActionTag="1555501332" Tag="1048" IconVisible="True" ctype="SingleNodeObjectData">
                     <Size X="0.0000" Y="0.0000" />
-                    <Children>
-                      <AbstractNodeData Name="Btn_Comp" ActionTag="1880862459" Tag="1046" IconVisible="False" LeftMargin="781.0962" RightMargin="-881.0962" TopMargin="-683.3607" BottomMargin="653.3607" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="70" Scale9Height="8" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                        <Size X="100.0000" Y="30.0000" />
-                        <Children>
-                          <AbstractNodeData Name="Btn_Comp_over" ActionTag="779906823" Tag="1149" IconVisible="False" ctype="SpriteObjectData">
-                            <Size X="100.0000" Y="30.0000" />
-                            <AnchorPoint />
-                            <Position />
-                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                            <CColor A="255" R="255" G="255" B="255" />
-                            <PrePosition />
-                            <PreSize X="1.0000" Y="1.0000" />
-                            <FileData Type="Normal" Path="RoomScene_res/Room/Btn_Pic/btn_comp_over.png" Plist="" />
-                            <BlendFunc Src="1" Dst="771" />
-                          </AbstractNodeData>
-                        </Children>
-                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="831.0962" Y="668.3607" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition />
-                        <PreSize X="0.0000" Y="0.0000" />
-                        <TextColor A="255" R="65" G="65" B="70" />
-                        <DisabledFileData Type="Normal" Path="RoomScene_res/Room/Btn_Pic/btn_comp_no.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="RoomScene_res/Room/Btn_Pic/btn_comp_down.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="RoomScene_res/Room/Btn_Pic/btn_comp_up.png" Plist="" />
-                        <OutlineColor A="255" R="255" G="0" B="0" />
-                        <ShadowColor A="255" R="110" G="110" B="110" />
-                      </AbstractNodeData>
-                      <AbstractNodeData Name="txt_Comp" ActionTag="-78533838" Tag="1158" IconVisible="False" LeftMargin="789.0000" RightMargin="-873.0000" TopMargin="-677.0000" BottomMargin="659.0000" FontSize="16" LabelText="Comp Q&amp;A" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="84.0000" Y="18.0000" />
-                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="831.0000" Y="668.0000" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="247" G="233" B="200" />
-                        <PrePosition />
-                        <PreSize X="0.0000" Y="0.0000" />
-                        <FontResource Type="Normal" Path="Gambler_res/font/arial.ttf" Plist="" />
-                        <OutlineColor A="255" R="255" G="0" B="0" />
-                        <ShadowColor A="255" R="110" G="110" B="110" />
-                      </AbstractNodeData>
-                    </Children>
                     <AnchorPoint />
                     <Position />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -3069,32 +3016,6 @@
               <AbstractNodeData Name="Sound_Node" ActionTag="-446577415" Tag="1141" IconVisible="True" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="Btn_Music" ActionTag="1728979587" Tag="1136" IconVisible="False" LeftMargin="908.1165" RightMargin="-942.1165" TopMargin="-683.3607" BottomMargin="653.3607" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="4" Scale9Height="8" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="34.0000" Y="30.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="925.1165" Y="668.3607" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Normal" Path="RoomScene_res/Room/btn_lobby_setting_no.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="RoomScene_res/Room/btn_lobby_setting_down.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="RoomScene_res/Room/btn_lobby_setting_up.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="pic_music" ActionTag="-907834699" Tag="1137" IconVisible="False" LeftMargin="916.2120" RightMargin="-934.2120" TopMargin="-676.6158" BottomMargin="660.6158" ctype="SpriteObjectData">
-                    <Size X="18.0000" Y="16.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="925.2120" Y="668.6158" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="RoomScene_res/Room/pic_lobby_music.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
                   <AbstractNodeData Name="pic_music_off" ActionTag="57033692" Tag="1171" IconVisible="False" LeftMargin="965.7876" RightMargin="-983.7876" TopMargin="-731.6198" BottomMargin="715.6198" ctype="SpriteObjectData">
                     <Size X="18.0000" Y="16.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -3116,34 +3037,6 @@
               </AbstractNodeData>
               <AbstractNodeData Name="Screen_Node" ActionTag="-1361744382" Tag="1142" IconVisible="True" LeftMargin="10.0001" RightMargin="-10.0001" TopMargin="10.0000" BottomMargin="-10.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
-                <Children>
-                  <AbstractNodeData Name="Btn_Screen" ActionTag="1193915322" Tag="1141" IconVisible="False" LeftMargin="935.6420" RightMargin="-969.6420" TopMargin="-693.3608" BottomMargin="663.3608" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="4" Scale9Height="8" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="34.0000" Y="30.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="952.6420" Y="678.3608" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Normal" Path="RoomScene_res/Room/btn_lobby_setting_no.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="RoomScene_res/Room/btn_lobby_setting_down.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="RoomScene_res/Room/btn_lobby_setting_up.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="pic_screen" ActionTag="-629509531" Tag="1142" IconVisible="False" LeftMargin="944.0007" RightMargin="-962.0007" TopMargin="-686.6158" BottomMargin="670.6158" ctype="SpriteObjectData">
-                    <Size X="18.0000" Y="16.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="953.0007" Y="678.6158" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition />
-                    <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Normal" Path="RoomScene_res/Room/pic_lobby_full_screen.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
-                </Children>
                 <AnchorPoint />
                 <Position X="10.0001" Y="-10.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />

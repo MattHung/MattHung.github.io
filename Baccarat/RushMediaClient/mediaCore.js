@@ -3,8 +3,8 @@ const THREAD_COUNT = 1;
 var desigenedWidth =960;
 var desigenedHeight =540;
 
-var ThreadPool=new ThreadPool(THREAD_COUNT, 'RushMediaClient/dummyCallback.js');
-ThreadPool.init();
+// var ThreadPool=new ThreadPool(THREAD_COUNT, 'RushMediaClient/dummyCallback.js');
+// ThreadPool.init();
 WSAvcPlayer = function(canvas_name){
   this.decoder = new Decoder(false);
   this.lastSendPingTick=0;

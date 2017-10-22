@@ -334,9 +334,16 @@ ccui.TextField = ccui.Widget.extend(/** @lends ccui.TextField# */{
      *  Changes the string value of textField.
      * @param {String} text
      */
+
+    _currentText:null,
     setString: function (text) {
         if (text == null)
             return;
+
+        if(this._currentText == text)
+            return;
+
+        this._currentText = text;
 
         text = String(text);
         if (this.isMaxLengthEnabled())

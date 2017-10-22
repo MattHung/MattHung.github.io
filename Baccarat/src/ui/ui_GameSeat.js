@@ -112,11 +112,12 @@ var ui_GameSeat = gameLayer.extend({
                 nameCount += 1;
             var clientSeatID = nameCount;
             this._seatChipNode = this._bet_area_sets[clientSeatID].txt_chip;
-            if (seatData[i].getSeatChip() == 0) {
+            var chips=seatData[i].getSeatChip();
+            if (chips == 0) {
                 this._seatChipNode.setString("");
                 continue;
             }
-            var chipCount = seatData[i].getSeatChip().toString();
+            var chipCount = chips.toString();
             this._seatChipNode.setString(chipCount);
             this._seatChipNode.setColor(new cc.Color(255, 255, 0));
             this._seatChipNode.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
@@ -124,7 +125,7 @@ var ui_GameSeat = gameLayer.extend({
     },
 
     update: function (dt) {
-        this.updateSeatChipArea();
+        // this.updateSeatChipArea();
         this.updateSeats();
     },
 

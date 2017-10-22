@@ -50,6 +50,8 @@ BaccaratRoom = cc.Class.extend({
     _SideBetLimit:null,
     _totalWin:0,
 
+    _profiler:null,
+
     getRoomID: function () {
         return this._id;
     },
@@ -129,6 +131,8 @@ BaccaratRoom = cc.Class.extend({
         GameManager.getInstance().Node_SceneRoot.addChild(this.uiRoadMap);
         GameManager.getInstance().Node_SceneRoot.setVisible(true);
         GameManager.getInstance().setGameResult(false);
+
+        this._profiler = new CocosWidget.Profiler();
     },
 
     settingBystander: function () {
@@ -332,6 +336,8 @@ BaccaratRoom = cc.Class.extend({
             this._seats[seat_id - 1].updatePlayerData(user_id, user_name);
         }
 
+        this.uiGameSeat.updateSeatChipArea();
+
         // this.uiSeatSelector.updateSeats(data);
     },
 
@@ -347,20 +353,61 @@ BaccaratRoom = cc.Class.extend({
         this._remain_ticks = remain_tick;
     },
 
-    update: function (dt) {
-        this.updateCounter(dt);
-        this.uiBetChip.update(dt);
-        this.uiCardBoard.update(dt);
-        this.uiGameSeat.update(dt);
-        this.uiMostBrand.update(dt);
-        this.uiRoadMap.update(dt);
-        // this.uiSeatSelector.update(dt);
-        this.uiTableArea.update(dt);
-        this.uiEffectController.update(dt);
-        this.uiMsg.update(dt);
-        this.uiGameResult.update(dt);
+    _lastTick:0,
 
+    updateBy300ms:function(){
+        var dt = this._profiler.getTick() - this._lastTick;
+        if(dt < 300)
+            return;
+
+        this._profiler.startProfile("this.uiBetChip.update(dt)");
+        this.uiBetChip.update(dt);
+        this._profiler.stopProfile("this.uiBetChip.update(dt)");
+
+        this._profiler.startProfile("this.uiMsg.update(dt);");
+        this.uiMsg.update(dt);
+        this._profiler.stopProfile("this.uiMsg.update(dt);");
+
+        this._profiler.startProfile("this.uiMostBrand.update(dt);");
+        this.uiMostBrand.update(dt);
+        this._profiler.stopProfile("this.uiMostBrand.update(dt);");
+
+        this.uiEffectController.update(dt);
+        // this.uiSeatSelector.update(dt);
+
+        this._lastTick = this._profiler.getTick();
+    },
+
+    update: function (dt) {
+        this.updateBy300ms();
+
+        this._profiler.startProfile("updateCounter");
+        this.updateCounter(dt);
+        this._profiler.stopProfile("updateCounter");
+
+        this._profiler.startProfile("this.uiCardBoard.update(dt)");
+        this.uiCardBoard.update(dt);
+        this._profiler.stopProfile("this.uiCardBoard.update(dt)");
+
+        this._profiler.startProfile("this.uiGameSeat.update(dt);");
+        this.uiGameSeat.update(dt);
+        this._profiler.stopProfile("this.uiGameSeat.update(dt);");
+
+        this._profiler.startProfile("this.uiRoadMap.update(dt);");
+        this.uiRoadMap.update(dt);
+        this._profiler.stopProfile("this.uiRoadMap.update(dt);");        
+
+        this._profiler.startProfile("this.uiTableArea.update(dt);");
+        this.uiTableArea.update(dt);
+        this._profiler.stopProfile("this.uiTableArea.update(dt);");
+
+        this._profiler.startProfile("his.uiGameResult.update(dt);");
+        this.uiGameResult.update(dt);
+        this._profiler.stopProfile("his.uiGameResult.update(dt);");
+
+        this._profiler.startProfile("this.setRoomMessage(GameManager.getInstance().SignUpRoom.getSelectRoom());");
         this.setRoomMessage(GameManager.getInstance().SignUpRoom.getSelectRoom());
+        this._profiler.stopProfile("this.setRoomMessage(GameManager.getInstance().SignUpRoom.getSelectRoom());");
     },
 
     updateCounter: function (dt) {
@@ -390,8 +437,6 @@ BaccaratRoom = cc.Class.extend({
         this._deltaTime = Math.ceil(this._remain_ticks / 1000);
         if (this._deltaTime - 1 > 1 && sound_manager.getInstance().isSoundVoiceOn())
             sound_manager.getInstance().setVoiceName("BettingStarted");
-
-        cc.director.getScheduler().schedule(this.playBG.bind(this), this, 1, this._deltaTime, 0, false);
     },
 
     playBG: function () {

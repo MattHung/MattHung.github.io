@@ -24,7 +24,7 @@ var LeaveCause = {
 
 GameManager = cc.Class.extend({
     RankUpdateTime: 180,
-    RoomListUpdateTime: 1,
+    RoomListUpdateTime: 3,
     CurrentRoomInfo: null,
     Room: null,
     SignUpRoom: null,
@@ -44,6 +44,8 @@ GameManager = cc.Class.extend({
     _scene_queue:null,
     _hideCount:0,
 
+    _times:[],
+
     isChangingScene:function(){
         return this._changingScene;
     },
@@ -52,13 +54,31 @@ GameManager = cc.Class.extend({
         return this._dateAry;
     },
 
-    ctor: function () {
-        cc.director.getScheduler().scheduleUpdate(this);
-        cc.director.getScheduler().schedule(this.rankUpdate, this, this.RankUpdateTime);
-        cc.director.getScheduler().schedule(this.roomListUpdate, this, this.RoomListUpdateTime);
+    getTick:function(){
+        return new Date().getTime();
+    },
 
+    ctor: function () {        
+        cc.director.getScheduler().scheduleUpdate(this);
+        // cc.director.getScheduler().schedule(this.rankUpdate, this, this.RankUpdateTime);        
+        cc.director.getScheduler().schedule(this.roomListUpdate, this, this.RoomListUpdateTime);
+        
         this._scene_queue = [];
         this.CurrentRoomInfo ={RoomID:0, RestoreSession:false}
+
+        // this._times["elapsed 2"] = [];
+
+        for(var i=1; i<=4; i++){
+            this._times["elapsed " + i.toString()]={};
+            this._times["elapsed " + i.toString()]["count"] = 0;
+            this._times["elapsed " + i.toString()]["time"] = 0;
+            this._times["elapsed " + i.toString()]["avg"] = 0;
+        }
+
+        // this._times["elapsed 1"] = [["count":0], ["time":0], ["avg":0]];
+        // this._times["elapsed 2"] = [["count":0], ["time":0], ["avg":0]];
+        // this._times["elapsed 3"] = [["count":0], ["time":0], ["avg":0]];
+        // this._times["elapsed 4"] = [["count":0], ["time":0], ["avg":0]];
     },
 
     setGameResult: function (val) {
@@ -66,15 +86,34 @@ GameManager = cc.Class.extend({
     },
 
     update: function (dt) {
+        var last_tick =  this.getTick();
         this.checkSceneTransition();
-
-        if (CURRENT_SCENE == SceneEnum.Room)
+        this._times["elapsed 1"]["count"] ++;
+        this._times["elapsed 1"]["time"] += (this.getTick() - last_tick);
+        this._times["elapsed 1"]["avg"] = this._times["elapsed 1"]["time"] / this._times["elapsed 1"]["count"];
+                
+        if (CURRENT_SCENE == SceneEnum.Room){
+            last_tick =  this.getTick();
             this.Room.update(dt);
+            this._times["elapsed 2"]["count"] ++;
+            this._times["elapsed 2"]["time"] += (this.getTick() - last_tick);
+            this._times["elapsed 2"]["avg"] = this._times["elapsed 2"]["time"] / this._times["elapsed 2"]["count"];
+        }
+        
 
+        last_tick =  this.getTick();
         ui_MessageBox.getInstance().update();
+        this._times["elapsed 3"]["count"] ++;
+        this._times["elapsed 3"]["time"] += (this.getTick() - last_tick);
+        this._times["elapsed 3"]["avg"] = this._times["elapsed 3"]["time"] / this._times["elapsed 3"]["count"];
 
-        if (CURRENT_SCENE == SceneEnum.RoomList)
+        if (CURRENT_SCENE == SceneEnum.RoomList){
+            last_tick =  this.getTick();
             this.SignUpRoom.update(dt);
+            this._times["elapsed 4"]["count"] ++;
+            this._times["elapsed 4"]["time"] += (this.getTick() - last_tick);
+            this._times["elapsed 4"]["avg"] = this._times["elapsed 4"]["time"] / this._times["elapsed 4"]["count"];
+        }
     },
 
     checkSceneTransition:function(){

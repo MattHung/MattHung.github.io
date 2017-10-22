@@ -99,18 +99,6 @@ ui_CardBoard = gameLayer.extend({
         var mark_text_player_txt = language_manager.getInstance().getTextID(13);
         var mark_text_banker_txt = language_manager.getInstance().getTextID(12);
 
-
-        if(language_manager.getInstance().getLanguage()==language_manager.getInstance().Choose_Language.lan_English){
-            this._mark_text.Player.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_LEFT);
-            this._mark_text.Banker.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_LEFT);
-        }
-        else  {
-            this._mark_text.Player.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
-            this._mark_text.Banker.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
-        }
-
-
-
         this._mark_text.Player.setString(mark_text_player_txt);
         this._mark_text.Banker.setString(mark_text_banker_txt);
 
@@ -165,6 +153,16 @@ ui_CardBoard = gameLayer.extend({
         this._msg_round[RoundStatus.RoundStart] = 0;
         this._msg_round[RoundStatus.DealCard] = 1;
         this._msg_round[RoundStatus.CheckResult] = 2;
+
+        if(language_manager.getInstance().getLanguage()==language_manager.getInstance().Choose_Language.lan_English){
+            this._mark_text.Player.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_LEFT);
+            this._mark_text.Banker.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_LEFT);
+        }
+        else  {
+            this._mark_text.Player.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
+            this._mark_text.Banker.setTextHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
+        }
+
     },
 
     initialWinnerHightLight: function () {
@@ -298,11 +296,22 @@ ui_CardBoard = gameLayer.extend({
             this._scoreCount[1] += this._cardsNumberContent[card_id - 1];
     },
 
+    _current_value_tens:0,
+    _current_value_ones:0,
+
     updateCountDown: function (value) {
         var _value = Math.floor(value);
 
         var value_tens = Math.floor(_value / 10);
         var value_ones = Math.floor(_value % 10);
+
+        if(this._current_value_tens==value_tens)
+        if(this._current_value_ones==value_ones)
+            return;
+
+        this._current_value_tens = value_tens;
+        this._current_value_ones = value_ones;
+
 
         for(var i=0; i<this._sprite_digit_tens.length; i++){
             this._sprite_digit_tens[i].setVisible(false);

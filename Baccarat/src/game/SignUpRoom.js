@@ -23,6 +23,8 @@ var SignUpRoom = cc.Class.extend({
     },
     _leaveRoomCause: null,
 
+    _profiler:null,
+
     getMsgOpen: function () {
         return this._msgOpen;
     },
@@ -67,21 +69,57 @@ var SignUpRoom = cc.Class.extend({
         this.sendGameEnrollHistory();
         if (GameManager.getInstance().getDateData())
             this.updateParticipator(GameManager.getInstance().getDateData());
+
+        this._profiler = new CocosWidget.Profiler();
+    },
+
+    _lastTick:0,
+
+    updateBy300ms:function(){
+        var dt = this._profiler.getTick() - this._lastTick;
+        if(dt < 300)
+            return;
+
+        if (this._roomList != null){
+            var pro_name = "this._roomList.update(dt);"
+            this._profiler.startProfile(pro_name);
+            this._roomList.update(dt);
+            this._profiler.stopProfile(pro_name);
+        }
+
+        if (this.uiAccumulated != null){
+            var pro_name = "this.uiAccumulated.update(dt);"
+            this._profiler.startProfile(pro_name);
+            this.uiAccumulated.update(dt);
+            this._profiler.stopProfile(pro_name);
+        }
+
+        if (this.uiDetail != null) {
+            var pro_name = "this.uiDetail.update(dt);";
+            this._profiler.startProfile(pro_name);
+            this.uiDetail.update(dt);
+            this._profiler.stopProfile(pro_name);
+        }        
+
+        this._lastTick = this._profiler.getTick();
     },
 
     update: function (dt) {
-        if (this._roomList != null)
-            this._roomList.update(dt);
-        if (this.uiRank != null)
-            this.uiRank.update(dt);
-        if (this.uiDetail != null) {
-            this.uiDetail.update(dt);
-        }
-        if (this.uiAccumulated != null)
-            this.uiAccumulated.update(dt);
+        this.updateBy300ms();
 
-        if (this.uiSignRoomEffect != null)
+        if (this.uiRank != null){
+            var pro_name = "this.uiRank.update(dt);";
+            this._profiler.startProfile(pro_name);
+            this.uiRank.update(dt);
+            this._profiler.stopProfile(pro_name);
+        }
+        
+        if (this.uiSignRoomEffect != null){
+            var pro_name = "this.uiSignRoomEffect.update(dt);";
+            this._profiler.startProfile(pro_name);
             this.uiSignRoomEffect.update(dt);
+            this._profiler.stopProfile(pro_name);
+        }
     },
 
     initialScrollView: function (roomList) {

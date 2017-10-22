@@ -7,7 +7,7 @@
         <LuaEncryptSign Value="" />
         <Android_PackageName Value="org.cocos.GodOfGambler" />
         <AndroidkeyStore Value="" />
-        <AndroidVersion Value="" />
+        <AndroidVersion Value="android-10" />
         <iOS_Target Value="GodOfGambler-mobile" />
         <iOS_BundleID Value="" />
         <Platform Value="None" />
@@ -26,17 +26,6 @@
         <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Web" />
-      </Value>
-    </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="GamblerScene.csd" />
-          <FilePathData Path="MainScene.csd" />
-          <FilePathData Path="LoginScene.csd" />
-          <FilePathData Path="RoomScene.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="RoomScene.csd" />
       </Value>
     </Item>
   </Properties>
