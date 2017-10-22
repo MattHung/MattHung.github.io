@@ -2,11 +2,11 @@
  * Created by matt1201 on 2016/3/24.
  */
 
-CocosWidget.Profiler = ccui.Class.extend({
+CocosWidget.Profiler = cc.Class.extend({
     _profile_datas:[],
     
     ctor:function(){
-        
+        this._profile_datas = [];        
     },
 
     getTick:function(){

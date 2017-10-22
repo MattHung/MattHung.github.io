@@ -45,6 +45,7 @@ var ui_BetChip = gameLayer.extend({
     _webChoose: null,
     _isTakeSeat: false,
     _btn_bet_control: null,
+    _profiler:null,
 
     ctor: function (room, mainNode, nodeName) {
         this._super(mainNode);
@@ -58,6 +59,8 @@ var ui_BetChip = gameLayer.extend({
         this.initBtnControl();
         this.initControlEvent();
         this.initialBetControl();
+
+        this._profiler = new CocosWidget.Profiler();
     },
 
     initialBetControl: function () {
@@ -976,13 +979,34 @@ var ui_BetChip = gameLayer.extend({
 
     update: function (dt) {
         // this.updateLanguage();
-        this.updateChipControl();
-        // this.updateWatchBox();
-        this.updateHide();
 
+        var pro_name = "this.updateChipControl();";
+        this._profiler.startProfile(pro_name);
+        this.updateChipControl();
+        this._profiler.stopProfile(pro_name);
+        
+
+        // this.updateWatchBox();
+
+        pro_name = "this.updateHide();";
+        this._profiler.startProfile(pro_name);
+        this.updateHide();
+        this._profiler.stopProfile(pro_name);
+
+        pro_name = "this.updateWebVisible();";
+        this._profiler.startProfile(pro_name);
         this.updateWebVisible();
+        this._profiler.stopProfile(pro_name);
+
+        pro_name = "this.updateWebBetPos();";
+        this._profiler.startProfile(pro_name);
         this.updateWebBetPos();
+        this._profiler.stopProfile(pro_name);
+
+        pro_name = "this.updateWebPage();";
+        this._profiler.startProfile(pro_name);
         this.updateWebPage();
+        this._profiler.stopProfile(pro_name);
 
     }
 });

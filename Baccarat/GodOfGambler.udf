@@ -28,5 +28,16 @@
         <LastRunType Value="Web" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="GamblerScene.csd" />
+          <FilePathData Path="MainScene.csd" />
+          <FilePathData Path="LoginScene.csd" />
+          <FilePathData Path="RoomScene.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="GamblerScene.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>

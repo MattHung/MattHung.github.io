@@ -24,7 +24,7 @@ var LeaveCause = {
 
 GameManager = cc.Class.extend({
     RankUpdateTime: 180,
-    RoomListUpdateTime: 3,
+    RoomListUpdateTime: 5,
     CurrentRoomInfo: null,
     Room: null,
     SignUpRoom: null,
@@ -157,6 +157,7 @@ GameManager = cc.Class.extend({
     },
 
     roomListUpdate: function () {
+        if (CURRENT_SCENE == SceneEnum.RoomList) 
         if (this.SignUpRoom) {
             this.SignUpRoom.roomUpdate();
         }

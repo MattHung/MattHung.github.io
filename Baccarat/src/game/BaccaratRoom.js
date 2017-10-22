@@ -375,28 +375,6 @@ BaccaratRoom = cc.Class.extend({
         this.uiEffectController.update(dt);
         // this.uiSeatSelector.update(dt);
 
-        this._lastTick = this._profiler.getTick();
-    },
-
-    update: function (dt) {
-        this.updateBy300ms();
-
-        this._profiler.startProfile("updateCounter");
-        this.updateCounter(dt);
-        this._profiler.stopProfile("updateCounter");
-
-        this._profiler.startProfile("this.uiCardBoard.update(dt)");
-        this.uiCardBoard.update(dt);
-        this._profiler.stopProfile("this.uiCardBoard.update(dt)");
-
-        this._profiler.startProfile("this.uiGameSeat.update(dt);");
-        this.uiGameSeat.update(dt);
-        this._profiler.stopProfile("this.uiGameSeat.update(dt);");
-
-        this._profiler.startProfile("this.uiRoadMap.update(dt);");
-        this.uiRoadMap.update(dt);
-        this._profiler.stopProfile("this.uiRoadMap.update(dt);");        
-
         this._profiler.startProfile("this.uiTableArea.update(dt);");
         this.uiTableArea.update(dt);
         this._profiler.stopProfile("this.uiTableArea.update(dt);");
@@ -408,6 +386,28 @@ BaccaratRoom = cc.Class.extend({
         this._profiler.startProfile("this.setRoomMessage(GameManager.getInstance().SignUpRoom.getSelectRoom());");
         this.setRoomMessage(GameManager.getInstance().SignUpRoom.getSelectRoom());
         this._profiler.stopProfile("this.setRoomMessage(GameManager.getInstance().SignUpRoom.getSelectRoom());");
+
+        this._profiler.startProfile("this.uiCardBoard.update(dt)");
+        this.uiCardBoard.update(dt);
+        this._profiler.stopProfile("this.uiCardBoard.update(dt)");
+
+        this._profiler.startProfile("this.uiGameSeat.update(dt);");
+        this.uiGameSeat.update(dt);
+        this._profiler.stopProfile("this.uiGameSeat.update(dt);");
+
+        this._lastTick = this._profiler.getTick();
+    },
+
+    update: function (dt) {
+        this.updateBy300ms();
+
+        this._profiler.startProfile("updateCounter");
+        this.updateCounter(dt);
+        this._profiler.stopProfile("updateCounter");        
+
+        this._profiler.startProfile("this.uiRoadMap.update(dt);");
+        this.uiRoadMap.update(dt);
+        this._profiler.stopProfile("this.uiRoadMap.update(dt);");        
     },
 
     updateCounter: function (dt) {
