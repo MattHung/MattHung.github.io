@@ -122,6 +122,17 @@ var LoginScene = cc.Scene.extend({
                         this.getNode("node_single_player/text").setColor(cc.color(255, 255, 255)); 
                     }.bind(this)
                 );
+
+                this.registerMouseEvent(this.getNode("node_single_player/text"), 
+                    function(node, mouseHitPoint){
+                        AccountManager.getInstance().setLoginType(LoginType.SinglePlay);
+                        this.getNode("node_single_player/text").setColor(cc.color(255, 0, 0));                    
+                        cc.director.runScene(new cc.TransitionFade(1, new MenuScene()));
+                    }.bind(this),
+                    function(node, mouseHitPoint){
+                        this.getNode("node_single_player/text").setColor(cc.color(255, 255, 255)); 
+                    }.bind(this)
+                );
             },
 
             onLoginServer:function(){
