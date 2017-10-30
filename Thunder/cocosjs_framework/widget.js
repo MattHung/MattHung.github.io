@@ -208,6 +208,22 @@ CocosWidget.Screen.registerFullScreenCallback= function(callback){
     }
 };
 
+CocosWidget.preloadEffect = function (url, callback) {
+    var self = cc.audioEngine;
+    cc.loader.useWebAudio = true;
+    cc.loader.load(url, function (audio) {
+        audio = cc.loader.getRes(url);
+        audio = audio.cloneNode();
+        if (!self._audioPool[url])
+            self._audioPool[url] = [];
+        self._audioPool[url].push(audio);
+
+        if(callback)
+            callback.call(null, url);
+    }.bind(cc.audioEngine));
+    cc.loader.useWebAudio = false;
+}
+
 CocosWidget.Storage  = cc.Class.extend({
     load: function(key) { 
         var jsonStr = cc.sys.localStorage[key];       

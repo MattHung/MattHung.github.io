@@ -31,9 +31,9 @@ LayerLevel1=gameLayer.extend({
             }.bind(this)
         );
 
-        this.addChild(this._ui_billboard);
+        cc.audioEngine.playMusic(res.music_play, true);
 
-        cc.audioEngine.playMusic("res/assets/audio/bgMusic_Scene_Play.mp3", false);
+        this.addChild(this._ui_billboard);
     },
 
     initShip:function(){

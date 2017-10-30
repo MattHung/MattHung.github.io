@@ -8,16 +8,6 @@ MenuLayer=gameLayer.extend({
         var file_name = "res/assets/menu.png";
         var spriteFrame = cc.SpriteFrame.create(file_name, cc.rect(0, 0, 126, 33));        
 
-        // this.btn_new = new ccui.Button();
-        // this.btn_new.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 );
-        // this.btn_new.loadTextures("res/assets/menu/new_normal.png", "res/assets/menu/new_pressed.png", "res/assets/menu/new_disabled.png");
-        // this.btn_new.setScale(3, 3);
-        // this.addChild(this.btn_new);
-        // this.registerMouseEvent(this.btn_new, function(node, mouseHitPoint){
-        //     // console.log("hit!");            
-        //     flareEffect(this, this, this.onNewGame);
-        // }.bind(this));
-
         // var blinks = cc.Blink.create(2, 10);
         var fadeIn = new cc.FadeIn(1);
         var fadeOut = new cc.FadeOut(1);
@@ -82,16 +72,47 @@ var LoginScene = cc.Scene.extend({
 
         var storage = new CocosWidget.Storage();
 
-        var loginLayer = r=gameLayer.extend({
+        var loginLayer = gameLayer.extend({
             messageLayer:null,
 
             ctor: function () {
                 this._super(res.Login_json);
                 this.init();
 
-                cc.audioEngine.setMusicVolume(1.0);
-                cc.audioEngine.playMusic("res/assets/audio/bgMusic_Scene_Menu.mp3", false);
+                this.onStart();
+            },         
 
+            testMusic:function(){
+                // this.btn_new = new ccui.Button();
+                // this.btn_new.setPosition(cc.winSize.width / 2, cc.winSize.height / 2 );
+                // this.btn_new.loadTextures("res/assets/menu/new_normal.png", "res/assets/menu/new_pressed.png", "res/assets/menu/new_disabled.png");
+                // this.btn_new.setScale(3, 3);
+                // this.btn_new.setPosition(0, cc.winSize.height-100);
+                // this.btn_new.setTouchEnabled(true);
+                // this.addChild(this.btn_new);
+
+                // var touchListener = cc.EventListener.create({
+                //     event: cc.EventListener.TOUCH_ONE_BY_ONE,
+                //     swallowTouches: true,
+
+                //     onTouchBegan: function (touch, event) {
+                //         // this.onMouseMove(touch.getLocation(), event._touches[0]);
+                //         // return this.onMouseDown(touch.getLocation());
+                //         cc.audioEngine.playMusic("res/assets/audio/bgMusic_Scene_Menu.mp3", true);
+                //         alert("test");
+                //     }.bind(this),
+                //     onTouchMoved: function (touch, event) {
+                //         // return this.onMouseMove(touch.getLocation(), event._touches[0]);
+                //     }.bind(this),
+                //     onTouchEnded: function (touch, event) {
+                //         // return this.onMouseUp(touch.getLocation());
+                //         alert("test1");
+                //     }.bind(this)
+                // });
+                // cc.eventManager.addListener(touchListener, this.btn_new);
+            },
+
+            onStart:function(){
                 this.messageLayer = new MessageLayer();
 
                 var previous_account = storage.load("account");
@@ -136,7 +157,7 @@ var LoginScene = cc.Scene.extend({
                         this.getNode("node_single_player/text").setColor(cc.color(255, 255, 255)); 
                     }.bind(this)
                 );
-            },         
+            },
 
             onLoginServer:function(){
                 GameManager.getInstance().setCallback("OnResponseLogin", function(res, accountSave){
@@ -183,7 +204,8 @@ var LoginScene = cc.Scene.extend({
             }
         });
 
-        this.addChild(new loginLayer());     
+        cc.audioEngine.playMusic(res.music_scene, true);
+        this.addChild(new loginLayer());                 
     }
 });
 

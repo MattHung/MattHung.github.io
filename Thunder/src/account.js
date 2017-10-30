@@ -57,6 +57,8 @@ accountManager=cc.Class.extend({
     },
 
     removeSave:function(user_id){
+        if(user_id==this._self_user_id)
+            return;
         delete this._saves[user_id];
     },
 
