@@ -164,6 +164,9 @@ NetworkPeer = CocosWidget.SocketPeer.extend({
         AccountManager.getInstance().getSave(user_id).UserName = user_name;
         AccountManager.getInstance().getSave(user_id).FighterType = fighterType;
         AccountManager.getInstance().getSave(user_id).Score = current_score;
+
+        if(current_score<0)
+            AccountManager.getInstance().removeSave(user_id);
     }
 
     // _recv_0:function(Message){

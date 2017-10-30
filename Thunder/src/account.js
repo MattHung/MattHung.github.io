@@ -56,6 +56,10 @@ accountManager=cc.Class.extend({
         return this._saves[user_id];
     },
 
+    removeSave:function(user_id){
+        delete this._saves[user_id];
+    },
+
     getRankedInfo:function(){
         var keys = Object.keys(this._saves);
 

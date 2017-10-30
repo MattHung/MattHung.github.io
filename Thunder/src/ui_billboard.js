@@ -28,7 +28,7 @@ UIBillboard=gameLayer.extend({
                 continue;
             }
 
-            var user_id = rankInfo[i];
+            var user_id = rankInfo[index];
 
             this._score_text[i].setVisible(true);
             this._score_text[i].setString(String.format("{0} :{1}", AccountManager.getInstance().getSave(user_id).UserName, AccountManager.getInstance().getSave(user_id).Score));

@@ -102,6 +102,7 @@ var LoginScene = cc.Scene.extend({
 
                 CocosWidget.eventRegister.getInstance().setRootNode(this.getNode("Scene"));
 
+                if(cc.sys.isMobile)
                 this.registerMouseEvent(this.getNode("account_node/text"), 
                     function(node, mouseHitPoint){
                         setTimeout(function(){this.getVirtualRenderer().attachWithIME();}.bind(node), 0);
