@@ -89,6 +89,9 @@ var LoginScene = cc.Scene.extend({
                 this._super(res.Login_json);
                 this.init();
 
+                cc.audioEngine.setMusicVolume(1.0);
+                cc.audioEngine.playMusic("res/assets/audio/bgMusic_Scene_Menu.mp3", false);
+
                 this.messageLayer = new MessageLayer();
 
                 var previous_account = storage.load("account");
@@ -180,8 +183,6 @@ var LoginScene = cc.Scene.extend({
         });
 
         this.addChild(new loginLayer());     
-        cc.audioEngine.setMusicVolume(1.0);
-        cc.audioEngine.playMusic("res/assets/audio/bgMusic_Scene_Menu.mp3", false);
     }
 });
 
