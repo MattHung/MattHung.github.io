@@ -70,7 +70,7 @@ accountManager=cc.Class.extend({
         }.bind(this));
 
         for(var i =keys.length-1; i>=0; i--)
-        if(keys[i]==0)
+        if((keys[i]==0) || (this._saves[keys[i]].UserName=="none"))
             keys.splice(i, 1);
 
         return keys;
