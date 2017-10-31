@@ -68,7 +68,8 @@ cc._LogInfos = {
     Node_resumeSchedulerAndActions: "resumeSchedulerAndActions is deprecated, please use resume instead.",
     Node_pauseSchedulerAndActions: "pauseSchedulerAndActions is deprecated, please use pause instead.",
     Node__arrayMakeObjectsPerformSelector: "Unknown callback function",
-    Node_reorderChild: "child must be non-null",
+    Node_reorderChild: "cc.Node.reorderChild(): child must be non-null",
+    Node_reorderChild_2: "cc.Node.reorderChild(): this child is not in children list",
     Node_runAction: "cc.Node.runAction(): action must be non-null",
     Node_schedule: "callback function must be non-null",
     Node_schedule_2: "interval must be positive",
@@ -119,7 +120,6 @@ cc._LogInfos = {
     animationCache__parseVersion2_2: "cocos2d: cc.AnimationCache: Animation '%s' refers to frame '%s' which is not currently in the cc.SpriteFrameCache. This frame will not be added to the animation.",
     animationCache_addAnimations_2: "cc.AnimationCache.addAnimations(): Invalid texture file name",
 
-    Sprite_reorderChild: "cc.Sprite.reorderChild(): this child is not in children list",
     Sprite_ignoreAnchorPointForPosition: "cc.Sprite.ignoreAnchorPointForPosition(): it is invalid in cc.Sprite when using SpriteBatchNode",
     Sprite_setDisplayFrameWithAnimationName: "cc.Sprite.setDisplayFrameWithAnimationName(): Frame not found",
     Sprite_setDisplayFrameWithAnimationName_2: "cc.Sprite.setDisplayFrameWithAnimationName(): Invalid frame index",
@@ -130,7 +130,6 @@ cc._LogInfos = {
     Sprite_initWithSpriteFrameName1: " is null, please check.",
     Sprite_initWithFile: "cc.Sprite.initWithFile(): filename should be non-null",
     Sprite_setDisplayFrameWithAnimationName_3: "cc.Sprite.setDisplayFrameWithAnimationName(): animationName must be non-null",
-    Sprite_reorderChild_2: "cc.Sprite.reorderChild(): child should be non-null",
     Sprite_addChild: "cc.Sprite.addChild(): cc.Sprite only supports cc.Sprites as children when using cc.SpriteBatchNode",
     Sprite_addChild_2: "cc.Sprite.addChild(): cc.Sprite only supports a sprite using same texture as children when using cc.SpriteBatchNode",
     Sprite_addChild_3: "cc.Sprite.addChild(): child should be non-null",
@@ -312,24 +311,23 @@ cc._initDebugSetting = function (mode) {
     } else if(console && console.log.apply){//console is null when user doesn't open dev tool on IE9
         //log to console
 
-        cc.error = function(){
-            return console.error.apply(console, arguments);
-        };
-        cc.assert = function (cond, msg) {
-            if (!cond && msg) {
-                for (var i = 2; i < arguments.length; i++)
-                    msg = msg.replace(/(%s)|(%d)/, cc._formatString(arguments[i]));
-                throw new Error(msg);
-            }
-        };
-        if(mode !== ccGame.DEBUG_MODE_ERROR)
-            cc.warn = function(){
-                return console.warn.apply(console, arguments);
+        cc.error = Function.prototype.bind.call(console.error, console);
+        //If console.assert is not support user throw Error msg on wrong condition
+        if (console.assert) {
+            cc.assert = Function.prototype.bind.call(console.assert, console);
+        } else {
+            cc.assert = function (cond, msg) {
+                if (!cond && msg) {
+                    for (var i = 2; i < arguments.length; i++)
+                        msg = msg.replace(/(%s)|(%d)/, cc._formatString(arguments[i]));
+                    throw new Error(msg);
+                }
             };
-        if(mode === ccGame.DEBUG_MODE_INFO)
-            cc.log = function(){
-                return console.log.apply(console, arguments);
-            };
+        }
+        if (mode !== ccGame.DEBUG_MODE_ERROR)
+            cc.warn = Function.prototype.bind.call(console.warn, console);
+        if (mode === ccGame.DEBUG_MODE_INFO)
+            cc.log = Function.prototype.bind.call(console.log, console);
     }
 };
 //+++++++++++++++++++++++++something about log end+++++++++++++++++++++++++++++

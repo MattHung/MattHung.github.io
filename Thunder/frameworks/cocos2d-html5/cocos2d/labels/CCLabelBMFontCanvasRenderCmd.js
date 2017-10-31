@@ -30,20 +30,15 @@
  http://www.angelcode.com/products/bmfont/ (Free, Windows only)
  ****************************************************************************/
 
-(function(){
-    cc.LabelBMFont.CanvasRenderCmd = function(renderableObject){
-        cc.SpriteBatchNode.CanvasRenderCmd.call(this, renderableObject);
-        this._needDraw = true;
+(function () {
+    cc.LabelBMFont.CanvasRenderCmd = function (renderableObject) {
+        this._rootCtor(renderableObject);
     };
 
-    var proto = cc.LabelBMFont.CanvasRenderCmd.prototype = Object.create(cc.SpriteBatchNode.CanvasRenderCmd.prototype);
+    var proto = cc.LabelBMFont.CanvasRenderCmd.prototype = Object.create(cc.Node.CanvasRenderCmd.prototype);
     proto.constructor = cc.LabelBMFont.CanvasRenderCmd;
 
-    proto.rendering = function(){
-        void 0;
-    };
-
-    proto._updateCharTexture = function(fontChar, rect, key){
+    proto._updateCharTexture = function (fontChar, rect, key) {
         if (key === 32) {
             fontChar.setTextureRect(rect, false, cc.size(0, 0));
         } else {
@@ -54,7 +49,7 @@
         }
     };
 
-    proto._updateCharColorAndOpacity = function(fontChar){
+    proto._updateCharColorAndOpacity = function (fontChar) {
         // Color MUST be set before opacity, since opacity might change color if OpacityModifyRGB is on
         fontChar._displayedColor = this._displayedColor;
         fontChar._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.colorDirty);
@@ -70,38 +65,37 @@
             var selChild = locChildren[i];
             var cm = selChild._renderCmd;
             var childDColor = cm._displayedColor;
-            if (this._texture !== cm._texture && (childDColor.r !== locDisplayedColor.r ||
+            if (node._texture !== cm._texture && (childDColor.r !== locDisplayedColor.r ||
                 childDColor.g !== locDisplayedColor.g || childDColor.b !== locDisplayedColor.b))
                 continue;
             selChild.texture = texture;
         }
-        this._texture = texture;
+        node._texture = texture;
     };
 
-    proto._changeTextureColor = function(){
+    proto._changeTextureColor = function () {
         var node = this._node;
-        var texture = this._textureToRender,
+        var texture = node._texture,
             contentSize = texture.getContentSize();
 
         var oTexture = node._texture,
             oElement = oTexture.getHtmlElementObj();
         var disColor = this._displayedColor;
         var textureRect = cc.rect(0, 0, oElement.width, oElement.height);
-        if(texture && contentSize.width > 0){
-            if(!oElement)
+        if (texture && contentSize.width > 0) {
+            if (!oElement)
                 return;
-            this._textureToRender = oTexture._generateColorTexture(disColor.r, disColor.g, disColor.b, textureRect);
+            var textureToRender = oTexture._generateColorTexture(disColor.r, disColor.g, disColor.b, textureRect);
+            node.setTexture(textureToRender);
         }
     };
 
-    proto._updateChildrenDisplayedOpacity = function(locChild){
+    proto._updateChildrenDisplayedOpacity = function (locChild) {
         cc.Node.prototype.updateDisplayedOpacity.call(locChild, this._displayedOpacity);
     };
 
-    proto._updateChildrenDisplayedColor = function(locChild){
+    proto._updateChildrenDisplayedColor = function (locChild) {
         cc.Node.prototype.updateDisplayedColor.call(locChild, this._displayedColor);
     };
-
-    proto._initBatchTexture = function(){};
 
 })();

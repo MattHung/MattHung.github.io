@@ -108,7 +108,7 @@ cc.textureCache = /** @lends cc.textureCache# */{
      * //example
      * var key = cc.textureCache.getTextureForKey("hello.png");
      */
-    getTextureForKey: function(textureKeyName){
+    getTextureForKey: function (textureKeyName) {
         return this._textures[textureKeyName] || this._textures[cc.loader._getAliase(textureKeyName)];
     },
 
@@ -214,8 +214,11 @@ cc.textureCache = /** @lends cc.textureCache# */{
     removeTextureForKey: function (textureKeyName) {
         if (textureKeyName == null)
             return;
-        if (this._textures[textureKeyName])
+        var tex = this._textures[textureKeyName];
+        if (tex) {
+            tex.releaseTexture();
             delete(this._textures[textureKeyName]);
+        }
     },
 
     //addImage move to Canvas/WebGL
@@ -276,11 +279,11 @@ cc.textureCache = /** @lends cc.textureCache# */{
             var selTexture = locTextures[key];
             count++;
             if (selTexture.getHtmlElementObj() instanceof  HTMLImageElement)
-                cc.log(cc._LogInfos.textureCache_dumpCachedTextureInfo, key, selTexture.getHtmlElementObj().src, selTexture.pixelsWidth, selTexture.pixelsHeight);
+                cc.log(cc._LogInfos.textureCache_dumpCachedTextureInfo, key, selTexture.getHtmlElementObj().src, selTexture.getPixelsWide(), selTexture.getPixelsHigh());
             else {
-                cc.log(cc._LogInfos.textureCache_dumpCachedTextureInfo_2, key, selTexture.pixelsWidth, selTexture.pixelsHeight);
+                cc.log(cc._LogInfos.textureCache_dumpCachedTextureInfo_2, key, selTexture.getPixelsWide(), selTexture.getPixelsHigh());
             }
-            totalBytes += selTexture.pixelsWidth * selTexture.pixelsHeight * 4;
+            totalBytes += selTexture.getPixelsWide() * selTexture.getPixelsHigh() * 4;
         }
 
         var locTextureColorsCache = this._textureColorsCache;
@@ -310,7 +313,7 @@ cc.game.addEventListener(cc.game.EVENT_RENDERER_INITED, function () {
 
         var _p = cc.textureCache;
 
-        _p.handleLoadedTexture = function (url) {
+        _p.handleLoadedTexture = function (url, img) {
             var locTexs = this._textures;
             //remove judge
             var tex = locTexs[url];
@@ -318,7 +321,9 @@ cc.game.addEventListener(cc.game.EVENT_RENDERER_INITED, function () {
                 tex = locTexs[url] = new cc.Texture2D();
                 tex.url = url;
             }
+            tex.initWithElement(img);
             tex.handleLoadedTexture();
+            return tex;
         };
 
         /**
@@ -343,13 +348,12 @@ cc.game.addEventListener(cc.game.EVENT_RENDERER_INITED, function () {
             //remove judge
             var tex = locTexs[url] || locTexs[cc.loader._getAliase(url)];
             if (tex) {
-                if(tex.isLoaded()) {
+                if (tex.isLoaded()) {
                     cb && cb.call(target, tex);
                     return tex;
                 }
-                else
-                {
-                    tex.addEventListener("load", function(){
+                else {
+                    tex.addEventListener("load", function () {
                         cb && cb.call(target, tex);
                     }, target);
                     return tex;
@@ -358,13 +362,12 @@ cc.game.addEventListener(cc.game.EVENT_RENDERER_INITED, function () {
 
             tex = locTexs[url] = new cc.Texture2D();
             tex.url = url;
-            var loadFunc = cc.loader._checkIsImageURL(url) ? cc.loader.load : cc.loader.loadImg;
-            loadFunc.call(cc.loader, url, function (err, img) {
+            var basePath = cc.loader.getBasePath ? cc.loader.getBasePath() : cc.loader.resPath;
+            cc.loader.loadImg(cc.path.join(basePath || "", url), function (err, img) {
                 if (err)
                     return cb && cb.call(target, err);
-                cc.textureCache.handleLoadedTexture(url);
 
-                var texResult = locTexs[url];
+                var texResult = cc.textureCache.handleLoadedTexture(url, img);
                 cb && cb.call(target, texResult);
             });
 

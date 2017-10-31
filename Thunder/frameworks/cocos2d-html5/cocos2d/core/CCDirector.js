@@ -23,19 +23,9 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  ****************************************************************************/
- 
+
 cc.g_NumberOfDraws = 0;
 
-cc.GLToClipTransform = function (transformOut) {
-    //var projection = new cc.math.Matrix4();
-    //cc.kmGLGetMatrix(cc.KM_GL_PROJECTION, projection);
-    cc.kmGLGetMatrix(cc.KM_GL_PROJECTION, transformOut);
-
-    var modelview = new cc.math.Matrix4();
-    cc.kmGLGetMatrix(cc.KM_GL_MODELVIEW, modelview);
-
-    transformOut.multiply(modelview);
-};
 //----------------------------------------------------------------------------------------------------------------------
 
 /**
@@ -53,7 +43,7 @@ cc.GLToClipTransform = function (transformOut) {
  *      - setting the OpenGL pixel format (default on is RGB565)<br/>
  *      - setting the OpenGL pixel format (default on is RGB565)<br/>
  *      - setting the OpenGL buffer depth (default one is 0-bit)<br/>
-        - setting the color for clear screen (default one is BLACK)<br/>
+ *      - setting the color for clear screen (default one is BLACK)<br/>
  *      - setting the projection (default one is 3D)<br/>
  *      - setting the orientation (default one is Portrait)<br/>
  *      <br/>
@@ -144,10 +134,10 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
         //scheduler
         this._scheduler = new cc.Scheduler();
         //action manager
-        if(cc.ActionManager){
+        if (cc.ActionManager) {
             this._actionManager = new cc.ActionManager();
             this._scheduler.scheduleUpdate(this._actionManager, cc.Scheduler.PRIORITY_SYSTEM, false);
-        }else{
+        } else {
             this._actionManager = null;
         }
 
@@ -191,7 +181,16 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
      * @param {cc.Point} uiPoint
      * @return {cc.Point}
      */
-    convertToGL: null,
+    convertToGL: function (uiPoint) {
+        var docElem = document.documentElement;
+        var view = cc.view;
+        var box = docElem.getBoundingClientRect();
+        box.left += window.pageXOffset - docElem.clientLeft;
+        box.top += window.pageYOffset - docElem.clientTop;
+        var x = view._devicePixelRatio * (uiPoint.x - box.left);
+        var y = view._devicePixelRatio * (box.top + box.height - uiPoint.y);
+        return view._isRotated ? {x: view._viewPortRect.width - y, y: x} : {x: x, y: y};
+    },
 
     /**
      * Converts an WebGL coordinate to a view coordinate<br/>
@@ -201,7 +200,23 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
      * @param {cc.Point} glPoint
      * @return {cc.Point}
      */
-    convertToUI: null,
+    convertToUI: function (glPoint) {
+        var docElem = document.documentElement;
+        var view = cc.view;
+        var box = docElem.getBoundingClientRect();
+        box.left += window.pageXOffset - docElem.clientLeft;
+        box.top += window.pageYOffset - docElem.clientTop;
+        var uiPoint = {x: 0, y: 0};
+        if (view._isRotated) {
+            uiPoint.x = box.left + glPoint.y / view._devicePixelRatio;
+            uiPoint.y = box.top + box.height - (view._viewPortRect.width - glPoint.x) / view._devicePixelRatio;
+        }
+        else {
+            uiPoint.x = box.left + glPoint.x / view._devicePixelRatio;
+            uiPoint.y = box.top + box.height - glPoint.y / view._devicePixelRatio;
+        }
+        return uiPoint;
+    },
 
     /**
      *  Draw the scene. This method is called every frame. Don't call it manually.
@@ -218,27 +233,27 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
             cc.eventManager.dispatchEvent(this._eventAfterUpdate);
         }
 
-        renderer.clear();
-
         /* to avoid flickr, nextScene MUST be here: after tick and before draw.
          XXX: Which bug is this one. It seems that it can't be reproduced with v0.9 */
         if (this._nextScene) {
             this.setNextScene();
         }
 
-        if (this._beforeVisitScene)
-            this._beforeVisitScene();
-
         // draw the scene
         if (this._runningScene) {
-            if (renderer.childrenOrderDirty === true) {
+            if (renderer.childrenOrderDirty) {
                 cc.renderer.clearRenderCommands();
+                cc.renderer.assignedZ = 0;
                 this._runningScene._renderCmd._curLevel = 0;                          //level start from 0;
                 this._runningScene.visit();
                 renderer.resetFlag();
-            } else if (renderer.transformDirty() === true)
+            } 
+            else if (renderer.transformDirty()) {
                 renderer.transform();
+            }
         }
+
+        renderer.clear();
 
         // draw the notifications node
         if (this._notificationNode)
@@ -247,19 +262,14 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
         cc.eventManager.dispatchEvent(this._eventAfterVisit);
         cc.g_NumberOfDraws = 0;
 
-        if (this._afterVisitScene)
-            this._afterVisitScene();
-
         renderer.rendering(cc._renderContext);
         this._totalFrames++;
 
         cc.eventManager.dispatchEvent(this._eventAfterDraw);
+        cc.eventManager.frameUpdateListeners();
 
         this._calculateMPF();
     },
-
-    _beforeVisitScene: null,
-    _afterVisitScene: null,
 
     /**
      * End the life of director in the next frame
@@ -390,9 +400,9 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
         // They are needed in case the director is run again
 
         if (this._runningScene) {
-            this._runningScene.onExitTransitionDidStart();
-            this._runningScene.onExit();
-            this._runningScene.cleanup();
+            this._runningScene._performRecursive(cc.Node._stateCallbackType.onExitTransitionDidStart);
+            this._runningScene._performRecursive(cc.Node._stateCallbackType.onExit);
+            this._runningScene._performRecursive(cc.Node._stateCallbackType.cleanup);
         }
 
         this._runningScene = null;
@@ -495,7 +505,7 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
      * set color for clear screen.<br/>
      * Implementation can be found in CCDirectorCanvas.js/CCDirectorWebGL.js
      * @function
-     * @param {cc.color} clearColor
+     * @param {cc.Color} clearColor
      */
     setClearColor: null,
     /**
@@ -527,14 +537,14 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
         if (!newIsTransition) {
             var locRunningScene = this._runningScene;
             if (locRunningScene) {
-                locRunningScene.onExitTransitionDidStart();
-                locRunningScene.onExit();
+                locRunningScene._performRecursive(cc.Node._stateCallbackType.onExitTransitionDidStart);
+                locRunningScene._performRecursive(cc.Node._stateCallbackType.onExit);
             }
 
             // issue #709. the root node (scene) should receive the cleanup message too
             // otherwise it might be leaked.
             if (this._sendCleanupToScene && locRunningScene)
-                locRunningScene.cleanup();
+                locRunningScene._performRecursive(cc.Node._stateCallbackType.cleanup);
         }
 
         this._runningScene = this._nextScene;
@@ -542,8 +552,8 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
 
         this._nextScene = null;
         if ((!runningIsTransition) && (this._runningScene !== null)) {
-            this._runningScene.onEnter();
-            this._runningScene.onEnterTransitionDidFinish();
+            this._runningScene._performRecursive(cc.Node._stateCallbackType.onEnter);
+            this._runningScene._performRecursive(cc.Node._stateCallbackType.onEnterTransitionDidFinish);
         }
     },
 
@@ -553,16 +563,16 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
      */
     setNotificationNode: function (node) {
         cc.renderer.childrenOrderDirty = true;
-        if(this._notificationNode){
-            this._notificationNode.onExitTransitionDidStart();
-            this._notificationNode.onExit();
-            this._notificationNode.cleanup();
+        if (this._notificationNode) {
+            this._notificationNode._performRecursive(cc.Node._stateCallbackType.onExitTransitionDidStart);
+            this._notificationNode._performRecursive(cc.Node._stateCallbackType.onExit);
+            this._notificationNode._performRecursive(cc.Node._stateCallbackType.cleanup);
         }
         this._notificationNode = node;
-        if(!node)
+        if (!node)
             return;
-        this._notificationNode.onEnter();
-        this._notificationNode.onEnterTransitionDidFinish();
+        this._notificationNode._performRecursive(cc.Node._stateCallbackType.onEnter);
+        this._notificationNode._performRecursive(cc.Node._stateCallbackType.onEnterTransitionDidFinish);
     },
 
     /**
@@ -738,10 +748,10 @@ cc.Director = cc.Class.extend(/** @lends cc.Director# */{
         while (c > level) {
             var current = locScenesStack.pop();
             if (current.running) {
-                current.onExitTransitionDidStart();
-                current.onExit();
+                current._performRecursive(cc.Node._stateCallbackType.onExitTransitionDidStart);
+                current._performRecursive(cc.Node._stateCallbackType.onExit);
             }
-            current.cleanup();
+            current._performRecursive(cc.Node._stateCallbackType.cleanup);
             c--;
         }
         this._nextScene = locScenesStack[locScenesStack.length - 1];
@@ -929,7 +939,7 @@ cc.Director.PROJECTION_3D = 1;
 cc.Director.PROJECTION_CUSTOM = 3;
 
 /**
- * Constant for default projection of cc.Director, default projection is 3D projection
+ * Constant for default projection of cc.Director, default projection is 2D projection
  * @constant
  * @type {Number}
  */

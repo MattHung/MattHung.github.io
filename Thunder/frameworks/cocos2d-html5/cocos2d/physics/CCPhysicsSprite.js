@@ -37,10 +37,10 @@
  */
 (function () {
     var box2dAPI = {
-        _ignoreBodyRotation:false,
-        _body:null,
-        _PTMRatio:32,
-        _rotation:1,
+        _ignoreBodyRotation: false,
+        _body: null,
+        _PTMRatio: 32,
+        _rotation: 1,
         /**
          * Create a PhysicsSprite with filename and rect
          * Constructor of cc.PhysicsSprite for Box2d
@@ -66,12 +66,12 @@
          * var physicsSprite2 = new cc.PhysicsSprite(texture, cc.rect(0,0,480,320));
          *
          */
-        ctor:function(fileName, rect){
+        ctor: function (fileName, rect) {
             cc.Sprite.prototype.ctor.call(this);
 
             if (fileName === undefined) {
                 cc.PhysicsSprite.prototype.init.call(this);
-            }else if (cc.isString(fileName)) {
+            } else if (cc.isString(fileName)) {
                 if (fileName[0] === "#") {
                     //init with a sprite frame name
                     var frameName = fileName.substr(1, fileName.length - 1);
@@ -81,7 +81,7 @@
                     //init  with filename and rect
                     this.init(fileName, rect);
                 }
-            }else if (cc.isObject(fileName)) {
+            } else if (cc.isObject(fileName)) {
                 if (fileName instanceof cc.Texture2D) {
                     //init  with texture and rect
                     this.initWithTexture(fileName, rect);
@@ -103,7 +103,7 @@
          * set body
          * @param {Box2D.Dynamics.b2Body} body
          */
-        setBody:function (body) {
+        setBody: function (body) {
             this._body = body;
         },
 
@@ -111,7 +111,7 @@
          * get body
          * @return {Box2D.Dynamics.b2Body}
          */
-        getBody:function () {
+        getBody: function () {
             return this._body;
         },
 
@@ -119,7 +119,7 @@
          * set PTM ratio
          * @param {Number} r
          */
-        setPTMRatio:function (r) {
+        setPTMRatio: function (r) {
             this._PTMRatio = r;
         },
 
@@ -127,7 +127,7 @@
          * get PTM ration
          * @return {Number}
          */
-        getPTMRatio:function () {
+        getPTMRatio: function () {
             return this._PTMRatio;
         },
 
@@ -135,9 +135,9 @@
          * get position
          * @return {cc.Point}
          */
-        getPosition:function () {
+        getPosition: function () {
             var pos = this._body.GetPosition();
-            var locPTMRatio =this._PTMRatio;
+            var locPTMRatio = this._PTMRatio;
             return cc.p(pos.x * locPTMRatio, pos.y * locPTMRatio);
         },
 
@@ -145,9 +145,9 @@
          * set position
          * @param {cc.Point} p
          */
-        setPosition:function (p) {
+        setPosition: function (p) {
             var angle = this._body.GetAngle();
-            var locPTMRatio =this._PTMRatio;
+            var locPTMRatio = this._PTMRatio;
             this._body.setTransform(Box2D.b2Vec2(p.x / locPTMRatio, p.y / locPTMRatio), angle);
             this.setNodeDirty();
         },
@@ -156,7 +156,7 @@
          * get rotation
          * @return {Number}
          */
-        getRotation:function () {
+        getRotation: function () {
             return (this._ignoreBodyRotation ? cc.radiansToDegrees(this._rotationRadians) : cc.radiansToDegrees(this._body.GetAngle()));
         },
 
@@ -164,7 +164,7 @@
          * set rotation
          * @param {Number} r
          */
-        setRotation:function (r) {
+        setRotation: function (r) {
             if (this._ignoreBodyRotation) {
                 this._rotation = r;
             } else {
@@ -174,43 +174,37 @@
             }
             this.setNodeDirty();
         },
-        _syncPosition:function () {
-            var pos = this._body.GetPosition();
-            this._position.x = pos.x * this._PTMRatio;
-            this._position.y = pos.y * this._PTMRatio;
-            this._rotationRadians = this._rotation * (Math.PI / 180);
+
+        _syncPosition: function () {
+            var locPosition = this._position,
+                pos = this._body.GetPosition(),
+                x = pos.x * this._PTMRatio,
+                y = pos.y * this._PTMRatio;
+            if (locPosition.x !== pos.x || locPosition.y !== pos.y) {
+                cc.Sprite.prototype.setPosition.call(this, x, y);
+            }
         },
-        _syncRotation:function () {
+        _syncRotation: function () {
             this._rotationRadians = this._body.GetAngle();
-        },
-        /**
-         * visit
-         */
-        visit:function () {
-            if (this._body && this._PTMRatio) {
-                this._syncPosition();
-                if (!this._ignoreBodyRotation)
-                    this._syncRotation();
+            var a = cc.radiansToDegrees(this._rotationRadians);
+            if (this._rotationX !== a) {
+                cc.Sprite.prototype.setRotation.call(this, a);
             }
-            else {
-                cc.log("PhysicsSprite body or PTIMRatio was not set");
-            }
-            this._super();
         },
 
         /**
          * set whether to ingore body's rotation
          * @param {Boolean} b
          */
-        setIgnoreBodyRotation: function(b) {
+        setIgnoreBodyRotation: function (b) {
             this._ignoreBodyRotation = b;
         }
     };
 
     var chipmunkAPI = {
-        _ignoreBodyRotation:false,
-        _body:null, //physics body
-        _rotation:1,
+        _ignoreBodyRotation: false,
+        _body: null, //physics body
+        _rotation: 1,
 
         /**
          * Create a PhysicsSprite with filename and rect
@@ -237,12 +231,12 @@
          * var physicsSprite2 = new cc.PhysicsSprite(texture, cc.rect(0,0,480,320));
          *
          */
-        ctor:function(fileName, rect){
+        ctor: function (fileName, rect) {
             cc.Sprite.prototype.ctor.call(this);
 
             if (fileName === undefined) {
                 cc.PhysicsSprite.prototype.init.call(this);
-            }else if (cc.isString(fileName)) {
+            } else if (cc.isString(fileName)) {
                 if (fileName[0] === "#") {
                     //init with a sprite frame name
                     var frameName = fileName.substr(1, fileName.length - 1);
@@ -252,7 +246,7 @@
                     //init  with filename and rect
                     this.init(fileName, rect);
                 }
-            }else if (cc.isObject(fileName)) {
+            } else if (cc.isObject(fileName)) {
                 if (fileName instanceof cc.Texture2D) {
                     //init  with texture and rect
                     this.initWithTexture(fileName, rect);
@@ -265,7 +259,7 @@
             cc.renderer.pushRenderCommand(this._renderCmd);
         },
 
-        visit: function(){
+        visit: function () {
             cc.renderer.pushRenderCommand(this._renderCmd);
             cc.Sprite.prototype.visit.call(this);
         },
@@ -274,7 +268,7 @@
          * set body
          * @param {cp.Body} body
          */
-        setBody:function (body) {
+        setBody: function (body) {
             this._body = body;
         },
 
@@ -282,7 +276,7 @@
          * get body
          * @returns {cp.Body}
          */
-        getBody:function () {
+        getBody: function () {
             return this._body;
         },
 
@@ -290,16 +284,16 @@
          * get position
          * @return {cc.Point}
          */
-        getPosition:function () {
+        getPosition: function () {
             var locBody = this._body;
-            return {x:locBody.p.x, y:locBody.p.y};
+            return {x: locBody.p.x, y: locBody.p.y};
         },
 
         /**
          * get position x
          * @return {Number}
          */
-        getPositionX:function () {
+        getPositionX: function () {
             return this._body.p.x;
         },
 
@@ -307,7 +301,7 @@
          * get position y
          * @return {Number}
          */
-        getPositionY:function () {
+        getPositionY: function () {
             return this._body.p.y;
         },
 
@@ -316,7 +310,7 @@
          * @param {cc.Point|Number}newPosOrxValue
          * @param {Number}yValue
          */
-        setPosition:function (newPosOrxValue, yValue) {
+        setPosition: function (newPosOrxValue, yValue) {
             if (yValue === undefined) {
                 this._body.p.x = newPosOrxValue.x;
                 this._body.p.y = newPosOrxValue.y;
@@ -324,28 +318,25 @@
                 this._body.p.x = newPosOrxValue;
                 this._body.p.y = yValue;
             }
-            //this._syncPosition();
         },
 
         /**
          * set position x
          * @param {Number} xValue
          */
-        setPositionX:function (xValue) {
+        setPositionX: function (xValue) {
             this._body.p.x = xValue;
-            //this._syncPosition();
         },
 
         /**
          * set position y
          * @param {Number} yValue
          */
-        setPositionY:function (yValue) {
+        setPositionY: function (yValue) {
             this._body.p.y = yValue;
-            //this._syncPosition();
         },
 
-        _syncPosition:function () {
+        _syncPosition: function () {
             var locPosition = this._position, locBody = this._body;
             if (locPosition.x !== locBody.p.x || locPosition.y !== locBody.p.y) {
                 cc.Sprite.prototype.setPosition.call(this, locBody.p.x, locBody.p.y);
@@ -356,7 +347,7 @@
          * get rotation
          * @return {Number}
          */
-        getRotation:function () {
+        getRotation: function () {
             return this._ignoreBodyRotation ? this._rotationX : -cc.radiansToDegrees(this._body.a);
         },
 
@@ -364,17 +355,17 @@
          * set rotation
          * @param {Number} r
          */
-        setRotation:function (r) {
+        setRotation: function (r) {
             if (this._ignoreBodyRotation) {
                 cc.Sprite.prototype.setRotation.call(this, r);
             } else {
                 this._body.a = -cc.degreesToRadians(r);
-                //this._syncRotation();
             }
         },
-        _syncRotation:function () {
-            if (this._rotationX !== -cc.radiansToDegrees(this._body.a)) {
-                cc.Sprite.prototype.setRotation.call(this, -cc.radiansToDegrees(this._body.a));
+        _syncRotation: function () {
+            var a = -cc.radiansToDegrees(this._body.a);
+            if (this._rotationX !== a) {
+                cc.Sprite.prototype.setRotation.call(this, a);
             }
         },
 
@@ -382,7 +373,7 @@
          * get the affine transform matrix of node to parent coordinate frame
          * @return {cc.AffineTransform}
          */
-        getNodeToParentTransform:function () {
+        getNodeToParentTransform: function () {
             return this._renderCmd.getNodeToParentTransform();
         },
 
@@ -390,26 +381,30 @@
          * whether dirty
          * @return {Boolean}
          */
-        isDirty:function(){
-           return !this._body.isSleeping();
+        isDirty: function () {
+            return !this._body.isSleeping();
         },
-        setDirty: function(){ },
+        setDirty: function () {
+        },
 
         /**
          * set whether to ignore rotation of body
          * @param {Boolean} b
          */
-        setIgnoreBodyRotation: function(b) {
+        setIgnoreBodyRotation: function (b) {
             this._ignoreBodyRotation = b;
         },
 
-        _createRenderCmd: function(){
-            if(cc._renderType === cc.game.RENDER_TYPE_CANVAS)
+        _createRenderCmd: function () {
+            if (cc._renderType === cc.game.RENDER_TYPE_CANVAS)
                 return new cc.PhysicsSprite.CanvasRenderCmd(this);
             else
                 return new cc.PhysicsSprite.WebGLRenderCmd(this);
         }
     };
+    /**
+     * @class
+     */
     cc.PhysicsSprite = cc.Sprite.extend(chipmunkAPI);
     cc.PhysicsSprite._className = "PhysicsSprite";
     var _p = cc.PhysicsSprite.prototype;

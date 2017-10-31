@@ -30,55 +30,28 @@
  http://www.angelcode.com/products/bmfont/ (Free, Windows only)
  ****************************************************************************/
 
-(function(){
-    cc.LabelBMFont.WebGLRenderCmd = function(renderableObject){
-        cc.SpriteBatchNode.WebGLRenderCmd.call(this, renderableObject);
-        this._needDraw = true;
+(function () {
+    cc.LabelBMFont.WebGLRenderCmd = function (renderableObject) {
+        this._rootCtor(renderableObject);
     };
 
-    var proto = cc.LabelBMFont.WebGLRenderCmd.prototype = Object.create(cc.SpriteBatchNode.WebGLRenderCmd.prototype);
+    var proto = cc.LabelBMFont.WebGLRenderCmd.prototype = Object.create(cc.Node.WebGLRenderCmd.prototype);
     proto.constructor = cc.LabelBMFont.WebGLRenderCmd;
 
-    proto._updateCharTexture = function(fontChar, rect, key){
+    proto.setTexture = function (texture) {
+        this._node.setOpacityModifyRGB(this._node._texture.hasPremultipliedAlpha());
+    };
+
+    proto._updateCharTexture = function(fontChar, rect, key, isRotated){
         // updating previous sprite
-        fontChar.setTextureRect(rect, false);
+        fontChar.setTextureRect(rect, isRotated);
         // restore to default in case they were modified
         fontChar.visible = true;
     };
 
-    proto._changeTextureColor = function(){};
-
-    proto._updateChildrenDisplayedOpacity = function(locChild){
-        locChild.updateDisplayedOpacity(this._displayedOpacity);
+    proto._changeTextureColor = function () {
     };
 
-    proto._updateChildrenDisplayedColor = function(locChild){
-        locChild.updateDisplayedColor(this._displayedColor);
+    proto._updateCharColorAndOpacity = function () {
     };
-
-    proto._initBatchTexture = function(){
-        var node  = this._node;
-        var locTexture = node.textureAtlas.texture;
-        node._opacityModifyRGB = locTexture.hasPremultipliedAlpha();
-
-        var reusedChar = node._reusedChar = new cc.Sprite();
-        reusedChar.initWithTexture(locTexture, cc.rect(0, 0, 0, 0), false);
-        reusedChar.batchNode = node;
-    };
-
-    proto.rendering = function(ctx){
-        cc.SpriteBatchNode.WebGLRenderCmd.prototype.rendering.call(this, ctx);
-
-        var node = this._node;
-        //LabelBMFont - Debug draw
-        if (cc.LABELBMFONT_DEBUG_DRAW) {
-            var size = node.getContentSize();
-            var pos = cc.p(0 | ( -this._anchorPointInPoints.x), 0 | ( -this._anchorPointInPoints.y));
-            var vertices = [cc.p(pos.x, pos.y), cc.p(pos.x + size.width, pos.y), cc.p(pos.x + size.width, pos.y + size.height), cc.p(pos.x, pos.y + size.height)];
-            cc._drawingUtil.setDrawColor(0, 255, 0, 255);
-            cc._drawingUtil.drawPoly(vertices, 4, true);
-        }
-    };
-
-    proto._updateCharColorAndOpacity = function(){};
 })();
