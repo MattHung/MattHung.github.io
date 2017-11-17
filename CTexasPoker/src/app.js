@@ -58,7 +58,7 @@ LoginLayer=gameLayer.extend({
                 //save account
                 storage.save("account", account);
 
-                 PokerManager.getInstance().connect("ws:/220.134.243.106:61230",
+                 PokerManager.getInstance().connect("ws:/220.134.243.106:61231",
                     function() {
                         //gameID, sessionID, platForm, subsidiaryID, subsidiaryAccount, subsidiaryUserID, browser, osType)
                         pokerPeer.getInstance().requestLogin("2", "robot", 4, 0, account, 148499947, "", "");
