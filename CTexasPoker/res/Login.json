@@ -1,0 +1,416 @@
+{
+  "ID": "595861cb-24a6-464e-aedc-16bf296f1f8d",
+  "Version": "3.10.0.0",
+  "Name": "Login",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 792,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Login/login_bg.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 960.0,
+              "Y": 540.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "TopEdge",
+            "Tag": 793,
+            "ActionTag": -1084617916,
+            "Size": {
+              "X": 1920.0,
+              "Y": 1080.0
+            },
+            "Name": "login_bg",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "AnchorPoint": {},
+            "Position": {
+              "X": 893.8047,
+              "Y": 590.8373
+            },
+            "Scale": {
+              "ScaleX": 1.5,
+              "ScaleY": 1.5
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.4655,
+              "Y": 0.5471
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 893.8047,
+            "RightMargin": 1026.1953,
+            "TopMargin": 489.1627,
+            "BottomMargin": 590.8373,
+            "Tag": 39,
+            "Children": [
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": -45.807,
+                  "Y": 0.0003
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -45.807,
+                "RightMargin": 45.807,
+                "TopMargin": -0.0003,
+                "BottomMargin": 0.0003,
+                "Tag": 36,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "assets/Login_res/account_frame.png",
+                      "Plist": ""
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 173.5896,
+                      "Y": -2.7522
+                    },
+                    "Scale": {
+                      "ScaleX": 2.0861,
+                      "ScaleY": 1.833
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 41.0896,
+                    "RightMargin": -306.0896,
+                    "TopMargin": -25.2478,
+                    "BottomMargin": -30.7522,
+                    "Tag": 37,
+                    "ActionTag": -1888443703,
+                    "Size": {
+                      "X": 265.0,
+                      "Y": 56.0
+                    },
+                    "Name": "text_bg",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "IsCustomSize": true,
+                    "LabelText": "account",
+                    "PlaceHolderText": "",
+                    "MaxLengthEnable": true,
+                    "MaxLengthText": 20,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 195.6242,
+                      "Y": 0.8781
+                    },
+                    "Scale": {
+                      "ScaleX": 1.4998,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 20.6242,
+                    "RightMargin": -370.6242,
+                    "TopMargin": -23.3781,
+                    "BottomMargin": -21.6219,
+                    "Tag": 27,
+                    "ActionTag": 995306464,
+                    "Size": {
+                      "X": 350.0,
+                      "Y": 45.0
+                    },
+                    "Name": "text",
+                    "ctype": "TextFieldObjectData"
+                  },
+                  {
+                    "FontSize": 36,
+                    "LabelText": "Account :",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -162.1216,
+                      "Y": 0.52
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -228.1216,
+                    "RightMargin": 96.1216,
+                    "TopMargin": -18.52,
+                    "BottomMargin": -17.48,
+                    "Tag": 38,
+                    "ActionTag": -1709170804,
+                    "Size": {
+                      "X": 132.0,
+                      "Y": 36.0
+                    },
+                    "Name": "label",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -758355087,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "account_node",
+                "ctype": "SingleNodeObjectData"
+              }
+            ],
+            "ActionTag": 2084929770,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "panel",
+            "ctype": "SingleNodeObjectData"
+          },
+          {
+            "AnchorPoint": {},
+            "Position": {
+              "X": 980.8925,
+              "Y": 442.8858
+            },
+            "Scale": {
+              "ScaleX": 1.7298,
+              "ScaleY": 1.5
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.5109,
+              "Y": 0.4101
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 980.8925,
+            "RightMargin": 939.1075,
+            "TopMargin": 637.1142,
+            "BottomMargin": 442.8858,
+            "Tag": 42,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "assets/Btn/btn_red.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.933,
+                  "ScaleY": 2.6465
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -150.0,
+                "RightMargin": -150.0,
+                "TopMargin": -17.5,
+                "BottomMargin": -17.5,
+                "Tag": 40,
+                "ActionTag": 1305984130,
+                "Size": {
+                  "X": 300.0,
+                  "Y": 35.0
+                },
+                "Name": "bg",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 58,
+                "LabelText": "Login",
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -64.5,
+                "RightMargin": -64.5,
+                "TopMargin": -29.0,
+                "BottomMargin": -29.0,
+                "Tag": 16,
+                "ActionTag": -878945401,
+                "Size": {
+                  "X": 129.0,
+                  "Y": 58.0
+                },
+                "Name": "text",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -1374517285,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "node_login",
+            "ctype": "SingleNodeObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "assets/Btn/btn_red.png",
+        "assets/Login_res/account_frame.png",
+        "Login/login_bg.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}

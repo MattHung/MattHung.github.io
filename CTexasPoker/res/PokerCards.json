@@ -1,0 +1,2522 @@
+{
+  "ID": "5ead078b-71d2-40af-ba8d-1c14b1201d7d",
+  "Version": "3.10.0.0",
+  "Name": "PokerCards",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 148,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_10c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 93,
+            "ActionTag": -815950355,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_10c_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_10d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 94,
+            "ActionTag": -2007201884,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_10d_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_10h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 95,
+            "ActionTag": -1294673470,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_10h_3",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_10s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 96,
+            "ActionTag": -7428187,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_10s_4",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_2c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 97,
+            "ActionTag": -1887135794,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_2c_5",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_2d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 98,
+            "ActionTag": -268066806,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_2d_6",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_2h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 99,
+            "ActionTag": 275581252,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_2h_7",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_2s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 100,
+            "ActionTag": -19851994,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_2s_8",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_3c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 101,
+            "ActionTag": 190093811,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_3c_9",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_3d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 102,
+            "ActionTag": 569937750,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_3d_10",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_3h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 103,
+            "ActionTag": 52840164,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_3h_11",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_3s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 104,
+            "ActionTag": 136882317,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_3s_12",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_4c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 105,
+            "ActionTag": 500146280,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_4c_13",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_4d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 106,
+            "ActionTag": -610180698,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_4d_14",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_4h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 107,
+            "ActionTag": -389055496,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_4h_15",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_4s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 108,
+            "ActionTag": -1963666471,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_4s_16",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_5c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 109,
+            "ActionTag": -949887854,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_5c_17",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_5d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 110,
+            "ActionTag": -447436880,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_5d_18",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_5h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 111,
+            "ActionTag": 792803854,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_5h_19",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_5s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 112,
+            "ActionTag": 1485242710,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_5s_20",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_6c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 113,
+            "ActionTag": -1246700893,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_6c_21",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_6d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 114,
+            "ActionTag": -887832609,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_6d_22",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_6h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 115,
+            "ActionTag": -1974669427,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_6h_23",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_6s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 116,
+            "ActionTag": 119408867,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_6s_24",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_7c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 117,
+            "ActionTag": -858627099,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_7c_25",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_7d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 118,
+            "ActionTag": 1420084812,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_7d_26",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_7h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 119,
+            "ActionTag": 1018056502,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_7h_27",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_7s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 120,
+            "ActionTag": 368968596,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_7s_28",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_8c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 121,
+            "ActionTag": -1000513221,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_8c_29",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_8d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 122,
+            "ActionTag": 2100348549,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_8d_30",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_8h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 123,
+            "ActionTag": 1760483076,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_8h_31",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_8s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 124,
+            "ActionTag": -534338728,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_8s_32",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_9c.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 125,
+            "ActionTag": 367518218,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_9c_33",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_9d.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 126,
+            "ActionTag": 465190858,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_9d_34",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_9h.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 127,
+            "ActionTag": -8846698,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_9h_35",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_9s.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 128,
+            "ActionTag": -1732443802,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_9s_36",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_ac.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 129,
+            "ActionTag": 1716554062,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_ac_37",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_ad.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 130,
+            "ActionTag": -229766589,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_ad_38",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_ah.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 131,
+            "ActionTag": -69821589,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_ah_39",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_as.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 132,
+            "ActionTag": 1573755288,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_as_40",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_jc.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 134,
+            "ActionTag": -2108144921,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_jc_42",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_jd.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 135,
+            "ActionTag": 1121489248,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_jd_43",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_jh.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 136,
+            "ActionTag": -1030585002,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_jh_44",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_js.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 137,
+            "ActionTag": 305449372,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_js_45",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_kc.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 138,
+            "ActionTag": -1808467635,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_kc_46",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_kd.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 139,
+            "ActionTag": -1733636514,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_kd_47",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_kh.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 140,
+            "ActionTag": -893899316,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_kh_48",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_ks.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 141,
+            "ActionTag": -1276455705,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_ks_49",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_qc.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 142,
+            "ActionTag": 538074305,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_qc_50",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_qd.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 143,
+            "ActionTag": -1661494631,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_qd_51",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_qh.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 144,
+            "ActionTag": 908247227,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_qh_52",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_qs.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 809.317,
+              "Y": 573.4581
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4215,
+              "Y": 0.531
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 737.317,
+            "RightMargin": 1038.683,
+            "TopMargin": 410.5419,
+            "BottomMargin": 477.4581,
+            "Tag": 145,
+            "ActionTag": 1066728510,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_qs_53",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Cards/144x192/ooo_cardback.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 821.8113,
+              "Y": 575.2679
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.428,
+              "Y": 0.5327
+            },
+            "PreSize": {
+              "X": 0.075,
+              "Y": 0.1778
+            },
+            "LeftMargin": 749.8113,
+            "RightMargin": 1026.1887,
+            "TopMargin": 408.7321,
+            "BottomMargin": 479.2679,
+            "Tag": 312,
+            "ActionTag": -1434423504,
+            "Size": {
+              "X": 144.0,
+              "Y": 192.0
+            },
+            "VisibleForFrame": false,
+            "Name": "ooo_cardback_107",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1920.0,
+          "Y": 1080.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Cards/144x192/ooo_10c.png",
+        "Cards/144x192/ooo_10d.png",
+        "Cards/144x192/ooo_10h.png",
+        "Cards/144x192/ooo_10s.png",
+        "Cards/144x192/ooo_2c.png",
+        "Cards/144x192/ooo_2d.png",
+        "Cards/144x192/ooo_2h.png",
+        "Cards/144x192/ooo_2s.png",
+        "Cards/144x192/ooo_3c.png",
+        "Cards/144x192/ooo_3d.png",
+        "Cards/144x192/ooo_3h.png",
+        "Cards/144x192/ooo_3s.png",
+        "Cards/144x192/ooo_4c.png",
+        "Cards/144x192/ooo_4d.png",
+        "Cards/144x192/ooo_4h.png",
+        "Cards/144x192/ooo_4s.png",
+        "Cards/144x192/ooo_5c.png",
+        "Cards/144x192/ooo_5d.png",
+        "Cards/144x192/ooo_5h.png",
+        "Cards/144x192/ooo_5s.png",
+        "Cards/144x192/ooo_6c.png",
+        "Cards/144x192/ooo_6d.png",
+        "Cards/144x192/ooo_6h.png",
+        "Cards/144x192/ooo_6s.png",
+        "Cards/144x192/ooo_7c.png",
+        "Cards/144x192/ooo_7d.png",
+        "Cards/144x192/ooo_7h.png",
+        "Cards/144x192/ooo_7s.png",
+        "Cards/144x192/ooo_8c.png",
+        "Cards/144x192/ooo_8d.png",
+        "Cards/144x192/ooo_8h.png",
+        "Cards/144x192/ooo_8s.png",
+        "Cards/144x192/ooo_9c.png",
+        "Cards/144x192/ooo_9d.png",
+        "Cards/144x192/ooo_9h.png",
+        "Cards/144x192/ooo_9s.png",
+        "Cards/144x192/ooo_ac.png",
+        "Cards/144x192/ooo_ad.png",
+        "Cards/144x192/ooo_ah.png",
+        "Cards/144x192/ooo_as.png",
+        "Cards/144x192/ooo_cardback.png",
+        "Cards/144x192/ooo_jc.png",
+        "Cards/144x192/ooo_jd.png",
+        "Cards/144x192/ooo_jh.png",
+        "Cards/144x192/ooo_js.png",
+        "Cards/144x192/ooo_kc.png",
+        "Cards/144x192/ooo_kd.png",
+        "Cards/144x192/ooo_kh.png",
+        "Cards/144x192/ooo_ks.png",
+        "Cards/144x192/ooo_qc.png",
+        "Cards/144x192/ooo_qd.png",
+        "Cards/144x192/ooo_qh.png",
+        "Cards/144x192/ooo_qs.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Scene"
+}
