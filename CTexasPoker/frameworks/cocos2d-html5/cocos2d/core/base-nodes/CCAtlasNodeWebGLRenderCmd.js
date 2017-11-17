@@ -25,14 +25,17 @@
 /**
  * cc.AtlasNode's rendering objects of WebGL
  */
-(function(){
-    cc.AtlasNode.WebGLRenderCmd = function(renderableObject){
-        cc.Node.WebGLRenderCmd.call(this, renderableObject);
+(function () {
+    cc.AtlasNode.WebGLRenderCmd = function (renderableObject) {
+        this._rootCtor(renderableObject);
         this._needDraw = true;
         this._textureAtlas = null;
         this._colorUnmodified = cc.color.WHITE;
         this._colorF32Array = null;
         this._uniformColor = null;
+
+        this._matrix = new cc.math.Matrix4();
+        this._matrix.identity();
 
         //shader stuff
         this._shaderProgram = cc.shaderCache.programForKey(cc.SHADER_POSITION_TEXTURE_UCOLOR);
@@ -57,8 +60,15 @@
     proto.rendering = function (ctx) {
         var context = ctx || cc._renderContext, node = this._node;
 
-        this._shaderProgram.use();
-        this._shaderProgram._setUniformForMVPMatrixWithMat4(this._stackMatrix);
+        var wt = this._worldTransform;
+        this._matrix.mat[0] = wt.a;
+        this._matrix.mat[4] = wt.c;
+        this._matrix.mat[12] = wt.tx;
+        this._matrix.mat[1] = wt.b;
+        this._matrix.mat[5] = wt.d;
+        this._matrix.mat[13] = wt.ty;
+
+        this._glProgramState.apply(this._matrix);
 
         cc.glBlendFunc(node._blendFunc.src, node._blendFunc.dst);
         if (this._uniformColor && this._colorF32Array) {
@@ -67,7 +77,7 @@
         }
     };
 
-    proto.initWithTexture = function(texture, tileWidth, tileHeight, itemsToRender){
+    proto.initWithTexture = function (texture, tileWidth, tileHeight, itemsToRender) {
         var node = this._node;
         node._itemWidth = tileWidth;
         node._itemHeight = tileHeight;
@@ -95,7 +105,7 @@
         return true;
     };
 
-    proto.setColor = function(color3){
+    proto.setColor = function (color3) {
         var temp = cc.color(color3.r, color3.g, color3.b), node = this._node;
         this._colorUnmodified = color3;
         var locDisplayedOpacity = this._displayedOpacity;
@@ -107,7 +117,7 @@
         cc.Node.prototype.setColor.call(node, temp);
     };
 
-    proto.setOpacity = function(opacity){
+    proto.setOpacity = function (opacity) {
         var node = this._node;
         cc.Node.prototype.setOpacity.call(node, opacity);
         // special opacity for premultiplied textures
@@ -116,23 +126,27 @@
         }
     };
 
-    proto._updateColor = function(){
-        var locDisplayedColor = this._displayedColor;
-        this._colorF32Array = new Float32Array([locDisplayedColor.r / 255.0, locDisplayedColor.g / 255.0,
-                locDisplayedColor.b / 255.0, this._displayedOpacity / 255.0]);
+    proto._updateColor = function () {
+        if (this._colorF32Array) {
+            var locDisplayedColor = this._displayedColor;
+            this._colorF32Array[0] = locDisplayedColor.r / 255.0;
+            this._colorF32Array[1] = locDisplayedColor.g / 255.0;
+            this._colorF32Array[2] = locDisplayedColor.b / 255.0;
+            this._colorF32Array[3] = this._displayedOpacity / 255.0;
+        }
     };
 
-    proto.getTexture = function(){
+    proto.getTexture = function () {
         return this._textureAtlas.texture;
     };
 
-    proto.setTexture = function(texture){
+    proto.setTexture = function (texture) {
         this._textureAtlas.texture = texture;
         this._updateBlendFunc();
         this._updateOpacityModifyRGB();
     };
 
-    proto._calculateMaxItems = function(){
+    proto._calculateMaxItems = function () {
         var node = this._node;
         var selTexture = this._textureAtlas.texture;
         var size = selTexture.getContentSize();

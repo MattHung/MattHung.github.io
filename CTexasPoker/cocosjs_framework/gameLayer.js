@@ -67,3 +67,5 @@ var gameLayer = cc.Layer.extend({
         this.root_node.setVisible(visible);
     }
 });
+
+Window.prototype.prompt = prompt;

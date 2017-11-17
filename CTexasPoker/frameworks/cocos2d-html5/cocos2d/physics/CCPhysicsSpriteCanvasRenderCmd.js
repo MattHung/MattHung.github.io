@@ -25,69 +25,26 @@
 /**
  * cc.PhysicsSprite's rendering objects of Canvas
  */
-(function(){
-    cc.PhysicsSprite.CanvasRenderCmd = function(renderableObject){
-        cc.Sprite.CanvasRenderCmd.call(this, renderableObject);
+(function () {
+    cc.PhysicsSprite.CanvasRenderCmd = function (renderableObject) {
+        this._spriteCmdCtor(renderableObject);
         this._needDraw = true;
     };
 
     var proto = cc.PhysicsSprite.CanvasRenderCmd.prototype = Object.create(cc.Sprite.CanvasRenderCmd.prototype);
     proto.constructor = cc.PhysicsSprite.CanvasRenderCmd;
 
-    proto.rendering = function(ctx, scaleX, scaleY){
+    proto.rendering = function (ctx, scaleX, scaleY) {
         //  This is a special class
         //  Sprite can not obtain sign
         //  So here must to calculate of each frame
-        var node  = this._node;
+        var node = this._node;
         node._syncPosition();
-        if(!node._ignoreBodyRotation)
+        if (!node._ignoreBodyRotation)
             node._syncRotation();
         this.transform(this.getParentRenderCmd());
 
         cc.Sprite.CanvasRenderCmd.prototype.rendering.call(this, ctx, scaleX, scaleY);
-    };
-
-    proto.getNodeToParentTransform = function(){
-        var node = this._node;
-
-        var t = this._transform;// quick reference
-        // base position
-        var locBody = node._body, locScaleX = node._scaleX, locScaleY = node._scaleY, locAnchorPIP = this._anchorPointInPoints;
-        t.tx = locBody.p.x;
-        t.ty = locBody.p.y;
-
-        // rotation Cos and Sin
-        var radians = -locBody.a;
-        var Cos = 1, Sin = 0;
-        if (radians && !node._ignoreBodyRotation) {
-            Cos = Math.cos(radians);
-            Sin = Math.sin(radians);
-        }
-
-        // base abcd
-        t.a = t.d = Cos;
-        t.b = -Sin;
-        t.c = Sin;
-
-        // scale
-        if (locScaleX !== 1 || locScaleY !== 1) {
-            t.a *= locScaleX;
-            t.c *= locScaleX;
-            t.b *= locScaleY;
-            t.d *= locScaleY;
-        }
-
-        // adjust anchorPoint
-        t.tx += Cos * -locAnchorPIP.x * locScaleX + -Sin * locAnchorPIP.y * locScaleY;
-        t.ty -= Sin * -locAnchorPIP.x * locScaleX + Cos * locAnchorPIP.y * locScaleY;
-
-        // if ignore anchorPoint
-        if (this._ignoreAnchorPointForPosition) {
-            t.tx += locAnchorPIP.x;
-            t.ty += locAnchorPIP.y;
-        }
-
-        return this._transform;
     };
 
 })();

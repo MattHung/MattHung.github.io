@@ -83,6 +83,7 @@ cc._tmp.WebGLTexture2D = function () {
         releaseTexture: function () {
             if (this._webTextureObj)
                 cc._renderContext.deleteTexture(this._webTextureObj);
+            this._htmlElementObj = null;
             cc.loader.release(this.url);
         },
 
@@ -224,7 +225,7 @@ cc._tmp.WebGLTexture2D = function () {
         },
 
         keepData: function (data, length) {
-            //The texture data mustn't be saved becuase it isn't a mutable texture.
+            //The texture data mustn't be saved because it isn't a mutable texture.
             return data;
         },
 
@@ -324,10 +325,11 @@ cc._tmp.WebGLTexture2D = function () {
         drawAtPoint: function (point) {
             var self = this;
             var coordinates = [
-                0.0, self.maxT,
-                self.maxS, self.maxT,
-                0.0, 0.0,
-                self.maxS, 0.0 ];
+                    0.0, self.maxT,
+                    self.maxS, self.maxT,
+                    0.0, 0.0,
+                    self.maxS, 0.0],
+                gl = cc._renderContext;
 
             var width = self._pixelsWide * self.maxS,
                 height = self._pixelsHigh * self.maxT;
@@ -336,15 +338,15 @@ cc._tmp.WebGLTexture2D = function () {
                 point.x, point.y, 0.0,
                 width + point.x, point.y, 0.0,
                 point.x, height + point.y, 0.0,
-                width + point.x, height + point.y, 0.0 ];
+                width + point.x, height + point.y, 0.0];
 
-            cc.glEnableVertexAttribs(cc.VERTEX_ATTRIB_FLAG_POSITION | cc.VERTEX_ATTRIB_FLAG_TEX_COORDS);
-            self._shaderProgram.use();
-            self._shaderProgram.setUniformsForBuiltins();
+            self._glProgramState.apply();
+            self._glProgramState._glprogram.setUniformsForBuiltins();
 
             cc.glBindTexture2D(self);
 
-            var gl = cc._renderContext;
+            gl.enableVertexAttribArray(cc.VERTEX_ATTRIB_POSITION);
+            gl.enableVertexAttribArray(cc.VERTEX_ATTRIB_TEX_COORDS);
             gl.vertexAttribPointer(cc.VERTEX_ATTRIB_POSITION, 2, gl.FLOAT, false, 0, vertices);
             gl.vertexAttribPointer(cc.VERTEX_ATTRIB_TEX_COORDS, 2, gl.FLOAT, false, 0, coordinates);
 
@@ -363,18 +365,19 @@ cc._tmp.WebGLTexture2D = function () {
                 0.0, 0.0,
                 self.maxS, 0.0];
 
-            var vertices = [    rect.x, rect.y, /*0.0,*/
+            var vertices = [rect.x, rect.y, /*0.0,*/
                 rect.x + rect.width, rect.y, /*0.0,*/
                 rect.x, rect.y + rect.height, /*0.0,*/
-                rect.x + rect.width, rect.y + rect.height        /*0.0*/ ];
+                rect.x + rect.width, rect.y + rect.height        /*0.0*/];
 
-            cc.glEnableVertexAttribs(cc.VERTEX_ATTRIB_FLAG_POSITION | cc.VERTEX_ATTRIB_FLAG_TEX_COORDS);
-            self._shaderProgram.use();
-            self._shaderProgram.setUniformsForBuiltins();
+            self._glProgramState.apply();
+            self._glProgramState._glprogram.setUniformsForBuiltins();
 
             cc.glBindTexture2D(self);
 
             var gl = cc._renderContext;
+            gl.enableVertexAttribArray(cc.VERTEX_ATTRIB_POSITION);
+            gl.enableVertexAttribArray(cc.VERTEX_ATTRIB_TEX_COORDS);
             gl.vertexAttribPointer(cc.VERTEX_ATTRIB_POSITION, 2, gl.FLOAT, false, 0, vertices);
             gl.vertexAttribPointer(cc.VERTEX_ATTRIB_TEX_COORDS, 2, gl.FLOAT, false, 0, coordinates);
 
@@ -421,6 +424,9 @@ cc._tmp.WebGLTexture2D = function () {
             this._webTextureObj = cc._renderContext.createTexture();
             this._htmlElementObj = element;
             this._textureLoaded = true;
+            // Textures should be loaded with premultiplied alpha in order to avoid gray bleeding
+            // when semitransparent textures are interpolated (e.g. when scaled).
+            this._hasPremultipliedAlpha = true;
         },
 
         /**
@@ -444,16 +450,16 @@ cc._tmp.WebGLTexture2D = function () {
          * @param {Boolean} [premultiplied=false]
          */
         handleLoadedTexture: function (premultiplied) {
-            premultiplied = (premultiplied === undefined) ? false : premultiplied;
             var self = this;
+            premultiplied =
+                (premultiplied !== undefined)
+                    ? premultiplied
+                    : self._hasPremultipliedAlpha;
             // Not sure about this ! Some texture need to be updated even after loaded
             if (!cc.game._rendererInitialized)
                 return;
-            if (!self._htmlElementObj) {
-                var img = cc.loader.getRes(self.url);
-                if (!img) return;
-                self.initWithElement(img);
-            }
+            if (!self._htmlElementObj)
+                return;
             if (!self._htmlElementObj.width || !self._htmlElementObj.height)
                 return;
 
@@ -463,7 +469,7 @@ cc._tmp.WebGLTexture2D = function () {
             cc.glBindTexture2D(self);
 
             gl.pixelStorei(gl.UNPACK_ALIGNMENT, 4);
-            if(premultiplied)
+            if (premultiplied)
                 gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
 
             // Specify OpenGL texture image
@@ -476,7 +482,7 @@ cc._tmp.WebGLTexture2D = function () {
 
             self.shaderProgram = cc.shaderCache.programForKey(cc.SHADER_POSITION_TEXTURE);
             cc.glBindTexture2D(null);
-            if(premultiplied)
+            if (premultiplied)
                 gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0);
 
             var pixelsWide = self._htmlElementObj.width;
@@ -490,6 +496,9 @@ cc._tmp.WebGLTexture2D = function () {
 
             self._hasPremultipliedAlpha = premultiplied;
             self._hasMipmaps = false;
+            if (window.ENABLE_IMAEG_POOL) {
+                self._htmlElementObj = null;
+            }
 
             //dispatch load event to listener.
             self.dispatchEvent("load");
@@ -567,7 +576,7 @@ cc._tmp.WebGLTexture2D = function () {
             var _t = this;
             var gl = cc._renderContext;
 
-            if(magFilter !== undefined)
+            if (magFilter !== undefined)
                 texParams = {minFilter: texParams, magFilter: magFilter, wrapS: wrapS, wrapT: wrapT};
 
             cc.assert((_t._pixelsWide === cc.NextPOT(_t._pixelsWide) && _t._pixelsHigh === cc.NextPOT(_t._pixelsHigh)) ||
@@ -656,7 +665,6 @@ cc._tmp.WebGLTexture2D = function () {
             var imageSize = cc.size(uiImage.getWidth(), uiImage.getHeight());
             var pixelFormat = tex2d.defaultPixelFormat;
             var bpp = uiImage.getBitsPerComponent();
-            var i;
 
             // compute pixel format
             if (!hasAlpha) {
@@ -669,7 +677,7 @@ cc._tmp.WebGLTexture2D = function () {
             }
 
             // Repack the pixel data into the right format
-            var length = width * height;
+            var i, length = width * height;
 
             if (pixelFormat === tex2d.PIXEL_FORMAT_RGB565) {
                 if (hasAlpha) {
@@ -680,8 +688,8 @@ cc._tmp.WebGLTexture2D = function () {
                     for (i = 0; i < length; ++i) {
                         tempData[i] =
                             ((((inPixel32[i] >> 0) & 0xFF) >> 3) << 11) | // R
-                                ((((inPixel32[i] >> 8) & 0xFF) >> 2) << 5) | // G
-                                ((((inPixel32[i] >> 16) & 0xFF) >> 3) << 0);    // B
+                            ((((inPixel32[i] >> 8) & 0xFF) >> 2) << 5) | // G
+                            ((((inPixel32[i] >> 16) & 0xFF) >> 3) << 0);    // B
                     }
                 } else {
                     // Convert "RRRRRRRRRGGGGGGGGBBBBBBBB" to "RRRRRGGGGGGBBBBB"
@@ -691,8 +699,8 @@ cc._tmp.WebGLTexture2D = function () {
                     for (i = 0; i < length; ++i) {
                         tempData[i] =
                             (((inPixel8[i] & 0xFF) >> 3) << 11) | // R
-                                (((inPixel8[i] & 0xFF) >> 2) << 5) | // G
-                                (((inPixel8[i] & 0xFF) >> 3) << 0);    // B
+                            (((inPixel8[i] & 0xFF) >> 2) << 5) | // G
+                            (((inPixel8[i] & 0xFF) >> 3) << 0);    // B
                     }
                 }
             } else if (pixelFormat === tex2d.PIXEL_FORMAT_RGBA4444) {
@@ -703,9 +711,9 @@ cc._tmp.WebGLTexture2D = function () {
                 for (i = 0; i < length; ++i) {
                     tempData[i] =
                         ((((inPixel32[i] >> 0) & 0xFF) >> 4) << 12) | // R
-                            ((((inPixel32[i] >> 8) & 0xFF) >> 4) << 8) | // G
-                            ((((inPixel32[i] >> 16) & 0xFF) >> 4) << 4) | // B
-                            ((((inPixel32[i] >> 24) & 0xFF) >> 4) << 0);  // A
+                        ((((inPixel32[i] >> 8) & 0xFF) >> 4) << 8) | // G
+                        ((((inPixel32[i] >> 16) & 0xFF) >> 4) << 4) | // B
+                        ((((inPixel32[i] >> 24) & 0xFF) >> 4) << 0);  // A
                 }
             } else if (pixelFormat === tex2d.PIXEL_FORMAT_RGB5A1) {
                 // Convert "RRRRRRRRRGGGGGGGGBBBBBBBBAAAAAAAA" to "RRRRRGGGGGBBBBBA"
@@ -715,9 +723,9 @@ cc._tmp.WebGLTexture2D = function () {
                 for (i = 0; i < length; ++i) {
                     tempData[i] =
                         ((((inPixel32[i] >> 0) & 0xFF) >> 3) << 11) | // R
-                            ((((inPixel32[i] >> 8) & 0xFF) >> 3) << 6) | // G
-                            ((((inPixel32[i] >> 16) & 0xFF) >> 3) << 1) | // B
-                            ((((inPixel32[i] >> 24) & 0xFF) >> 7) << 0);  // A
+                        ((((inPixel32[i] >> 8) & 0xFF) >> 3) << 6) | // G
+                        ((((inPixel32[i] >> 16) & 0xFF) >> 3) << 1) | // B
+                        ((((inPixel32[i] >> 24) & 0xFF) >> 7) << 0);  // A
                 }
             } else if (pixelFormat === tex2d.PIXEL_FORMAT_A8) {
                 // Convert "RRRRRRRRRGGGGGGGGBBBBBBBBAAAAAAAA" to "AAAAAAAA"
@@ -765,7 +773,7 @@ cc._tmp.WebGLTexture2D = function () {
          * @param {cc.Node} target
          */
         removeLoadedEventListener: function (target) {
-            this.removeEventListener("load", target);
+            this.removeEventTarget("load", target);
         }
     });
 };
@@ -817,13 +825,16 @@ cc._tmp.WebGLTextureAtlas = function () {
         //vertices
         //gl.bindBuffer(gl.ARRAY_BUFFER, _t._buffersVBO[0]);
         // XXX: update is done in draw... perhaps it should be done in a timer
-        cc.glEnableVertexAttribs(cc.VERTEX_ATTRIB_FLAG_POS_COLOR_TEX);
 
         gl.bindBuffer(gl.ARRAY_BUFFER, _t._quadsWebBuffer);
-        if (_t.dirty){
+        if (_t.dirty) {
             gl.bufferData(gl.ARRAY_BUFFER, _t._quadsArrayBuffer, gl.DYNAMIC_DRAW);
             _t.dirty = false;
         }
+
+        gl.enableVertexAttribArray(cc.VERTEX_ATTRIB_POSITION);
+        gl.enableVertexAttribArray(cc.VERTEX_ATTRIB_COLOR);
+        gl.enableVertexAttribArray(cc.VERTEX_ATTRIB_TEX_COORDS);
 
         gl.vertexAttribPointer(cc.VERTEX_ATTRIB_POSITION, 3, gl.FLOAT, false, 24, 0);               // vertices
         gl.vertexAttribPointer(cc.VERTEX_ATTRIB_COLOR, 4, gl.UNSIGNED_BYTE, true, 24, 12);          // colors
@@ -844,7 +855,7 @@ cc._tmp.WebGLTextureAtlas = function () {
 cc._tmp.WebGLTextureCache = function () {
     var _p = cc.textureCache;
 
-    _p.handleLoadedTexture = function (url) {
+    _p.handleLoadedTexture = function (url, img) {
         var locTexs = this._textures, tex, ext;
         //remove judge(webgl)
         if (!cc.game._rendererInitialized) {
@@ -855,6 +866,7 @@ cc._tmp.WebGLTextureCache = function () {
             tex = locTexs[url] = new cc.Texture2D();
             tex.url = url;
         }
+        tex.initWithElement(img);
         ext = cc.path.extname(url);
         if (ext === ".png") {
             tex.handleLoadedTexture(true);
@@ -862,6 +874,7 @@ cc._tmp.WebGLTextureCache = function () {
         else {
             tex.handleLoadedTexture();
         }
+        return tex;
     };
 
     /**
@@ -888,14 +901,13 @@ cc._tmp.WebGLTextureCache = function () {
         }
         var tex = locTexs[url] || locTexs[cc.loader._getAliase(url)];
         if (tex) {
-            if(tex.isLoaded()) {
+            if (tex.isLoaded()) {
                 cb && cb.call(target, tex);
                 return tex;
             }
-            else
-            {
-                tex.addEventListener("load", function(){
-                   cb && cb.call(target, tex);
+            else {
+                tex.addEventListener("load", function () {
+                    cb && cb.call(target, tex);
                 }, target);
                 return tex;
             }
@@ -903,13 +915,12 @@ cc._tmp.WebGLTextureCache = function () {
 
         tex = locTexs[url] = new cc.Texture2D();
         tex.url = url;
-        var loadFunc = cc.loader._checkIsImageURL(url) ? cc.loader.load : cc.loader.loadImg;
-        loadFunc.call(cc.loader, url, function (err, img) {
+        var basePath = cc.loader.getBasePath ? cc.loader.getBasePath() : cc.loader.resPath;
+        cc.loader.loadImg(cc.path.join(basePath || "", url), function (err, img) {
             if (err)
                 return cb && cb.call(target, err);
-            cc.textureCache.handleLoadedTexture(url);
 
-            var texResult = locTexs[url];
+            var texResult = cc.textureCache.handleLoadedTexture(url, img);
             cb && cb.call(target, texResult);
         });
 

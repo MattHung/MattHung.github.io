@@ -22,7 +22,7 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-(function(){
+(function () {
     cc.ProtectedNode.RenderCmd = {
         _updateDisplayColor: function (parentColor) {
             var node = this._node;
@@ -55,16 +55,16 @@
                     selChildren = node._children;
                     for (i = 0, len = selChildren.length; i < len; i++) {
                         item = selChildren[i];
-                        if (item && item._renderCmd){
+                        if (item && item._renderCmd) {
                             item._renderCmd._updateDisplayColor(locDispColor);
                             item._renderCmd._updateColor();
                         }
                     }
                 }
                 selChildren = node._protectedChildren;
-                for(i = 0, len = selChildren.length;i < len; i++){
+                for (i = 0, len = selChildren.length; i < len; i++) {
                     item = selChildren[i];
-                    if(item && item._renderCmd){
+                    if (item && item._renderCmd) {
                         item._renderCmd._updateDisplayColor(locDispColor);
                         item._renderCmd._updateColor();
                     }
@@ -97,16 +97,16 @@
                     selChildren = node._children;
                     for (i = 0, len = selChildren.length; i < len; i++) {
                         item = selChildren[i];
-                        if (item && item._renderCmd){
+                        if (item && item._renderCmd) {
                             item._renderCmd._updateDisplayOpacity(this._displayedOpacity);
                             item._renderCmd._updateColor();
                         }
                     }
                 }
                 selChildren = node._protectedChildren;
-                for(i = 0, len = selChildren.length;i < len; i++){
+                for (i = 0, len = selChildren.length; i < len; i++) {
                     item = selChildren[i];
-                    if(item && item._renderCmd){
+                    if (item && item._renderCmd) {
                         item._renderCmd._updateDisplayOpacity(this._displayedOpacity);
                         item._renderCmd._updateColor();
                     }
@@ -139,7 +139,7 @@
     };
 
     cc.ProtectedNode.CanvasRenderCmd = function (renderable) {
-        cc.Node.CanvasRenderCmd.call(this, renderable);
+        this._rootCtor(renderable);
         this._cachedParent = null;
         this._cacheDirty = false;
     };
@@ -147,94 +147,23 @@
     var proto = cc.ProtectedNode.CanvasRenderCmd.prototype = Object.create(cc.Node.CanvasRenderCmd.prototype);
     cc.inject(cc.ProtectedNode.RenderCmd, proto);
     proto.constructor = cc.ProtectedNode.CanvasRenderCmd;
+    proto._pNodeCmdCtor = cc.ProtectedNode.CanvasRenderCmd;
 
-    proto.visit = function(parentCmd){
-        var node = this._node;
-        // quick return if not visible
-        if (!node._visible)
-            return;
-
-        //visit for canvas
-        var i, j;
-        var children = node._children, child;
-        var locChildren = node._children, locProtectedChildren = node._protectedChildren;
-        var childLen = locChildren.length, pLen = locProtectedChildren.length;
-
-        this._syncStatus(parentCmd);
-
-        node.sortAllChildren();
-        node.sortAllProtectedChildren();
-
-        var pChild;
-        // draw children zOrder < 0
-        for (i = 0; i < childLen; i++) {
-            child = children[i];
-            if (child._localZOrder < 0)
-                child.visit(this);
-            else
-                break;
-        }
-        for (j = 0; j < pLen; j++) {
-            pChild = locProtectedChildren[j];
-            if (pChild && pChild._localZOrder < 0){
-                this._changeProtectedChild(pChild);
-                pChild.visit(this);
-            }
-            else
-                break;
-        }
-
-        cc.renderer.pushRenderCommand(this);
-
-        for (; i < childLen; i++)
-            children[i] && children[i].visit(this);
-        for (; j < pLen; j++){
-            pChild = locProtectedChildren[j];
-            if(!pChild) continue;
-            this._changeProtectedChild(pChild);
-            pChild.visit(this);
-        }
-
-        this._dirtyFlag = 0;
-        this._cacheDirty = false;
-    };
-
-    proto.transform = function(parentCmd, recursive){
+    proto.transform = function (parentCmd, recursive) {
         var node = this._node;
 
-        if(node._changePosition)
+        if (node._changePosition)
             node._changePosition();
 
-        var t = node.getNodeToParentTransform(), worldT = this._worldTransform;
-        if (parentCmd) {
-            var pt = parentCmd._worldTransform;
-            // cc.AffineTransformConcat is incorrect at get world transform
-            worldT.a = t.a * pt.a + t.b * pt.c;                               //a
-            worldT.b = t.a * pt.b + t.b * pt.d;                               //b
-            worldT.c = t.c * pt.a + t.d * pt.c;                               //c
-            worldT.d = t.c * pt.b + t.d * pt.d;                               //d
+        this.originTransform(parentCmd, recursive);
 
-            worldT.tx = pt.a * t.tx + pt.c * t.ty + pt.tx;
-            worldT.ty = pt.d * t.ty + pt.ty + pt.b * t.tx;
-        } else {
-            worldT.a = t.a;
-            worldT.b = t.b;
-            worldT.c = t.c;
-            worldT.d = t.d;
-            worldT.tx = t.tx;
-            worldT.ty = t.ty;
-        }
-        var i, len, locChildren = node._children;
-        if(recursive && locChildren && locChildren.length !== 0){
-            for(i = 0, len = locChildren.length; i< len; i++){
-                locChildren[i]._renderCmd.transform(this, recursive);
-            }
-        }
-        locChildren = node._protectedChildren;
-        if(recursive && locChildren && locChildren.length !== 0){
-            for(i = 0, len = locChildren.length; i< len; i++){
+        var i, len, locChildren = node._protectedChildren;
+        if (recursive && locChildren && locChildren.length !== 0) {
+            for (i = 0, len = locChildren.length; i < len; i++) {
                 locChildren[i]._renderCmd.transform(this, recursive);
             }
         }
     };
+
+    proto.pNodeTransform = proto.transform;
 })();

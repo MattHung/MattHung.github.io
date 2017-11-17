@@ -64,12 +64,12 @@ cc.TRANSITION_ORIENTATION_DOWN_OVER = 1;
  * var trans = new TransitionScene(time,scene);
  */
 cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
-    _inScene:null,
-    _outScene:null,
-    _duration:null,
-    _isInSceneOnTop:false,
-    _isSendCleanupToScene:false,
-    _className:"TransitionScene",
+    _inScene: null,
+    _outScene: null,
+    _duration: null,
+    _isInSceneOnTop: false,
+    _isSendCleanupToScene: false,
+    _className: "TransitionScene",
 
     /**
      * creates a base transition with duration and incoming scene
@@ -77,14 +77,14 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene the scene to transit with
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.Scene.prototype.ctor.call(this);
-        if(t !== undefined && scene !== undefined)
+        if (t !== undefined && scene !== undefined)
             this.initWithDuration(t, scene);
     },
 
     //private
-    _setNewScene:function (dt) {
+    _setNewScene: function (dt) {
         this.unschedule(this._setNewScene);
         // Before replacing, save the "send cleanup to scene"
         var director = cc.director;
@@ -99,14 +99,14 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
     },
 
     //protected
-    _sceneOrder:function () {
+    _sceneOrder: function () {
         this._isInSceneOnTop = true;
     },
 
     /**
      * stuff gets drawn here
      */
-    visit:function () {
+    visit: function () {
         if (this._isInSceneOnTop) {
             this._outScene.visit();
             this._inScene.visit();
@@ -125,7 +125,7 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
      *     If you override onEnter, you must call its parent's onEnter function with this._super().
      * </p>
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.Node.prototype.onEnter.call(this);
 
         // disable events while transitions
@@ -133,9 +133,9 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
 
         // outScene should not receive the onEnter callback
         // only the onExitTransitionDidStart
-        this._outScene.onExitTransitionDidStart();
+        this._outScene._performRecursive(cc.Node._stateCallbackType.onExitTransitionDidStart);
 
-        this._inScene.onEnter();
+        this._inScene._performRecursive(cc.Node._stateCallbackType.onEnter);
     },
 
     /**
@@ -146,27 +146,27 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
      * If you override onExit, you shall call its parent's onExit with this._super().
      * </p>
      */
-    onExit:function () {
+    onExit: function () {
         cc.Node.prototype.onExit.call(this);
 
         // enable events while transitions
         cc.eventManager.setEnabled(true);
 
-        this._outScene.onExit();
+        this._outScene._performRecursive(cc.Node._stateCallbackType.onExit);
 
         // _inScene should not receive the onEnter callback
         // only the onEnterTransitionDidFinish
-        this._inScene.onEnterTransitionDidFinish();
+        this._inScene._performRecursive(cc.Node._stateCallbackType.onEnterTransitionDidFinish);
     },
 
     /**
      * custom cleanup
      */
-    cleanup:function () {
+    cleanup: function () {
         cc.Node.prototype.cleanup.call(this);
 
         if (this._isSendCleanupToScene)
-            this._outScene.cleanup();
+            this._outScene._performRecursive(cc.Node._stateCallbackType.cleanup);
     },
 
     /**
@@ -175,17 +175,17 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
      * @param {cc.Scene} scene a scene to transit to
      * @return {Boolean} return false if error
      */
-    initWithDuration:function (t, scene) {
-        if(!scene)
+    initWithDuration: function (t, scene) {
+        if (!scene)
             throw new Error("cc.TransitionScene.initWithDuration(): Argument scene must be non-nil");
 
         if (this.init()) {
             this._duration = t;
             this.attr({
-	            x: 0,
-	            y: 0,
-	            anchorX: 0,
-	            anchorY: 0
+                x: 0,
+                y: 0,
+                anchorX: 0,
+                anchorY: 0
             });
             // retain
             this._inScene = scene;
@@ -195,7 +195,7 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
                 this._outScene.init();
             }
 
-            if(this._inScene === this._outScene)
+            if (this._inScene === this._outScene)
                 throw new Error("cc.TransitionScene.initWithDuration(): Incoming scene must be different from the outgoing scene");
 
             this._sceneOrder();
@@ -208,27 +208,23 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
     /**
      * called after the transition finishes
      */
-    finish:function () {
+    finish: function () {
         // clean up
         this._inScene.attr({
-			visible: true,
-	        x: 0,
-	        y: 0,
-	        scale: 1.0,
-	        rotation: 0.0
+            visible: true,
+            x: 0,
+            y: 0,
+            scale: 1.0,
+            rotation: 0.0
         });
-        if(cc._renderType === cc.game.RENDER_TYPE_WEBGL)
-            this._inScene.getCamera().restore();
 
         this._outScene.attr({
-	        visible: false,
-	        x: 0,
-	        y: 0,
-	        scale: 1.0,
-	        rotation: 0.0
+            visible: false,
+            x: 0,
+            y: 0,
+            scale: 1.0,
+            rotation: 0.0
         });
-        if(cc._renderType === cc.game.RENDER_TYPE_WEBGL)
-            this._outScene.getCamera().restore();
 
         //[self schedule:@selector(setNewScene:) interval:0];
         this.schedule(this._setNewScene, 0);
@@ -237,7 +233,7 @@ cc.TransitionScene = cc.Scene.extend(/** @lends cc.TransitionScene# */{
     /**
      * set hide the out scene and show in scene
      */
-    hideOutShowIn:function () {
+    hideOutShowIn: function () {
         this._inScene.visible = true;
         this._outScene.visible = false;
     }
@@ -266,7 +262,7 @@ cc.TransitionScene.create = function (t, scene) {
  * var trans = new cc.TransitionSceneOriented(time,scene,orientation);
  */
 cc.TransitionSceneOriented = cc.TransitionScene.extend(/** @lends cc.TransitionSceneOriented# */{
-    _orientation:0,
+    _orientation: 0,
 
     /**
      * Constructor of TransitionSceneOriented
@@ -274,7 +270,7 @@ cc.TransitionSceneOriented = cc.TransitionScene.extend(/** @lends cc.TransitionS
      * @param {cc.Scene} scene
      * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} orientation
      */
-    ctor:function (t, scene, orientation) {
+    ctor: function (t, scene, orientation) {
         cc.TransitionScene.prototype.ctor.call(this);
         orientation != undefined && this.initWithDuration(t, scene, orientation);
     },
@@ -285,7 +281,7 @@ cc.TransitionSceneOriented = cc.TransitionScene.extend(/** @lends cc.TransitionS
      * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} orientation
      * @return {Boolean}
      */
-    initWithDuration:function (t, scene, orientation) {
+    initWithDuration: function (t, scene, orientation) {
         if (cc.TransitionScene.prototype.initWithDuration.call(this, t, scene)) {
             this._orientation = orientation;
         }
@@ -322,7 +318,7 @@ cc.TransitionRotoZoom = cc.TransitionScene.extend(/** @lends cc.TransitionRotoZo
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
@@ -330,19 +326,19 @@ cc.TransitionRotoZoom = cc.TransitionScene.extend(/** @lends cc.TransitionRotoZo
      * Custom On Enter callback
      * @override
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
 
-	    this._inScene.attr({
-		    scale: 0.001,
-		    anchorX: 0.5,
-		    anchorY: 0.5
-	    });
-	    this._outScene.attr({
-		    scale: 1.0,
-		    anchorX: 0.5,
-		    anchorY: 0.5
-	    });
+        this._inScene.attr({
+            scale: 0.001,
+            anchorX: 0.5,
+            anchorY: 0.5
+        });
+        this._outScene.attr({
+            scale: 1.0,
+            anchorX: 0.5,
+            anchorY: 0.5
+        });
 
         var rotoZoom = cc.sequence(
             cc.spawn(cc.scaleBy(this._duration / 2, 0.001),
@@ -357,7 +353,7 @@ cc.TransitionRotoZoom = cc.TransitionScene.extend(/** @lends cc.TransitionRotoZo
 });
 
 /**
- * Creates a Transtion rotation and zoom
+ * Creates a Transition rotation and zoom
  * @deprecated since v3.0,please use new cc.TransitionRotoZoom(t, scene) instead
  * @param {Number} t time in seconds
  * @param {cc.Scene} scene the scene to work with
@@ -382,26 +378,26 @@ cc.TransitionJumpZoom = cc.TransitionScene.extend(/** @lends cc.TransitionJumpZo
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
     /**
      * Custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
         var winSize = cc.director.getWinSize();
 
-	    this._inScene.attr({
-		    scale: 0.5,
-		    x: winSize.width,
-		    y: 0,
-		    anchorX: 0.5,
-		    anchorY: 0.5
-	    });
+        this._inScene.attr({
+            scale: 0.5,
+            x: winSize.width,
+            y: 0,
+            anchorX: 0.5,
+            anchorY: 0.5
+        });
         this._outScene.anchorX = 0.5;
-	    this._outScene.anchorY = 0.5;
+        this._outScene.anchorY = 0.5;
 
         var jump = cc.jumpBy(this._duration / 4, cc.p(-winSize.width, 0), winSize.width / 4, 2);
         var scaleIn = cc.scaleTo(this._duration / 4, 1.0);
@@ -442,14 +438,14 @@ cc.TransitionMoveInL = cc.TransitionScene.extend(/** @lends cc.TransitionMoveInL
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
     /**
      * Custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
         this.initScenes();
 
@@ -462,14 +458,14 @@ cc.TransitionMoveInL = cc.TransitionScene.extend(/** @lends cc.TransitionMoveInL
     /**
      * initializes the scenes
      */
-    initScenes:function () {
+    initScenes: function () {
         this._inScene.setPosition(-cc.director.getWinSize().width, 0);
     },
 
     /**
      * returns the action that will be performed
      */
-    action:function () {
+    action: function () {
         return cc.moveTo(this._duration, cc.p(0, 0));
     },
 
@@ -478,7 +474,7 @@ cc.TransitionMoveInL = cc.TransitionScene.extend(/** @lends cc.TransitionMoveInL
      * @param {cc.ActionInterval} action
      * @return {cc.EaseOut}
      */
-    easeActionWithAction:function (action) {
+    easeActionWithAction: function (action) {
         return new cc.EaseOut(action, 2.0);
     }
 });
@@ -509,14 +505,14 @@ cc.TransitionMoveInR = cc.TransitionMoveInL.extend(/** @lends cc.TransitionMoveI
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionMoveInL.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
     /**
      * Init function
      */
-    initScenes:function () {
+    initScenes: function () {
         this._inScene.setPosition(cc.director.getWinSize().width, 0);
     }
 });
@@ -547,14 +543,14 @@ cc.TransitionMoveInT = cc.TransitionMoveInL.extend(/** @lends cc.TransitionMoveI
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionMoveInL.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
     /**
      * init function
      */
-    initScenes:function () {
+    initScenes: function () {
         this._inScene.setPosition(0, cc.director.getWinSize().height);
     }
 });
@@ -585,7 +581,7 @@ cc.TransitionMoveInB = cc.TransitionMoveInL.extend(/** @lends cc.TransitionMoveI
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionMoveInL.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
@@ -593,7 +589,7 @@ cc.TransitionMoveInB = cc.TransitionMoveInL.extend(/** @lends cc.TransitionMoveI
     /**
      * init function
      */
-    initScenes:function () {
+    initScenes: function () {
         this._inScene.setPosition(0, -cc.director.getWinSize().height);
     }
 });
@@ -634,18 +630,18 @@ cc.TransitionSlideInL = cc.TransitionScene.extend(/** @lends cc.TransitionSlideI
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
-    _sceneOrder:function () {
+    _sceneOrder: function () {
         this._isInSceneOnTop = false;
     },
 
     /**
      * custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
         this.initScenes();
 
@@ -661,14 +657,14 @@ cc.TransitionSlideInL = cc.TransitionScene.extend(/** @lends cc.TransitionSlideI
     /**
      * initializes the scenes
      */
-    initScenes:function () {
+    initScenes: function () {
         this._inScene.setPosition(-cc.director.getWinSize().width + cc.ADJUST_FACTOR, 0);
     },
     /**
-     * returns the action that will be performed by the incomming and outgoing scene
+     * returns the action that will be performed by the incoming and outgoing scene
      * @return {cc.MoveBy}
      */
-    action:function () {
+    action: function () {
         return cc.moveBy(this._duration, cc.p(cc.director.getWinSize().width - cc.ADJUST_FACTOR, 0));
     },
 
@@ -676,7 +672,7 @@ cc.TransitionSlideInL = cc.TransitionScene.extend(/** @lends cc.TransitionSlideI
      * @param {cc.ActionInterval} action
      * @return {*}
      */
-    easeActionWithAction:function (action) {
+    easeActionWithAction: function (action) {
         return new cc.EaseInOut(action, 2.0);
     }
 });
@@ -707,24 +703,24 @@ cc.TransitionSlideInR = cc.TransitionSlideInL.extend(/** @lends cc.TransitionSli
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionSlideInL.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
-    _sceneOrder:function () {
+    _sceneOrder: function () {
         this._isInSceneOnTop = true;
     },
     /**
      * initializes the scenes
      */
-    initScenes:function () {
+    initScenes: function () {
         this._inScene.setPosition(cc.director.getWinSize().width - cc.ADJUST_FACTOR, 0);
     },
     /**
-     *  returns the action that will be performed by the incomming and outgoing scene
+     *  returns the action that will be performed by the incoming and outgoing scene
      * @return {cc.MoveBy}
      */
-    action:function () {
+    action: function () {
         return cc.moveBy(this._duration, cc.p(-(cc.director.getWinSize().width - cc.ADJUST_FACTOR), 0));
     }
 });
@@ -755,26 +751,26 @@ cc.TransitionSlideInB = cc.TransitionSlideInL.extend(/** @lends cc.TransitionSli
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionSlideInL.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
-    _sceneOrder:function () {
+    _sceneOrder: function () {
         this._isInSceneOnTop = false;
     },
 
     /**
      * initializes the scenes
      */
-    initScenes:function () {
+    initScenes: function () {
         this._inScene.setPosition(0, -(cc.director.getWinSize().height - cc.ADJUST_FACTOR));
     },
 
     /**
-     * returns the action that will be performed by the incomming and outgoing scene
+     * returns the action that will be performed by the incoming and outgoing scene
      * @return {cc.MoveBy}
      */
-    action:function () {
+    action: function () {
         return cc.moveBy(this._duration, cc.p(0, cc.director.getWinSize().height - cc.ADJUST_FACTOR));
     }
 });
@@ -805,26 +801,26 @@ cc.TransitionSlideInT = cc.TransitionSlideInL.extend(/** @lends cc.TransitionSli
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionSlideInL.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
-    _sceneOrder:function () {
+    _sceneOrder: function () {
         this._isInSceneOnTop = true;
     },
 
     /**
      * initializes the scenes
      */
-    initScenes:function () {
+    initScenes: function () {
         this._inScene.setPosition(0, cc.director.getWinSize().height - cc.ADJUST_FACTOR);
     },
 
     /**
-     * returns the action that will be performed by the incomming and outgoing scene
+     * returns the action that will be performed by the incoming and outgoing scene
      * @return {cc.MoveBy}
      */
-    action:function () {
+    action: function () {
         return cc.moveBy(this._duration, cc.p(0, -(cc.director.getWinSize().height - cc.ADJUST_FACTOR)));
     }
 });
@@ -855,26 +851,26 @@ cc.TransitionShrinkGrow = cc.TransitionScene.extend(/** @lends cc.TransitionShri
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
     /**
      * Custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
 
-	    this._inScene.attr({
-		    scale: 0.001,
-		    anchorX: 2 / 3.0,
-		    anchorY: 0.5
-	    });
-	    this._outScene.attr({
-		    scale: 1.0,
-		    anchorX: 1 / 3.0,
-		    anchorY: 0.5
-	    });
+        this._inScene.attr({
+            scale: 0.001,
+            anchorX: 2 / 3.0,
+            anchorY: 0.5
+        });
+        this._outScene.attr({
+            scale: 1.0,
+            anchorX: 1 / 3.0,
+            anchorY: 0.5
+        });
 
         var scaleOut = cc.scaleTo(this._duration, 0.01);
         var scaleIn = cc.scaleTo(this._duration, 1.0);
@@ -887,7 +883,7 @@ cc.TransitionShrinkGrow = cc.TransitionScene.extend(/** @lends cc.TransitionShri
      * @param action
      * @return {cc.EaseOut}
      */
-    easeActionWithAction:function (action) {
+    easeActionWithAction: function (action) {
         return new cc.EaseOut(action, 2.0);
     }
 });
@@ -904,476 +900,6 @@ cc.TransitionShrinkGrow.create = function (t, scene) {
 };
 
 /**
- *  Flips the screen horizontally.<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @class
- * @extends cc.TransitionSceneOriented
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @example
- * var trans = new cc.TransitionFlipX(t,scene,o);
- */
-cc.TransitionFlipX = cc.TransitionSceneOriented.extend(/** @lends cc.TransitionFlipX# */{
-    /**
-     * Constructor of TransitionFlipX
-     * @function
-     * @param {Number} t time in seconds
-     * @param {cc.Scene} scene
-     * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
-     */
-    ctor:function (t, scene, o) {
-        cc.TransitionSceneOriented.prototype.ctor.call(this);
-        if(o == null)
-            o = cc.TRANSITION_ORIENTATION_RIGHT_OVER;
-        scene && this.initWithDuration(t, scene, o);
-    },
-
-    /**
-     * custom on enter
-     */
-    onEnter:function () {
-        cc.TransitionScene.prototype.onEnter.call(this);
-
-        var inA, outA;
-        this._inScene.visible = false;
-
-        var inDeltaZ, inAngleZ, outDeltaZ, outAngleZ;
-
-        if (this._orientation === cc.TRANSITION_ORIENTATION_RIGHT_OVER) {
-            inDeltaZ = 90;
-            inAngleZ = 270;
-            outDeltaZ = 90;
-            outAngleZ = 0;
-        } else {
-            inDeltaZ = -90;
-            inAngleZ = 90;
-            outDeltaZ = -90;
-            outAngleZ = 0;
-        }
-
-        inA = cc.sequence(
-            cc.delayTime(this._duration / 2), cc.show(),
-            cc.orbitCamera(this._duration / 2, 1, 0, inAngleZ, inDeltaZ, 0, 0),
-            cc.callFunc(this.finish, this)
-        );
-
-        outA = cc.sequence(
-            cc.orbitCamera(this._duration / 2, 1, 0, outAngleZ, outDeltaZ, 0, 0),
-            cc.hide(), cc.delayTime(this._duration / 2)
-        );
-
-        this._inScene.runAction(inA);
-        this._outScene.runAction(outA);
-    }
-});
-
-/**
- * Flips the screen horizontally.<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @deprecated since v3.0,please use new cc.TransitionFlipX(t, scene,o) instead.
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @return {cc.TransitionFlipX}
- */
-cc.TransitionFlipX.create = function (t, scene, o) {
-    return new cc.TransitionFlipX(t, scene, o);
-};
-
-/**
- * Flips the screen vertically.<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @class
- * @extends cc.TransitionSceneOriented
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @example
- * var trans = new cc.TransitionFlipY(time,scene,0);
- */
-cc.TransitionFlipY = cc.TransitionSceneOriented.extend(/** @lends cc.TransitionFlipY# */{
-
-    /**
-     * Constructor of TransitionFlipY
-     * @param {Number} t time in seconds
-     * @param {cc.Scene} scene
-     * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
-     */
-    ctor:function (t, scene, o) {
-        cc.TransitionSceneOriented.prototype.ctor.call(this);
-        if(o == null)
-            o = cc.TRANSITION_ORIENTATION_UP_OVER;
-        scene && this.initWithDuration(t, scene, o);
-    },
-    /**
-     * custom on enter
-     */
-    onEnter:function () {
-        cc.TransitionScene.prototype.onEnter.call(this);
-
-        var inA, outA;
-        this._inScene.visible = false;
-
-        var inDeltaZ, inAngleZ, outDeltaZ, outAngleZ;
-
-        if (this._orientation === cc.TRANSITION_ORIENTATION_UP_OVER) {
-            inDeltaZ = 90;
-            inAngleZ = 270;
-            outDeltaZ = 90;
-            outAngleZ = 0;
-        } else {
-            inDeltaZ = -90;
-            inAngleZ = 90;
-            outDeltaZ = -90;
-            outAngleZ = 0;
-        }
-
-        inA = cc.sequence(
-            cc.delayTime(this._duration / 2), cc.show(),
-            cc.orbitCamera(this._duration / 2, 1, 0, inAngleZ, inDeltaZ, 90, 0),
-            cc.callFunc(this.finish, this)
-        );
-        outA = cc.sequence(
-            cc.orbitCamera(this._duration / 2, 1, 0, outAngleZ, outDeltaZ, 90, 0),
-            cc.hide(), cc.delayTime(this._duration / 2)
-        );
-
-        this._inScene.runAction(inA);
-        this._outScene.runAction(outA);
-    }
-});
-
-/**
- * Flips the screen vertically.<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @deprecated since v3.0,please use new cc.TransitionFlipY(t, scene,o) instead.
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @return {cc.TransitionFlipY}
- */
-cc.TransitionFlipY.create = function (t, scene, o) {
-    return new cc.TransitionFlipY(t, scene, o);
-};
-
-/**
- * Flips the screen half horizontally and half vertically.<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @class
- * @extends cc.TransitionSceneOriented
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @example
- * var trans = cc.TransitionFlipAngular(time,scene,o);
- */
-cc.TransitionFlipAngular = cc.TransitionSceneOriented.extend(/** @lends cc.TransitionFlipAngular# */{
-    /**
-     * Constructor of TransitionFlipAngular
-     * @param {Number} t time in seconds
-     * @param {cc.Scene} scene
-     * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
-     */
-    ctor:function (t, scene, o) {
-        cc.TransitionSceneOriented.prototype.ctor.call(this);
-        if(o == null)
-            o = cc.TRANSITION_ORIENTATION_RIGHT_OVER;
-        scene && this.initWithDuration(t, scene, o);
-    },
-    /**
-     * custom on enter
-     */
-    onEnter:function () {
-        cc.TransitionScene.prototype.onEnter.call(this);
-
-        var inA, outA;
-        this._inScene.visible = false;
-
-        var inDeltaZ, inAngleZ, outDeltaZ, outAngleZ;
-
-        if (this._orientation === cc.TRANSITION_ORIENTATION_RIGHT_OVER) {
-            inDeltaZ = 90;
-            inAngleZ = 270;
-            outDeltaZ = 90;
-            outAngleZ = 0;
-        } else {
-            inDeltaZ = -90;
-            inAngleZ = 90;
-            outDeltaZ = -90;
-            outAngleZ = 0;
-        }
-
-        inA = cc.sequence(
-            cc.delayTime(this._duration / 2), cc.show(),
-            cc.orbitCamera(this._duration / 2, 1, 0, inAngleZ, inDeltaZ, -45, 0),
-            cc.callFunc(this.finish, this)
-        );
-        outA = cc.sequence(
-            cc.orbitCamera(this._duration / 2, 1, 0, outAngleZ, outDeltaZ, 45, 0),
-            cc.hide(), cc.delayTime(this._duration / 2)
-        );
-
-        this._inScene.runAction(inA);
-        this._outScene.runAction(outA);
-    }
-});
-
-/**
- * Flips the screen half horizontally and half vertically.<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @deprecated since v3.0,please use new new cc.TransitionFlipAngular(t, scene, o) instead
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @return {cc.TransitionFlipAngular}
- */
-cc.TransitionFlipAngular.create = function (t, scene, o) {
-    return new cc.TransitionFlipAngular(t, scene, o);
-};
-
-/**
- *  Flips the screen horizontally doing a zoom out/in<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @class
- * @extends cc.TransitionSceneOriented
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @example
- * var trans = new cc.TransitionZoomFlipX(time,scene,o);
- */
-cc.TransitionZoomFlipX = cc.TransitionSceneOriented.extend(/** @lends cc.TransitionZoomFlipX# */{
-
-    /**
-     * Constructor of TransitionZoomFlipX
-     * @param {Number} t time in seconds
-     * @param {cc.Scene} scene
-     * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
-     */
-    ctor:function (t, scene, o) {
-        cc.TransitionSceneOriented.prototype.ctor.call(this);
-        if(o == null)
-            o = cc.TRANSITION_ORIENTATION_RIGHT_OVER;
-        scene && this.initWithDuration(t, scene, o);
-    },
-    /**
-     * custom on enter
-     */
-    onEnter:function () {
-        cc.TransitionScene.prototype.onEnter.call(this);
-
-        var inA, outA;
-        this._inScene.visible = false;
-
-        var inDeltaZ, inAngleZ, outDeltaZ, outAngleZ;
-
-        if (this._orientation === cc.TRANSITION_ORIENTATION_RIGHT_OVER) {
-            inDeltaZ = 90;
-            inAngleZ = 270;
-            outDeltaZ = 90;
-            outAngleZ = 0;
-        } else {
-            inDeltaZ = -90;
-            inAngleZ = 90;
-            outDeltaZ = -90;
-            outAngleZ = 0;
-        }
-
-        inA = cc.sequence(
-            cc.delayTime(this._duration / 2),
-            cc.spawn(
-                cc.orbitCamera(this._duration / 2, 1, 0, inAngleZ, inDeltaZ, 0, 0),
-                cc.scaleTo(this._duration / 2, 1), cc.show()),
-            cc.callFunc(this.finish, this)
-        );
-        outA = cc.sequence(
-            cc.spawn(
-                cc.orbitCamera(this._duration / 2, 1, 0, outAngleZ, outDeltaZ, 0, 0),
-                cc.scaleTo(this._duration / 2, 0.5)),
-            cc.hide(),
-            cc.delayTime(this._duration / 2)
-        );
-
-        this._inScene.scale = 0.5;
-        this._inScene.runAction(inA);
-        this._outScene.runAction(outA);
-    }
-});
-
-/**
- * Flips the screen horizontally doing a zoom out/in<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @deprecated since v3.0,please use new new cc.TransitionZoomFlipX(t, scene, o) instead
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @return {cc.TransitionZoomFlipX}
- */
-cc.TransitionZoomFlipX.create = function (t, scene, o) {
-    return new cc.TransitionZoomFlipX(t, scene, o);
-};
-
-/**
- * Flips the screen vertically doing a little zooming out/in<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @class
- * @extends cc.TransitionSceneOriented
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @example
- * var trans = new cc.TransitionZoomFlipY(t,scene,o);
- */
-cc.TransitionZoomFlipY = cc.TransitionSceneOriented.extend(/** @lends cc.TransitionZoomFlipY# */{
-
-    /**
-     * Constructor of TransitionZoomFlipY
-     * @param {Number} t time in seconds
-     * @param {cc.Scene} scene
-     * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
-     */
-    ctor:function (t, scene, o) {
-        cc.TransitionSceneOriented.prototype.ctor.call(this);
-        if(o == null)
-            o = cc.TRANSITION_ORIENTATION_UP_OVER;
-        scene && this.initWithDuration(t, scene, o);
-    },
-    /**
-     * custom on enter
-     */
-    onEnter:function () {
-        cc.TransitionScene.prototype.onEnter.call(this);
-
-        var inA, outA;
-        this._inScene.visible = false;
-
-        var inDeltaZ, inAngleZ, outDeltaZ, outAngleZ;
-
-        if (this._orientation === cc.TRANSITION_ORIENTATION_UP_OVER) {
-            inDeltaZ = 90;
-            inAngleZ = 270;
-            outDeltaZ = 90;
-            outAngleZ = 0;
-        } else {
-            inDeltaZ = -90;
-            inAngleZ = 90;
-            outDeltaZ = -90;
-            outAngleZ = 0;
-        }
-
-        inA = cc.sequence(
-            cc.delayTime(this._duration / 2),
-            cc.spawn(
-                cc.orbitCamera(this._duration / 2, 1, 0, inAngleZ, inDeltaZ, 90, 0),
-                cc.scaleTo(this._duration / 2, 1), cc.show()),
-            cc.callFunc(this.finish, this));
-
-        outA = cc.sequence(
-            cc.spawn(
-                cc.orbitCamera(this._duration / 2, 1, 0, outAngleZ, outDeltaZ, 90, 0),
-                cc.scaleTo(this._duration / 2, 0.5)),
-            cc.hide(), cc.delayTime(this._duration / 2));
-
-        this._inScene.scale = 0.5;
-        this._inScene.runAction(inA);
-        this._outScene.runAction(outA);
-    }
-});
-
-/**
- * Flips the screen vertically doing a little zooming out/in<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @deprecated since v3.0,please use new new cc.TransitionZoomFlipY(t, scene, o) instead
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @return {cc.TransitionZoomFlipY}
- */
-cc.TransitionZoomFlipY.create = function (t, scene, o) {
-    return new cc.TransitionZoomFlipY(t, scene, o);
-};
-
-/**
- *  Flips the screen half horizontally and half vertically doing a little zooming out/in.<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @class
- * @extends cc.TransitionSceneOriented
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @example
- * var trans = new cc.TransitionZoomFlipAngular(time,scene,o);
- */
-cc.TransitionZoomFlipAngular = cc.TransitionSceneOriented.extend(/** @lends cc.TransitionZoomFlipAngular# */{
-
-    /**
-     * Constructor of TransitionZoomFlipAngular
-     * @param {Number} t time in seconds
-     * @param {cc.Scene} scene
-     * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
-     */
-    ctor:function (t, scene, o) {
-        cc.TransitionSceneOriented.prototype.ctor.call(this);
-        if(o == null)
-            o = cc.TRANSITION_ORIENTATION_RIGHT_OVER;
-        scene && this.initWithDuration(t, scene, o);
-    },
-    /**
-     * custom on enter
-     */
-    onEnter:function () {
-        cc.TransitionScene.prototype.onEnter.call(this);
-
-        var inA, outA;
-        this._inScene.visible = false;
-
-        var inDeltaZ, inAngleZ, outDeltaZ, outAngleZ;
-        if (this._orientation === cc.TRANSITION_ORIENTATION_RIGHT_OVER) {
-            inDeltaZ = 90;
-            inAngleZ = 270;
-            outDeltaZ = 90;
-            outAngleZ = 0;
-        } else {
-            inDeltaZ = -90;
-            inAngleZ = 90;
-            outDeltaZ = -90;
-            outAngleZ = 0;
-        }
-
-        inA = cc.sequence(
-            cc.delayTime(this._duration / 2),
-            cc.spawn(
-                cc.orbitCamera(this._duration / 2, 1, 0, inAngleZ, inDeltaZ, -45, 0),
-                cc.scaleTo(this._duration / 2, 1), cc.show()),
-            cc.show(),
-            cc.callFunc(this.finish, this));
-        outA = cc.sequence(
-            cc.spawn(
-                cc.orbitCamera(this._duration / 2, 1, 0, outAngleZ, outDeltaZ, 45, 0),
-                cc.scaleTo(this._duration / 2, 0.5)),
-            cc.hide(), cc.delayTime(this._duration / 2));
-
-        this._inScene.scale = 0.5;
-        this._inScene.runAction(inA);
-        this._outScene.runAction(outA);
-    }
-});
-
-/**
- *  Flips the screen half horizontally and half vertically doing a little zooming out/in.<br/>
- * The front face is the outgoing scene and the back face is the incoming scene.
- * @deprecated since v3.0,please use new new cc.TransitionZoomFlipAngular(t, scene, o) instead
- * @param {Number} t time in seconds
- * @param {cc.Scene} scene
- * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
- * @return {cc.TransitionZoomFlipAngular}
- */
-cc.TransitionZoomFlipAngular.create = function (t, scene, o) {
-    return new cc.TransitionZoomFlipAngular(t, scene, o);
-};
-
-/**
  * Fade out the outgoing scene and then fade in the incoming scene.
  * @class
  * @extends cc.TransitionScene
@@ -1384,7 +910,7 @@ cc.TransitionZoomFlipAngular.create = function (t, scene, o) {
  * var trans = new cc.TransitionFade(time,scene,color)
  */
 cc.TransitionFade = cc.TransitionScene.extend(/** @lends cc.TransitionFade# */{
-    _color:null,
+    _color: null,
 
     /**
      * Constructor of TransitionFade
@@ -1392,7 +918,7 @@ cc.TransitionFade = cc.TransitionScene.extend(/** @lends cc.TransitionFade# */{
      * @param {cc.Scene} scene
      * @param {cc.TRANSITION_ORIENTATION_LEFT_OVER|cc.TRANSITION_ORIENTATION_RIGHT_OVER|cc.TRANSITION_ORIENTATION_UP_OVER|cc.TRANSITION_ORIENTATION_DOWN_OVER} o
      */
-    ctor:function (t, scene, color) {
+    ctor: function (t, scene, color) {
         cc.TransitionScene.prototype.ctor.call(this);
         this._color = cc.color();
         scene && this.initWithDuration(t, scene, color);
@@ -1401,7 +927,7 @@ cc.TransitionFade = cc.TransitionScene.extend(/** @lends cc.TransitionFade# */{
     /**
      * custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
 
         var l = new cc.LayerColor(this._color);
@@ -1422,7 +948,7 @@ cc.TransitionFade = cc.TransitionScene.extend(/** @lends cc.TransitionFade# */{
     /**
      * custom on exit
      */
-    onExit:function () {
+    onExit: function () {
         cc.TransitionScene.prototype.onExit.call(this);
         this.removeChildByTag(cc.SCENE_FADE, false);
     },
@@ -1434,7 +960,7 @@ cc.TransitionFade = cc.TransitionScene.extend(/** @lends cc.TransitionFade# */{
      * @param {cc.Color} color
      * @return {Boolean}
      */
-    initWithDuration:function (t, scene, color) {
+    initWithDuration: function (t, scene, color) {
         color = color || cc.color.BLACK;
         if (cc.TransitionScene.prototype.initWithDuration.call(this, t, scene)) {
             this._color.r = color.r;
@@ -1474,14 +1000,14 @@ cc.TransitionCrossFade = cc.TransitionScene.extend(/** @lends cc.TransitionCross
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
     /**
      * custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
 
         // create a transparent color layer
@@ -1494,12 +1020,12 @@ cc.TransitionCrossFade = cc.TransitionScene.extend(/** @lends cc.TransitionCross
         var inTexture = new cc.RenderTexture(winSize.width, winSize.height);
 
         inTexture.sprite.anchorX = 0.5;
-	    inTexture.sprite.anchorY = 0.5;
+        inTexture.sprite.anchorY = 0.5;
         inTexture.attr({
-	        x: winSize.width / 2,
-	        y: winSize.height / 2,
-	        anchorX: 0.5,
-	        anchorY: 0.5
+            x: winSize.width / 2,
+            y: winSize.height / 2,
+            anchorX: 0.5,
+            anchorY: 0.5
         });
 
         // render inScene to its texturebuffer
@@ -1510,8 +1036,8 @@ cc.TransitionCrossFade = cc.TransitionScene.extend(/** @lends cc.TransitionCross
         // create the second render texture for outScene
         var outTexture = new cc.RenderTexture(winSize.width, winSize.height);
         outTexture.setPosition(winSize.width / 2, winSize.height / 2);
-	    outTexture.sprite.anchorX = outTexture.anchorX = 0.5;
-	    outTexture.sprite.anchorY = outTexture.anchorY = 0.5;
+        outTexture.sprite.anchorX = outTexture.anchorX = 0.5;
+        outTexture.sprite.anchorY = outTexture.anchorY = 0.5;
 
         // render outScene to its texturebuffer
         outTexture.begin();
@@ -1545,24 +1071,10 @@ cc.TransitionCrossFade = cc.TransitionScene.extend(/** @lends cc.TransitionCross
     /**
      * custom on exit
      */
-    onExit:function () {
+    onExit: function () {
         this.removeChildByTag(cc.SCENE_FADE, false);
         cc.TransitionScene.prototype.onExit.call(this);
     },
-
-    /**
-     * stuff gets drawn here
-     */
-    visit:function () {
-        cc.Node.prototype.visit.call(this);
-    },
-
-    /**
-     * overide draw
-     */
-    draw:function () {
-        // override draw since both scenes (textures) are rendered in 1 scene
-    }
 });
 
 /**
@@ -1592,23 +1104,23 @@ cc.TransitionTurnOffTiles = cc.TransitionScene.extend(/** @lends cc.TransitionTu
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         this._gridProxy = new cc.NodeGrid();
         scene && this.initWithDuration(t, scene);
     },
 
-    _sceneOrder:function () {
+    _sceneOrder: function () {
         this._isInSceneOnTop = false;
     },
 
     /**
      * custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
         this._gridProxy.setTarget(this._outScene);
-        this._gridProxy.onEnter();
+        this._gridProxy._performRecursive(cc.Node._stateCallbackType.onEnter);
 
         var winSize = cc.director.getWinSize();
         var aspect = winSize.width / winSize.height;
@@ -1619,7 +1131,7 @@ cc.TransitionTurnOffTiles = cc.TransitionScene.extend(/** @lends cc.TransitionTu
         this._gridProxy.runAction(cc.sequence(action, cc.callFunc(this.finish, this), cc.stopGrid()));
     },
 
-    visit: function(){
+    visit: function () {
         this._inScene.visit();
         this._gridProxy.visit();
     },
@@ -1628,7 +1140,7 @@ cc.TransitionTurnOffTiles = cc.TransitionScene.extend(/** @lends cc.TransitionTu
      * @param {cc.ActionInterval} action
      * @return {cc.ActionInterval}
      */
-    easeActionWithAction:function (action) {
+    easeActionWithAction: function (action) {
         return action;
     }
 });
@@ -1656,7 +1168,7 @@ cc.TransitionTurnOffTiles.create = function (t, scene) {
 cc.TransitionSplitCols = cc.TransitionScene.extend(/** @lends cc.TransitionSplitCols# */{
     _gridProxy: null,
 
-    _switchTargetToInscene: function(){
+    _switchTargetToInscene: function () {
         this._gridProxy.setTarget(this._inScene);
     },
 
@@ -1665,7 +1177,7 @@ cc.TransitionSplitCols = cc.TransitionScene.extend(/** @lends cc.TransitionSplit
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         this._gridProxy = new cc.NodeGrid();
         scene && this.initWithDuration(t, scene);
@@ -1673,11 +1185,11 @@ cc.TransitionSplitCols = cc.TransitionScene.extend(/** @lends cc.TransitionSplit
     /**
      * custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
         //this._inScene.visible = false;
         this._gridProxy.setTarget(this._outScene);
-        this._gridProxy.onEnter();
+        this._gridProxy._performRecursive(cc.Node._stateCallbackType.onEnter);
 
         var split = this.action();
         var seq = cc.sequence(
@@ -1688,13 +1200,13 @@ cc.TransitionSplitCols = cc.TransitionScene.extend(/** @lends cc.TransitionSplit
         );
     },
 
-    onExit: function(){
+    onExit: function () {
         this._gridProxy.setTarget(null);
-        this._gridProxy.onExit();
+        this._gridProxy._performRecursive(cc.Node._stateCallbackType.onExit);
         cc.TransitionScene.prototype.onExit.call(this);
     },
 
-    visit: function(){
+    visit: function () {
         this._gridProxy.visit();
     },
 
@@ -1702,14 +1214,14 @@ cc.TransitionSplitCols = cc.TransitionScene.extend(/** @lends cc.TransitionSplit
      * @param {cc.ActionInterval} action
      * @return {cc.EaseInOut}
      */
-    easeActionWithAction:function (action) {
+    easeActionWithAction: function (action) {
         return new cc.EaseInOut(action, 3.0);
     },
 
     /**
      * @return {*}
      */
-    action:function () {
+    action: function () {
         return cc.splitCols(this._duration / 2.0, 3);
     }
 });
@@ -1741,14 +1253,14 @@ cc.TransitionSplitRows = cc.TransitionSplitCols.extend(/** @lends cc.TransitionS
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionSplitCols.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
     /**
      * @return {*}
      */
-    action:function () {
+    action: function () {
         return cc.splitRows(this._duration / 2.0, 3);
     }
 });
@@ -1780,23 +1292,23 @@ cc.TransitionFadeTR = cc.TransitionScene.extend(/** @lends cc.TransitionFadeTR# 
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionScene.prototype.ctor.call(this);
         this._gridProxy = new cc.NodeGrid();
         scene && this.initWithDuration(t, scene);
     },
-    _sceneOrder:function () {
+    _sceneOrder: function () {
         this._isInSceneOnTop = false;
     },
 
     /**
      * Custom on enter
      */
-    onEnter:function () {
+    onEnter: function () {
         cc.TransitionScene.prototype.onEnter.call(this);
 
         this._gridProxy.setTarget(this._outScene);
-        this._gridProxy.onEnter();
+        this._gridProxy._performRecursive(cc.Node._stateCallbackType.onEnter);
 
         var winSize = cc.director.getWinSize();
         var aspect = winSize.width / winSize.height;
@@ -1809,7 +1321,7 @@ cc.TransitionFadeTR = cc.TransitionScene.extend(/** @lends cc.TransitionFadeTR# 
         );
     },
 
-    visit: function(){
+    visit: function () {
         this._inScene.visit();
         this._gridProxy.visit();
     },
@@ -1818,7 +1330,7 @@ cc.TransitionFadeTR = cc.TransitionScene.extend(/** @lends cc.TransitionFadeTR# 
      * @param {cc.ActionInterval} action
      * @return {cc.ActionInterval}
      */
-    easeActionWithAction:function (action) {
+    easeActionWithAction: function (action) {
         return action;
     },
 
@@ -1826,7 +1338,7 @@ cc.TransitionFadeTR = cc.TransitionScene.extend(/** @lends cc.TransitionFadeTR# 
      * @param {cc.Size} size
      * @return {*}
      */
-    actionWithSize:function (size) {
+    actionWithSize: function (size) {
         return cc.fadeOutTRTiles(this._duration, size);
     }
 });
@@ -1857,7 +1369,7 @@ cc.TransitionFadeBL = cc.TransitionFadeTR.extend(/** @lends cc.TransitionFadeBL#
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionFadeTR.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
@@ -1866,7 +1378,7 @@ cc.TransitionFadeBL = cc.TransitionFadeTR.extend(/** @lends cc.TransitionFadeBL#
      * @param {cc.Size} size
      * @return {*}
      */
-    actionWithSize:function (size) {
+    actionWithSize: function (size) {
         return cc.fadeOutBLTiles(this._duration, size);
     }
 });
@@ -1899,7 +1411,7 @@ cc.TransitionFadeUp = cc.TransitionFadeTR.extend(/** @lends cc.TransitionFadeUp#
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionFadeTR.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
@@ -1908,7 +1420,7 @@ cc.TransitionFadeUp = cc.TransitionFadeTR.extend(/** @lends cc.TransitionFadeUp#
      * @param {cc.Size} size
      * @return {cc.FadeOutUpTiles}
      */
-    actionWithSize:function (size) {
+    actionWithSize: function (size) {
         return new cc.FadeOutUpTiles(this._duration, size);
     }
 });
@@ -1940,7 +1452,7 @@ cc.TransitionFadeDown = cc.TransitionFadeTR.extend(/** @lends cc.TransitionFadeD
      * @param {Number} t time in seconds
      * @param {cc.Scene} scene
      */
-    ctor:function (t, scene) {
+    ctor: function (t, scene) {
         cc.TransitionFadeTR.prototype.ctor.call(this);
         scene && this.initWithDuration(t, scene);
     },
@@ -1949,8 +1461,8 @@ cc.TransitionFadeDown = cc.TransitionFadeTR.extend(/** @lends cc.TransitionFadeD
      * @param {cc.Size} size
      * @return {*}
      */
-    actionWithSize:function (size) {
-        return cc.fadeOutDownTiles( this._duration, size);
+    actionWithSize: function (size) {
+        return cc.fadeOutDownTiles(this._duration, size);
     }
 });
 

@@ -261,13 +261,13 @@ cc.EventListener.MOUSE = 4;
  * @constant
  * @type {number}
  */
-cc.EventListener.ACCELERATION = 5;
+cc.EventListener.ACCELERATION = 6;
 /**
- * The type code of focus event listener.
+ * The type code of Focus change event listener.
  * @constant
  * @type {number}
  */
-cc.EventListener.ACCELERATION = 6;
+cc.EventListener.FOCUS = 7;
 /**
  * The type code of custom event listener.
  * @constant
@@ -275,24 +275,18 @@ cc.EventListener.ACCELERATION = 6;
  */
 cc.EventListener.CUSTOM = 8;
 
-/**
- * The type code of Focus change event listener.
- * @constant
- * @type {number}
- */
-cc.EventListener.FOCUS = 7;
-
 cc._EventListenerCustom = cc.EventListener.extend({
     _onCustomEvent: null,
-    ctor: function (listenerId, callback) {
+    ctor: function (listenerId, callback, target) {
         this._onCustomEvent = callback;
-        var selfPointer = this;
-        var listener = function (event) {
-            if (selfPointer._onCustomEvent !== null)
-                selfPointer._onCustomEvent(event);
-        };
+        this._target = target;
 
-        cc.EventListener.prototype.ctor.call(this, cc.EventListener.CUSTOM, listenerId, listener);
+        cc.EventListener.prototype.ctor.call(this, cc.EventListener.CUSTOM, listenerId, this._callback);
+    },
+
+    _callback: function (event) {
+        if (this._onCustomEvent !== null)
+            this._onCustomEvent.call(this._target, event);
     },
 
     checkAvailable: function () {
@@ -315,31 +309,31 @@ cc._EventListenerMouse = cc.EventListener.extend({
     onMouseScroll: null,
 
     ctor: function () {
-        var selfPointer = this;
-        var listener = function (event) {
-            var eventType = cc.EventMouse;
-            switch (event._eventType) {
-                case eventType.DOWN:
-                    if (selfPointer.onMouseDown)
-                        selfPointer.onMouseDown(event);
-                    break;
-                case eventType.UP:
-                    if (selfPointer.onMouseUp)
-                        selfPointer.onMouseUp(event);
-                    break;
-                case eventType.MOVE:
-                    if (selfPointer.onMouseMove)
-                        selfPointer.onMouseMove(event);
-                    break;
-                case eventType.SCROLL:
-                    if (selfPointer.onMouseScroll)
-                        selfPointer.onMouseScroll(event);
-                    break;
-                default:
-                    break;
-            }
-        };
-        cc.EventListener.prototype.ctor.call(this, cc.EventListener.MOUSE, cc._EventListenerMouse.LISTENER_ID, listener);
+        cc.EventListener.prototype.ctor.call(this, cc.EventListener.MOUSE, cc._EventListenerMouse.LISTENER_ID, this._callback);
+    },
+
+    _callback: function (event) {
+        var eventType = cc.EventMouse;
+        switch (event._eventType) {
+            case eventType.DOWN:
+                if (this.onMouseDown)
+                    this.onMouseDown(event);
+                break;
+            case eventType.UP:
+                if (this.onMouseUp)
+                    this.onMouseUp(event);
+                break;
+            case eventType.MOVE:
+                if (this.onMouseMove)
+                    this.onMouseMove(event);
+                break;
+            case eventType.SCROLL:
+                if (this.onMouseScroll)
+                    this.onMouseScroll(event);
+                break;
+            default:
+                break;
+        }
     },
 
     clone: function () {
@@ -508,11 +502,12 @@ cc._EventListenerFocus = cc.EventListener.extend({
     },
     onFocusChanged: null,
     ctor: function(){
-        var listener = function(event){
-            if(this.onFocusChanged)
-                this.onFocusChanged(event._widgetLoseFocus, event._widgetGetFocus);
-        };
-        cc.EventListener.prototype.ctor.call(this, cc.EventListener.FOCUS, cc._EventListenerFocus.LISTENER_ID, listener);
+        cc.EventListener.prototype.ctor.call(this, cc.EventListener.FOCUS, cc._EventListenerFocus.LISTENER_ID, this._callback);
+    },
+    _callback: function (event) {
+        if (this.onFocusChanged) {
+            this.onFocusChanged(event._widgetLoseFocus, event._widgetGetFocus);
+        }
     }
 });
 

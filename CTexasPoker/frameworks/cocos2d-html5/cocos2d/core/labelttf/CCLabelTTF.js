@@ -135,6 +135,11 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
         this._renderCmd._setColorsString();
         this._renderCmd._updateTexture();
         this._setUpdateTextureDirty();
+
+        // Needed for high dpi text.
+        // In order to render it crisp, we request devicePixelRatio times the
+        // font size and scale it down 1/devicePixelRatio.
+        this._scaleX = this._scaleY = 1 / cc.view.getDevicePixelRatio();
         return true;
     },
 
@@ -291,7 +296,7 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
         if (a.r != null && a.g != null && a.b != null && a.a != null) {
             this._enableShadow(a, b, c);
         } else {
-            this._enableShadowNoneColor(a, b, c, d)
+            this._enableShadowNoneColor(a, b, c, d);
         }
     },
 
@@ -507,8 +512,8 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
         this._fontName = textDefinition.fontName;
         this._fontSize = textDefinition.fontSize || 12;
 
-        if(textDefinition.lineHeight)
-            this._lineHeight = textDefinition.lineHeight
+        if (textDefinition.lineHeight)
+            this._lineHeight = textDefinition.lineHeight;
         else
             this._lineHeight = this._fontSize;
 
@@ -532,7 +537,7 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
         if (mustUpdateTexture)
             this._renderCmd._updateTexture();
         var flags = cc.Node._dirtyFlags;
-        this._renderCmd.setDirtyFlag(flags.colorDirty|flags.opacityDirty|flags.textDirty);
+        this._renderCmd.setDirtyFlag(flags.colorDirty | flags.opacityDirty | flags.textDirty);
     },
 
     _prepareTextDefinition: function (adjustForResolution) {
@@ -577,6 +582,87 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
         texDef.fillStyle = cc.color(locTextFillColor.r, locTextFillColor.g, locTextFillColor.b);
         return texDef;
     },
+
+    /*
+     * BEGIN SCALE METHODS
+     *
+     * In order to make the value of scaleX and scaleY consistent across
+     * screens, we provide patched versions that return the same values as if
+     * the screen was not HiDPI.
+     */
+
+    /**
+     * Returns the scale factor of the node.
+     * @warning: Assertion will fail when _scaleX != _scaleY.
+     * @function
+     * @return {Number} The scale factor
+     */
+    getScale: function () {
+        if (this._scaleX !== this._scaleY)
+            cc.log(cc._LogInfos.Node_getScale);
+        return this._scaleX * cc.view.getDevicePixelRatio();
+    },
+
+    /**
+     * Sets the scale factor of the node. 1.0 is the default scale factor. This function can modify the X and Y scale at the same time.
+     * @function
+     * @param {Number} scale or scaleX value
+     * @param {Number} [scaleY=]
+     */
+    setScale: function (scale, scaleY) {
+        var ratio = cc.view.getDevicePixelRatio();
+        this._scaleX = scale / ratio;
+        this._scaleY = ((scaleY || scaleY === 0) ? scaleY : scale) / ratio;
+        this._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.transformDirty);
+    },
+
+    /**
+     * Returns the scale factor on X axis of this node
+     * @function
+     * @return {Number} The scale factor on X axis.
+     */
+    getScaleX: function () {
+        return this._scaleX * cc.view.getDevicePixelRatio();
+    },
+
+    /**
+     * <p>
+     *     Changes the scale factor on X axis of this node                                   <br/>
+     *     The default value is 1.0 if you haven't changed it before
+     * </p>
+     * @function
+     * @param {Number} newScaleX The scale factor on X axis.
+     */
+    setScaleX: function (newScaleX) {
+        this._scaleX = newScaleX / cc.view.getDevicePixelRatio();
+        this._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.transformDirty);
+    },
+
+    /**
+     * Returns the scale factor on Y axis of this node
+     * @function
+     * @return {Number} The scale factor on Y axis.
+     */
+    getScaleY: function () {
+        return this._scaleY * cc.view.getDevicePixelRatio();
+    },
+
+    /**
+     * <p>
+     *     Changes the scale factor on Y axis of this node                                            <br/>
+     *     The Default value is 1.0 if you haven't changed it before.
+     * </p>
+     * @function
+     * @param {Number} newScaleY The scale factor on Y axis.
+     */
+    setScaleY: function (newScaleY) {
+        this._scaleY = newScaleY / cc.view.getDevicePixelRatio();
+        this._renderCmd.setDirtyFlag(cc.Node._dirtyFlags.transformDirty);
+    },
+
+    /*
+     * END SCALE METHODS
+     */
 
     /**
      * Changes the text content of the label
@@ -720,23 +806,40 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
     getContentSize: function () {
         if (this._needUpdateTexture)
             this._renderCmd._updateTTF();
-        return cc.Sprite.prototype.getContentSize.call(this);
+        var ratio = cc.view.getDevicePixelRatio();
+        return cc.size( this._contentSize.width / ratio, this._contentSize.height / ratio );
     },
 
     _getWidth: function () {
         if (this._needUpdateTexture)
             this._renderCmd._updateTTF();
-        return cc.Sprite.prototype._getWidth.call(this);
+        return this._contentSize.width / cc.view.getDevicePixelRatio();
     },
     _getHeight: function () {
         if (this._needUpdateTexture)
             this._renderCmd._updateTTF();
-        return cc.Sprite.prototype._getHeight.call(this);
+        return this._contentSize.height / cc.view.getDevicePixelRatio();
     },
 
     setTextureRect: function (rect, rotated, untrimmedSize) {
-        //set needConvert to false
-        cc.Sprite.prototype.setTextureRect.call(this, rect, rotated, untrimmedSize, false);
+        var _t = this;
+        _t._rectRotated = rotated || false;
+        _t.setContentSize(untrimmedSize || rect);
+
+        var locRect = _t._rect;
+        locRect.x = rect.x;
+        locRect.y = rect.y;
+        locRect.width = rect.width;
+        locRect.height = rect.height;
+        _t._renderCmd._setTextureCoords(rect, false);
+
+        var relativeOffsetX = _t._unflippedOffsetPositionFromCenter.x, relativeOffsetY = _t._unflippedOffsetPositionFromCenter.y;
+        if (_t._flippedX)
+            relativeOffsetX = -relativeOffsetX;
+        if (_t._flippedY)
+            relativeOffsetY = -relativeOffsetY;
+        _t._offsetPosition.x = relativeOffsetX + (rect.width - locRect.width) / 2;
+        _t._offsetPosition.y = relativeOffsetY + (rect.height - locRect.height) / 2;
     },
 
     /**
@@ -757,7 +860,7 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
     },
 
     //For web only
-    _setFontStyle: function(fontStyle){
+    _setFontStyle: function (fontStyle) {
         if (this._fontStyle !== fontStyle) {
             this._fontStyle = fontStyle;
             this._renderCmd._setFontStyle(this._fontName, this._fontSize, this._fontStyle, this._fontWeight);
@@ -765,11 +868,11 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
         }
     },
 
-    _getFontStyle: function(){
+    _getFontStyle: function () {
         return this._fontStyle;
     },
 
-    _setFontWeight: function(fontWeight){
+    _setFontWeight: function (fontWeight) {
         if (this._fontWeight !== fontWeight) {
             this._fontWeight = fontWeight;
             this._renderCmd._setFontStyle(this._fontName, this._fontSize, this._fontStyle, this._fontWeight);
@@ -777,7 +880,7 @@ cc.LabelTTF = cc.Sprite.extend(/** @lends cc.LabelTTF# */{
         }
     },
 
-    _getFontWeight: function(){
+    _getFontWeight: function () {
         return this._fontWeight;
     }
 });
@@ -813,11 +916,6 @@ cc.LabelTTF.create = function (text, fontName, fontSize, dimensions, hAlignment,
  */
 cc.LabelTTF.createWithFontDefinition = cc.LabelTTF.create;
 
-if (cc.USE_LA88_LABELS)
-    cc.LabelTTF._SHADER_PROGRAM = cc.SHADER_POSITION_TEXTURECOLOR;
-else
-    cc.LabelTTF._SHADER_PROGRAM = cc.SHADER_POSITION_TEXTUREA8COLOR;
-
 cc.LabelTTF.__labelHeightDiv = document.createElement("div");
 cc.LabelTTF.__labelHeightDiv.style.fontFamily = "Arial";
 cc.LabelTTF.__labelHeightDiv.style.position = "absolute";
@@ -832,14 +930,22 @@ document.body ?
         document.body.appendChild(cc.LabelTTF.__labelHeightDiv);
     }, false);
 
+/**
+ * Returns the height of text with an specified font family and font size, in
+ * device independent pixels.
+ *
+ * @param {string|cc.FontDefinition} fontName
+ * @param {number} fontSize
+ * @returns {number}
+ * @private
+ */
 cc.LabelTTF.__getFontHeightByDiv = function (fontName, fontSize) {
-
+    var clientHeight, labelDiv = cc.LabelTTF.__labelHeightDiv;
     if(fontName instanceof cc.FontDefinition){
         /** @type cc.FontDefinition */
         var fontDef = fontName;
-        var clientHeight = cc.LabelTTF.__fontHeightCache[fontDef._getCanvasFontStr()];
+        clientHeight = cc.LabelTTF.__fontHeightCache[fontDef._getCanvasFontStr()];
         if (clientHeight > 0) return clientHeight;
-        var labelDiv = cc.LabelTTF.__labelHeightDiv;
         labelDiv.innerHTML = "ajghl~!";
         labelDiv.style.fontFamily = fontDef.fontName;
         labelDiv.style.fontSize = fontDef.fontSize + "px";
@@ -849,19 +955,18 @@ cc.LabelTTF.__getFontHeightByDiv = function (fontName, fontSize) {
         clientHeight = labelDiv.clientHeight;
         cc.LabelTTF.__fontHeightCache[fontDef._getCanvasFontStr()] = clientHeight;
         labelDiv.innerHTML = "";
-        return clientHeight;
     }
-
-    //Default
-    var clientHeight = cc.LabelTTF.__fontHeightCache[fontName + "." + fontSize];
-    if (clientHeight > 0) return clientHeight;
-    var labelDiv = cc.LabelTTF.__labelHeightDiv;
-    labelDiv.innerHTML = "ajghl~!";
-    labelDiv.style.fontFamily = fontName;
-    labelDiv.style.fontSize = fontSize + "px";
-    clientHeight = labelDiv.clientHeight;
-    cc.LabelTTF.__fontHeightCache[fontName + "." + fontSize] = clientHeight;
-    labelDiv.innerHTML = "";
+    else {
+        //Default
+        clientHeight = cc.LabelTTF.__fontHeightCache[fontName + "." + fontSize];
+        if (clientHeight > 0) return clientHeight;
+        labelDiv.innerHTML = "ajghl~!";
+        labelDiv.style.fontFamily = fontName;
+        labelDiv.style.fontSize = fontSize + "px";
+        clientHeight = labelDiv.clientHeight;
+        cc.LabelTTF.__fontHeightCache[fontName + "." + fontSize] = clientHeight;
+        labelDiv.innerHTML = "";
+    }
     return clientHeight;
 
 };

@@ -24,53 +24,60 @@
  ****************************************************************************/
 
 cc._txtLoader = {
-    load : function(realUrl, url, res, cb){
+    load: function (realUrl, url, res, cb) {
         cc.loader.loadTxt(realUrl, cb);
     }
 };
 cc.loader.register(["txt", "xml", "vsh", "fsh", "atlas"], cc._txtLoader);
 
 cc._jsonLoader = {
-    load : function(realUrl, url, res, cb){
+    load: function (realUrl, url, res, cb) {
         cc.loader.loadJson(realUrl, cb);
     }
 };
 cc.loader.register(["json", "ExportJson"], cc._jsonLoader);
 
 cc._jsLoader = {
-    load : function(realUrl, url, res, cb){
+    load: function (realUrl, url, res, cb) {
         cc.loader.loadJs(realUrl, cb);
     }
 };
 cc.loader.register(["js"], cc._jsLoader);
 
 cc._imgLoader = {
-    load : function(realUrl, url, res, cb){
-        cc.loader.cache[url] = cc.loader.loadImg(realUrl, function(err, img){
-            if(err)
-                return cb(err);
-            cc.textureCache.handleLoadedTexture(url);
-            cb(null, img);
-        });
+    load: function (realUrl, url, res, cb) {
+        var callback;
+        if (cc.loader.isLoading(realUrl)) {
+            callback = function (err, img) {
+                if (err)
+                    return cb(err);
+                var tex = cc.textureCache.getTextureForKey(url) || cc.textureCache.handleLoadedTexture(url, img);
+                cb(null, tex);
+            };
+        }
+        else {
+            callback = function (err, img) {
+                if (err)
+                    return cb(err);
+                var tex = cc.textureCache.handleLoadedTexture(url, img);
+                cb(null, tex);
+            };
+        }
+        cc.loader.loadImg(realUrl, callback);
     }
 };
-cc.loader.register(["png", "jpg", "bmp","jpeg","gif", "ico", "tiff", "webp"], cc._imgLoader);
+cc.loader.register(["png", "jpg", "bmp", "jpeg", "gif", "ico", "tiff", "webp"], cc._imgLoader);
 cc._serverImgLoader = {
-    load : function(realUrl, url, res, cb){
-        cc.loader.cache[url] =  cc.loader.loadImg(res.src, function(err, img){
-            if(err)
-                return cb(err);
-            cc.textureCache.handleLoadedTexture(url);
-            cb(null, img);
-        });
+    load: function (realUrl, url, res, cb) {
+        cc._imgLoader.load(res.src, url, res, cb);
     }
 };
 cc.loader.register(["serverImg"], cc._serverImgLoader);
 
 cc._plistLoader = {
-    load : function(realUrl, url, res, cb){
-        cc.loader.loadTxt(realUrl, function(err, txt){
-            if(err)
+    load: function (realUrl, url, res, cb) {
+        cc.loader.loadTxt(realUrl, function (err, txt) {
+            if (err)
                 return cb(err);
             cb(null, cc.plistParser.parse(txt));
         });
@@ -79,31 +86,31 @@ cc._plistLoader = {
 cc.loader.register(["plist"], cc._plistLoader);
 
 cc._fontLoader = {
-    TYPE : {
-        ".eot" : "embedded-opentype",
-        ".ttf" : "truetype",
-        ".ttc" : "truetype",
-        ".woff" : "woff",
-        ".svg" : "svg"
+    TYPE: {
+        ".eot": "embedded-opentype",
+        ".ttf": "truetype",
+        ".ttc": "truetype",
+        ".woff": "woff",
+        ".svg": "svg"
     },
-    _loadFont : function(name, srcs, type){
+    _loadFont: function (name, srcs, type) {
         var doc = document, path = cc.path, TYPE = this.TYPE, fontStyle = document.createElement("style");
         fontStyle.type = "text/css";
         doc.body.appendChild(fontStyle);
 
         var fontStr = "";
-        if(isNaN(name - 0))
+        if (isNaN(name - 0))
             fontStr += "@font-face { font-family:" + name + "; src:";
         else
             fontStr += "@font-face { font-family:'" + name + "'; src:";
-        if(srcs instanceof Array){
-            for(var i = 0, li = srcs.length; i < li; i++){
+        if (srcs instanceof Array) {
+            for (var i = 0, li = srcs.length; i < li; i++) {
                 var src = srcs[i];
                 type = path.extname(src).toLowerCase();
                 fontStr += "url('" + srcs[i] + "') format('" + TYPE[type] + "')";
                 fontStr += (i === li - 1) ? ";" : ",";
             }
-        }else{
+        } else {
             type = type.toLowerCase();
             fontStr += "url('" + srcs + "') format('" + TYPE[type] + "');";
         }
@@ -111,7 +118,7 @@ cc._fontLoader = {
 
         //<div style="font-family: PressStart;">.</div>
         var preloadDiv = document.createElement("div");
-        var _divStyle =  preloadDiv.style;
+        var _divStyle = preloadDiv.style;
         _divStyle.fontFamily = name;
         preloadDiv.innerHTML = ".";
         _divStyle.position = "absolute";
@@ -119,23 +126,23 @@ cc._fontLoader = {
         _divStyle.top = "-100px";
         doc.body.appendChild(preloadDiv);
     },
-    load : function(realUrl, url, res, cb){
+    load: function (realUrl, url, res, cb) {
         var self = this;
         var type = res.type, name = res.name, srcs = res.srcs;
-        if(cc.isString(res)){
+        if (cc.isString(res)) {
             type = cc.path.extname(res);
             name = cc.path.basename(res, type);
             self._loadFont(name, res, type);
-        }else{
+        } else {
             self._loadFont(name, srcs);
         }
-        if(document.fonts){
-            document.fonts.load("1em " + name).then(function(){
+        if (document.fonts) {
+            document.fonts.load("1em " + name).then(function () {
                 cb(null, true);
-            }, function(err){
+            }, function (err) {
                 cb(err);
             });
-        }else{
+        } else {
             cb(null, true);
         }
     }
@@ -143,7 +150,7 @@ cc._fontLoader = {
 cc.loader.register(["font", "eot", "ttf", "woff", "svg", "ttc"], cc._fontLoader);
 
 cc._binaryLoader = {
-    load : function(realUrl, url, res, cb){
+    load: function (realUrl, url, res, cb) {
         cc.loader.loadBinary(realUrl, cb);
     }
 };
