@@ -30,6 +30,10 @@ LoginLayer=gameLayer.extend({
         this._super(res.LoginScene_json);
         
         var storage = new CocosWidget.Storage();
+        var previous_account = storage.load("account");
+        if(previous_account)
+            this.getNode("account_node/text").setString(previous_account);
+        
         PokerManager.getInstance().currentTable = null;
 
         CocosWidget.eventRegister.getInstance().setRootNode(this.getNode("Scene"));
@@ -61,7 +65,7 @@ LoginLayer=gameLayer.extend({
                  PokerManager.getInstance().connect("ws:/220.134.243.106:61231",
                     function() {
                         //gameID, sessionID, platForm, subsidiaryID, subsidiaryAccount, subsidiaryUserID, browser, osType)
-                        pokerPeer.getInstance().requestLogin("2", "robot", 4, 0, account, 148499947, "", "");
+                        pokerPeer.getInstance().requestLogin("3", "robot", 4, 0, "account5", 148499947, "", "");
                     },
 
                     function() {
@@ -84,6 +88,8 @@ LobbyLayer=gameLayer.extend({
 
     ctor: function () {
         this._super(res.TableListScene_json);
+
+        PokerManager.getInstance().currentTable = null;
 
         CocosWidget.eventRegister.getInstance().setRootNode(this.getNode("Scene"));
 
