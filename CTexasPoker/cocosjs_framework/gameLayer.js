@@ -48,11 +48,11 @@ var gameLayer = cc.Layer.extend({
     },
 
     //callback: callback(node, mouseHitPoint)
-    registerMouseEvent:function(node, callback_mouseDown, callback_mouseUp, callback_mouseEnter, callback_mouseOver, callback_mouseMove, target){
+    registerMouseEvent:function(node, callback_mouseDown, callback_mouseUp, callback_mouseEnter, callback_mouseOver, target){
         if(target==undefined)
             target = this;
 
-        CocosWidget.eventRegister.getInstance().registerMouseEvent(target, node, callback_mouseDown, callback_mouseUp, callback_mouseEnter, callback_mouseOver, callback_mouseMove);
+        CocosWidget.eventRegister.getInstance().registerMouseEvent(target, node, callback_mouseDown, callback_mouseUp, callback_mouseEnter, callback_mouseOver);
     },
 
     // parent/second_layer/child_node

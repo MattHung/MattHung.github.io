@@ -23,7 +23,7 @@ eventRegister=cc.Class.extend({
 
     //node: mouse event registration of node
     //callback: callback(node, mouseHitPoint)
-    registerMouseEvent:function(target, node, callback_mouseDown, callback_mouseUp, callback_mouseEnter, callback_mouseOver, callback_mouseMove){
+    registerMouseEvent:function(target, node, callback_mouseDown, callback_mouseUp, callback_mouseEnter, callback_mouseOver){
         var sender = {};
         sender.target = target;
         sender.node = node;
@@ -31,7 +31,6 @@ eventRegister=cc.Class.extend({
         sender.callback_mouseUp = callback_mouseUp;
         sender.callback_mouseEnter = callback_mouseEnter;
         sender.callback_mouseOver = callback_mouseOver;
-        sender.callback_mouseMove = callback_mouseMove;
         this.eventSender.push(sender);
 
         this.setWidget(node);
@@ -42,7 +41,7 @@ eventRegister=cc.Class.extend({
         if(!(node instanceof ccui.Widget))
             return;
 
-        node.setTouchEnabled(true);
+        node.setTouchEnabled(false);
     },
 
     setTouchEvent:function(node){
@@ -54,11 +53,11 @@ eventRegister=cc.Class.extend({
             swallowTouches: true,
 
             onTouchBegan: function (touch, event) {
-                this.onMouseMove(touch.getLocation(), event._touches[0]);
+                this.onMouseMove(touch.getLocation());
                 return this.onMouseDown(touch.getLocation());
             }.bind(this),
             onTouchMoved: function (touch, event) {
-                return this.onMouseMove(touch.getLocation(), event._touches[0]);
+                return this.onMouseMove(touch.getLocation());
             }.bind(this),
             onTouchEnded: function (touch, event) {
                 return this.onMouseUp(touch.getLocation());
@@ -79,7 +78,7 @@ eventRegister=cc.Class.extend({
                 return this.onMouseDown(new cc.Point(event.getLocationX(), event.getLocationY()));
             }.bind(this),
             onMouseMove: function (event) {
-                return this.onMouseMove(new cc.Point(event.getLocationX(), event.getLocationY()), event);
+                return this.onMouseMove(new cc.Point(event.getLocationX(), event.getLocationY()));
             }.bind(this),
             onMouseUp: function (event) {
                 return this.onMouseUp(new cc.Point(event.getLocationX(), event.getLocationY()));
@@ -91,7 +90,7 @@ eventRegister=cc.Class.extend({
         cc.eventManager.addListener(mouseListener, this.root_node);
     },
 
-    onMouseMove:function(point, event){
+    onMouseMove:function(point){
         for(var i=this.eventSender.length -1 ; i>=0; i--){
             var scrollView = null;
 
@@ -101,7 +100,7 @@ eventRegister=cc.Class.extend({
             boundingBox.x = worldSpace.x;
             boundingBox.y = worldSpace.y;
 
-            if(cc.rectContainsPoint(boundingBox, point)) {                
+            if(cc.rectContainsPoint(boundingBox, point)) {
                 if(isSpriteTransparentInPoint(point))
                     continue;
 
@@ -116,11 +115,9 @@ eventRegister=cc.Class.extend({
                     this.current_target = this.eventSender[i];
 
                     if(this.eventSender[i].callback_mouseEnter)
-                        this.eventSender[i].callback_mouseEnter.call(this.current_target.target, this.eventSender[i].node, point, event);
+                        this.eventSender[i].callback_mouseEnter.call(this.current_target.target, this.eventSender[i].node, point);
                 }
 
-                if(this.eventSender[i].callback_mouseMove)
-                    this.eventSender[i].callback_mouseMove.call(this.current_target.target, this.eventSender[i].node, point, event);                
                 this.current_target = this.eventSender[i];
                 return true;
             }
@@ -128,7 +125,7 @@ eventRegister=cc.Class.extend({
 
         if(this.current_target)
             if(this.current_target.callback_mouseOver)
-                this.current_target.callback_mouseOver.call(this.current_target.target, this.current_target.node, point, event);
+                this.current_target.callback_mouseOver.call(this.current_target.target, this.current_target.node, point);
 
         this.current_target =  null;
         return false;
